@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="http://w.datacdn.cn/">
+    <title>买家中心</title>
+    <script src="/static/js/plugin/main.js"></script>
+    {css href="/static/css/commonm.css"}
+    {load href="/static/js/vue.min.js" /}
+    {load href="/static/js/vuex.min.js" /}
+    <script type="text/javascript">
+        !function () {
+            function a() {
+                var clientWidth = document.documentElement.clientWidth > 640 ? 640 : document.documentElement.clientWidth;
+                document.documentElement.style.fontSize = clientWidth / 7.5 + "px";
+
+                //适应字体调整
+                var div = document.createElement("div");
+                div.style.width = "7.5rem";
+                document.documentElement.appendChild(div);
+                document.documentElement.style.fontSize = document.documentElement.style.fontSize.replace("px", "") * clientWidth / div.clientWidth + "px";
+                document.documentElement.removeChild(div);
+            }
+            var b = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(b), b = setTimeout(a, 300)
+            }, !1), a()
+        }(window);
+    </script>
+</head>
+<body>
+<div id="contentbox" style="height: auto;">
+    <div id="boxheader"><my_user_center_header></my_user_center_header></div>
+    <div class="orderMain">
+        <div class="myOrder" href="/my/order">
+            <div class="title">买买买</div>
+            <div class="arrow">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+        </div>
+
+        <div class="orderMenu buyer">
+            <a href="http://w.weipaitang.com/my/order/notPay">
+                <div><span>
+                                                <i class="wptFi icon-notpay"></i>
+                    </span>未付款</div>
+            </a>
+            <a href="http://w.weipaitang.com/my/order/waitDelivery">
+                <div><span>
+                                                <i class="wptFi icon-time"></i>
+                    </span>待发货</div>
+            </a>
+            <a href="http://w.weipaitang.com/my/order/notReceipt">
+                <div><span>
+                                                <i class="wptFi icon-waitreceive"></i>
+                    </span>未收货</div>
+            </a>
+            <a href="http://w.weipaitang.com/my/order/notRate">
+                <div><span>
+                                                <i class="wptFi icon-notrate"></i>
+                    </span>未评价</div>
+            </a>
+            <a href="http://w.weipaitang.com/my/order/afterSale">
+                <div><span>
+                                                <i class="wptFi icon-aftersale"></i>
+                    </span>售后</div>
+            </a>
+        </div>
+    </div>
+
+    <div  id="menuMain"  class="menuMain buyer">
+        <div class="menuItem balance">
+            <span><i class="wptFi icon-balance" style="color: #ffad17"></i></span>
+            <div class="title">余额</div>
+            <div class="arrow" href="/balance"></div>
+            <div class="info money" v-cloak>￥{{userinfo.user_money}}</div>
+        </div>
+        <div class="menuItem message">
+            <span><i class="wptFi icon-message" style="color: #169ada"></i></span>
+            <div class="title">消息中心</div>
+            <div class="arrow" href="/message"></div>
+            <div class="info message" v-cloak >{{userinfo.message_count}}</div>
+        </div>
+        <div class="menuItem articleBuyer">
+            <span><i class="wptFi icon-articlebuyer" style="color: #f46200"></i></span>
+            <div class="title">晒宝</div>
+            <div class="arrow" href="###"></div>
+        </div>
+        <div class="menuItem bidSale">
+            <span><i class="wptFi icon-bidsale" style="color: #169ada"></i></span>
+            <div class="title">参拍商品区</div>
+            <div class="arrow" href="/my/bidSale"></div>
+        </div>
+        <div class="menuItem likeSale">
+            <span><i class="wptFi icon-like" style="color: #ffad17"></i></span>
+            <div class="title">围观商品区</div>
+            <div class="arrow" href="/my/likeSale"></div>
+        </div>
+        <div class="menuItem attentionShop">
+            <span><i class="wptFi icon-attentionshop" style="color: #2ecabf"></i></span>
+            <div class="title">关注店铺</div>
+            <div class="arrow" href="###"></div>
+        </div>
+        <div class="menuItem represent">
+            <span><i class="wptFi icon-representcenter" style="color: #1c9ddc"></i></span>
+            <div class="title">我的代言</div>
+            <div class="arrow" href="###"></div>
+        </div>
+        <div class="menuItem expect">
+            <span><i class="wptFi icon-menuitemexpect" style="color: #cbcbcb"></i></span>
+            <div class="title">敬请期待</div>
+            <div class="arrow" href="#"></div>
+        </div>
+        <div class="menuItem"></div>
+    </div>
+    <div class="menuMain sellerCenter">
+        <div class="menuItem seller">
+            <i class="wptFi icon-shopicon"></i>
+            <div class="title">卖家中心</div>
+            <div class="arrow" href="/user/sellindex">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+{load href="/static/js/plugin/zepto.min.js" /}
+{load href="/static/js/plugin/vueresource.min.js" /}
+<script src="/static/js/plugin/usercenter_index.js"></script>
+{include file="common/menu" /}
+
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</body>
+</html>

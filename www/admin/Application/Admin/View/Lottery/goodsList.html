@@ -1,0 +1,172 @@
+<include file="Public/min-header"/>
+<div class="wrapper">
+ <include file="Public/breadcrumb"/>
+ <style>#search-form > .form-group{margin-left: 10px;}  .lottery_set{margin-left:20%}</style>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><i class="fa fa-list"></i> 奖品列表</h3>
+        </div>
+        <div class="panel-body">
+          <div class="navbar navbar-default">
+              <form action="" id="search-form2" class="navbar-form form-inline" method="get">
+                <div class="form-group">
+                  <select name="lottery_type" id="lottery_type" class="form-control">
+                    <option value="">所有分类</option>
+                    <foreach name="categoryList" item="v" key="k" >
+                      <option value="{$v['type_id']}" <if condition="$params[lottery_type] eq $v['type_id']"> selected</if> > {$v['type_name']}</option>
+			 		          </foreach>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label" for="lottery_name">奖品名称:</label>
+                  <div class="input-group">
+                    <input type="text" name="lottery_name" placeholder="请输入奖品名称" value="{$params['lottery_name']}" id="lottery_name" class="form-control">
+                  </div>
+                </div>                  
+                <!--排序规则-->
+                <input type="hidden" name="orderby1" value="goods_id" />
+                <input type="hidden" name="orderby2" value="desc" />
+                <button type="submit" id="button-filter search-order" class="btn btn-primary"><i class="fa fa-search"></i> 筛选</button>
+                <a class="btn btn-primary lottery_set" data-toggle="modal" data-target="#myModal">抽奖设置</a>
+                <a href="{:U('Admin/Lottery/lotteryLog')}" class="btn btn-primary">抽奖记录</a>
+                <a href="{:U('Admin/Lottery/goodsAdd')}" class="btn btn-primary">添加奖品</a>
+              </form>
+
+          </div>
+          <div id="ajax_return">
+
+            <form method="post" enctype="multipart/form-data" target="_blank" id="form-order">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">ID</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">添加时间</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">奖品名称</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">奖品描述</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">中奖提示语</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">类型</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">奖励积分</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">奖品个数</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">中奖概率</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">是否空奖</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">是否显示</a>
+                    </td>
+                    <td class="text-center">
+                      <a href="javascript:void(0);">修改时间</a>
+                    </td>
+                    <td class="text-center">操作</td>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <volist name="goodsList" id="list">
+                    <tr>
+                      <td class="text-center">{$list.lottery_id}</td>
+                      <td class="text-center">{$list.addtime|date="Y-m-d H:i:s",###}</td>
+                      <td class="text-center">{$list.lottery_name|getSubstr=0,33}</td>
+                      <td class="text-center"><textarea>{$list.lottery_content|getSubstr=0,33}</textarea></td>
+                      <td class="text-center">{$list.lottery_msg|getSubstr=0,33}</td>
+                      <php>$type_info = M('lottery_types')->where(array('type_id' => $list['lottery_type']))->find()</php>
+                      <td class="text-center">{$type_info['type_name']}</td>
+                      <td class="text-center">{$list.lottery_jifen}</td>
+                      <td class="text-center">{$list.lottery_num}</td>
+                      <td class="text-center">{$list.lottery_pr}</td>
+                      <td class="text-center"><if condition='$list[status] eq 1'>Yes<else />No</if></td>
+                      <td class="text-center">
+                        <img width="20" height="20" src="__PUBLIC__/images/<if condition='$list[ifshow] eq 0'>yes.png<else />cancel.png</if>" />
+                      </td>
+                      <td class="text-center"><if condition='$list[updatetime] gt 0'>{$list.updatetime|date="Y-m-d H:i:s",###}<else />无</if></td>
+                      <td class="text-center">
+                        <a href="{:U('Admin/Lottery/goodsAdd',array('lottery_id'=>$list['lottery_id']))}" class="btn btn-primary" title="编辑"><i class="fa fa-pencil"></i></a>
+                      </td>
+                    </tr>
+                  </volist>
+
+                  </tbody>
+                </table>
+                {$page}
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row --> 
+  </section>
+  <!-- /.content --> 
+</div>
+<!-- /.content-wrapper -->
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          抽奖设置
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div><h3>每次抽奖消耗：<input type="text"  id="jifen_val" style="width:50px" value="{$jifen}" class="form-control" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" onpaste="this.value=this.value.replace(/[^\d.]/g,'')">积分<h3></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+        </button>
+        <button type="button" class="btn btn-primary" id="jifen_btn">
+          提交
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
+<script>
+    $(document).ready(function(){
+        $('#jifen_btn').click(function(){
+            var val = $.trim($('#jifen_val').val());
+            if(val < 10){
+                alert('每次消耗积分最低为 10 积分');return false;
+            }
+            $.ajax({
+                url:"/index.php?m=Admin&c=Lottery&a=updJifen&jifen="+val,
+                success: function(v){
+                    var v =  eval('('+v+')');
+                    alert(v.msg);
+                    if(v.status == 200){
+                        $('#jifen_val').val(val);
+                    }
+                    return false;
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

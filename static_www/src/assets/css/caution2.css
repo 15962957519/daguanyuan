@@ -1,0 +1,52 @@
+.payment_margin_header {
+    margin: 0.3rem 0;
+    padding-left: 0.3rem;
+    background-color: #fff;
+}
+.payment_margin_header .top {
+    height: 0.88rem;
+    font-size: 0.33rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D3D3D3;
+}
+.payment_margin_header .bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+}
+.payment_margin_header .bottom>img {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+.payment_margin_header .bottom>div {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 0.46rem;
+    padding-right: 0.3rem;
+    color: #9D0C0C;
+}
+.payment_margin_list {
+    padding: 0 0.25rem;
+    height: 0.98rem;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+}
+.payment_margin_list>span {
+    color: #980000;
+}
+.payment_margin_but {
+    width: 6.95rem;
+    height: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.4rem auto;
+    background-color: #FE0100;
+    color: #fff;
+    border-radius: 0.1rem;
+    font-size: 0.35rem;
+}

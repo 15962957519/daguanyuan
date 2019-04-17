@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/*初始化  reset*/
+/* line 5, ../../sass/public/reset.scss */
+body,
+button,
+dd,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+td,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 26, ../../sass/public/reset.scss */
+body,
+button,
+input {
+  font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53, sans-serif;
+}
+
+/* line 32, ../../sass/public/reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input {
+  font-size: 100%;
+}
+
+/* line 43, ../../sass/public/reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 48, ../../sass/public/reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 52, ../../sass/public/reset.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 56, ../../sass/public/reset.scss */
+fieldset,
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+/* line 62, ../../sass/public/reset.scss */
+a,
+button {
+  cursor: pointer;
+}
+
+/*清除浮动*/
+/* line 72, ../../sass/public/reset.scss */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 78, ../../sass/public/reset.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 82, ../../sass/public/reset.scss */
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+
+/* line 8, ../../sass/public/public.scss */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* line 11, ../../sass/public/public.scss */
+body {
+  background: #F0F0F0;
+  background-color: #F0F0F0 !important;
+  margin: 0;
+}
+
+/* line 17, ../../sass/public/public.scss */
+.fles_level_vertical_center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/**
+ * flex
+ */
+/* line 31, ../../sass/public/public.scss */
+.flex_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 37, ../../sass/public/public.scss */
+.flex_box_space_between, .box > .content > .year, .integral_recharge_container > .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 44, ../../sass/public/public.scss */
+.flex_box_space_between_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* line 52, ../../sass/public/public.scss */
+.flex_box_item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* line 58, ../../sass/public/public.scss */
+.flex_box_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* line 64, ../../sass/public/public.scss */
+.flex_end {
+  justify-content: flex-end;
+}
+
+/* line 68, ../../sass/public/public.scss */
+.flex_text_height_center {
+  display: flex;
+  align-items: center;
+}
+
+/* line 73, ../../sass/public/public.scss */
+.flex_text_height_width_center, .integral_recharge_container > .but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 79, ../../sass/public/public.scss */
+.flex_column_height_width_center {
+  display: flex;
+  -webkit-display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+/* line 90, ../../sass/public/public.scss */
+.flex_column_space_around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/**
+ * css3其他
+ */
+/* line 101, ../../sass/public/public.scss */
+.text_nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 107, ../../sass/public/public.scss */
+.line_clamp, .box > .content > .text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* line 114, ../../sass/public/public.scss */
+.public_box_sizing {
+  box-sizing: boder-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 123, ../../sass/public/public.scss */
+.paddingclear {
+  padding: 0 !important;
+}
+
+/* line 126, ../../sass/public/public.scss */
+.clear {
+  clear: both;
+}
+
+/* line 130, ../../sass/public/public.scss */
+.top-1 {
+  margin-top: -1px;
+}
+
+/**
+ * 菜单
+ */
+/* line 200, ../../sass/public/public.scss */
+#canvas {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* line 205, ../../sass/public/public.scss */
+#canvas li, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 212, ../../sass/public/public.scss */
+.canvasli {
+  width: 12.5%;
+  text-align: center;
+}
+
+/* line 216, ../../sass/public/public.scss */
+#canvas li {
+  float: left;
+  background: #fff;
+  padding: 0.12rem 0;
+}
+/* line 220, ../../sass/public/public.scss */
+#canvas li .sjydmenu {
+  font-size: 0.18rem;
+  color: #5c5c5c;
+}
+
+/* line 225, ../../sass/public/public.scss */
+.border_right_0 {
+  border-right: 0 !important;
+}
+
+/**
+     * 瀑布流
+ */
+/* line 233, ../../sass/public/public.scss */
+#main {
+  /*定位*/
+  position: relative;
+  width: 100%;
+}
+
+/* line 238, ../../sass/public/public.scss */
+.box {
+  /*内边距*/
+  float: left;
+  width: 50%;
+  background: #F0F0F0;
+  /*商品区图*/
+  /*商品区简介*/
+}
+/* line 244, ../../sass/public/public.scss */
+.box > .pic {
+  /*边框*/
+  width: 100%;
+  margin-top: 0.13rem;
+  position: relative;
+}
+/* line 249, ../../sass/public/public.scss */
+.box > .pic > .hoot {
+  height: 0.5rem;
+  font-size: 0.18rem;
+  /* text-align: right; */
+  position: absolute;
+  color: #fff;
+  right: 0;
+  line-height: 0.36rem;
+  padding: 0.1rem;
+}
+/* line 258, ../../sass/public/public.scss */
+.box > .pic > .hoot > img {
+  height: 100%;
+}
+/* line 262, ../../sass/public/public.scss */
+.box > .pic > .cuttime {
+  height: 0.5rem;
+  line-height: 0.56rem;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 0.25rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 272, ../../sass/public/public.scss */
+.box > .pic > img {
+  width: 100%;
+}
+/* line 277, ../../sass/public/public.scss */
+.box > .content {
+  background: #fff;
+  padding-bottom: 0.24rem;
+  border-radius: 0 0 0.1rem 0;
+}
+/* line 281, ../../sass/public/public.scss */
+.box > .content > .year {
+  height: 0.82rem;
+  line-height: 0.82rem;
+  font-size: 0.25rem;
+  padding: 0 0.22rem;
+}
+/* line 287, ../../sass/public/public.scss */
+.box > .content > .year > .price {
+  color: #A0A0A0;
+}
+/* line 289, ../../sass/public/public.scss */
+.box > .content > .year > .price > .year {
+  color: #FE7458;
+}
+/* line 292, ../../sass/public/public.scss */
+.box > .content > .year > .price > .year1 {
+  color: #FE7458;
+  font-size: 0.45rem;
+}
+/* line 297, ../../sass/public/public.scss */
+.box > .content > .year > .hoot {
+  line-height: 0.98rem;
+  color: #A0A0A0;
+}
+/* line 300, ../../sass/public/public.scss */
+.box > .content > .year > .hoot > img {
+  height: 0.25rem;
+  padding-right: 0.1rem;
+  vertical-align: text-top;
+}
+/* line 307, ../../sass/public/public.scss */
+.box > .content > .text {
+  font-size: 0.28rem;
+  padding: 0 0.22rem;
+  line-height: 0.32rem;
+}
+
+/* line 4, ../../sass/integralmall/integral_recharge.scss */
+.integral_recharge_container > .list {
+  align-items: center;
+  font-size: 0.28rem;
+  color: #6F6F6F;
+  height: 0.86rem;
+  padding: 0 0.43rem;
+  background: #fff;
+  margin-bottom: 1px;
+}
+/* line 14, ../../sass/integralmall/integral_recharge.scss */
+.integral_recharge_container > .list > .item_r {
+  font-weight: 600;
+}
+/* line 16, ../../sass/integralmall/integral_recharge.scss */
+.integral_recharge_container > .list > .item_r > input {
+  border: 0;
+  text-align: right;
+}
+/* line 19, ../../sass/integralmall/integral_recharge.scss */
+.integral_recharge_container > .list > .item_r > input::-webkit-input-placeholder {
+  color: #B9B9B9;
+}
+/* line 22, ../../sass/integralmall/integral_recharge.scss */
+.integral_recharge_container > .list > .item_r > input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #B9B9B9;
+}
+/* line 26, ../../sass/integralmall/integral_recharge.scss */
+.integral_recharge_container > .list > .item_r > input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #B9B9B9;
+}
+/* line 30, ../../sass/integralmall/integral_recharge.scss */
+.integral_recharge_container > .list > .item_r > input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #B9B9B9;
+}
+/* line 37, ../../sass/integralmall/integral_recharge.scss */
+.integral_recharge_container > .but {
+  margin: 0.6rem 0.43rem;
+  background: #af773e;
+  font-size: 0.42rem;
+  color: #fff;
+  height: 0.85rem;
+}

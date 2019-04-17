@@ -1,0 +1,4 @@
+1、调用同步接口即：ImageSyncScanRequestSample.php
+2、文件内修改：1、配置文件aliyun.ak.ini内的accessKeyId，和accessKeySecret（例子里面的是我个人的）
+3、修改ImageSyncScanRequestSample.php文件的图片的外网地址
+4、根据返回的结果判断是否合格，文件内已写结果备注

@@ -1,0 +1,232 @@
+<include file="Public/min-header"/>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css"/>
+<div class="wrapper">
+    <include file="Public/breadcrumb"/>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-list"></i> 用户列表</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="navbar navbar-default">
+                        <form action="" id="search-form2" class="navbar-form form-inline" method="post" onsubmit="return false">
+                            <div class="form-group">
+                                <label class="control-label" for="input-mobile">手机号码</label>
+                                <div class="input-group">
+                                    <input type="text" name="mobile" value="" placeholder="手机号码" id="input-mobile" class="form-control">
+                                    <!--<span class="input-group-addon" id="basic-addon2"><i class="fa fa-search"></i></span>-->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="input_user_id">用户id</label>
+                                <div class="input-group">
+                                    <input type="text" name="user_id" value="" placeholder="用户ID" id="input_user_id" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="input-nickname">微信昵称</label>
+                                <div class="input-group">
+                                    <input type="text" name="nickname" value="" placeholder="微信昵称"  id="input-nickname" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="input-nickname">认证状态</label>
+                                <select name='is_authentication' class="form-control">
+                                    <option value='0'>请选择</option>
+                                    <option value='1'>已实名</option>
+                                    <option value='2'>未实名</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="input-nickname">星级</label>
+                                <select name='store_level' class="form-control">
+                                    <option value='0'>请选择</option>
+                                    <volist name="store_level" id="vo" >
+                                        <option value='{$vo['store_level_id']}'>{$vo['store_name']}</option>
+                                    </volist>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="input-nickname">虚/实</label>
+                                <select name='fictitious' class="form-control">
+                                    <option value='0'>请选择</option>
+                                    <option value='1'>正常</option>
+                                    <option value='2'>虚拟</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="input-nickname">优选店铺</label>
+                                <select name='is_goodstore' class="form-control">
+                                    <option value='0'>请选择</option>
+                                    <option value='1'>是</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="input-nickname">时间</label>
+                                <input class="form-control form_datetime" type="text" name="reg_time" value="" size="6">
+
+                            </div>
+
+                            <div class="form-group">
+                                <input type="hidden" name="order_by" value="user_id">
+                                <input type="hidden" name="sort" value="desc">
+                                <button type="submit" onclick="ajax_get_table('search-form2',1)" id="button-filter search-order" class="btn btn-primary pull-right"><i class="fa fa-search"></i> 筛选</button>
+                            </div>
+                            <br>
+                            <button type="button" onclick="send_message(0);" class="btn btn-primary"><i class="fa"></i> 发送站内信</button>
+                            <button type="button" onclick="send_mail(0);" class="btn btn-primary"><i class="fa"></i> 发送邮箱</button>
+                            <button type="button" onclick="pipei_fans(0);" class="btn btn-primary"><i class="fa"></i> 粉丝匹配</button>
+                            <a href="{:U('User/add_user')}" class="btn btn-info pull-right">添加会员</a>
+                        </form>
+                    </div>
+                    <div id="ajax_return">
+
+                    </div>
+                </div>
+            </div>
+        </div>        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<script>
+    $('select[name="store_level"]').children('option').eq(2).remove();
+
+    $(document).ready(function(){
+        ajax_get_table('search-form2',1);
+
+    });
+
+    // ajax 抓取页面
+    function ajax_get_table(tab,page){
+        cur_page = page; //当前页面 保存为全局变量
+        $.ajax({
+            type : "POST",
+            url:"/Admin/user/ajaxindex/p/"+page,//+tab,
+            data : $('#'+tab).serialize(),// 你的formid
+            success: function(data){
+                $("#ajax_return").html('');
+                $("#ajax_return").append(data);
+            }
+        });
+    }
+
+    // 点击排序
+    function sort(field)
+    {
+        $("input[name='order_by']").val(field);
+        var v = $("input[name='sort']").val() == 'desc' ? 'asc' : 'desc';
+        $("input[name='sort']").val(v);
+        ajax_get_table('search-form2',cur_page);
+    }
+
+    //发送站内信
+    function send_message(id)
+    {
+        var obj = $("input[name*='selected']");
+        var url = "{:U('Admin/User/sendMessage')}";
+        if(obj.is(":checked")){
+            var check_val = [];
+            for(var k in obj){
+                if(obj[k].checked)
+                    check_val.push(obj[k].value);
+            }
+            url += "?user_id_array="+check_val;
+        }
+        layer.open({
+            type: 2,
+            title: '站内信',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['580px', '480px'],
+            content: url
+        });
+    }
+
+    //发送邮件
+    function send_mail(id)
+    {
+        var obj = $("input[name*='selected']");
+        var url = "{:U('Admin/User/sendMail')}";
+        if(obj.is(":checked")){
+            var check_val = [];
+            for(var k in obj){
+                if(obj[k].checked)
+                    check_val.push(obj[k].value);
+            }
+            url += "?user_id_array="+check_val;
+            layer.open({
+                type: 2,
+                title: '发送邮箱',
+                shadeClose: true,
+                shade: 0.8,
+                area: ['580px', '480px'],
+                content: url
+            });
+        }else{
+            layer.msg('请选择会员');
+        }
+
+    }
+
+    //匹配粉丝
+    function pipei_fans(id)
+    {
+        var obj = $("input[name*='selected']");
+        var url = "{:U('Admin/User/pipeiFans')}";
+        if(obj.is(":checked")){
+            var check_val = [];
+            for(var k in obj){
+                if(obj[k].checked)
+                    check_val.push(obj[k].value);
+            }
+            url += "?user_id_array="+check_val;
+            layer.open({
+                type: 2,
+                title: '粉丝匹配',
+                shadeClose: true,
+                shade: 0.8,
+                area: ['580px', '480px'],
+                content: url
+            });
+        }else{
+            layer.msg('请选择会员');
+        }
+
+    }
+
+    /**
+     * 回调函数
+     */
+    function call_back(v) {
+        layer.closeAll();
+        if (v == 1) {
+            layer.msg('发送成功');
+        } else {
+            layer.msg('发送失败');
+        }
+    }
+
+    $('.form_datetime').datetimepicker({
+        format: 'yyyy-mm',
+        autoclose: true,
+        todayBtn: true,
+        startView: 'year',
+        minView:'year',
+        maxView:'decade',
+        language:  'zh-CN',
+    });
+
+
+</script>
+</body>
+</html>

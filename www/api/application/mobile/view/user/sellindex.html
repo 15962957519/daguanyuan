@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="http://cdn.weipaitang.com/">
+    <title>卖家中心</title>
+    {load href="/static/js/vue.min.js" /}
+
+    <script src="/static/js/plugin/main.js"></script>
+    {css href="/static/css/commonm.css"}
+    {load href="/static/js/plugin/vueresource.min.js" /}
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+        !function () {
+            function a() {
+                var clientWidth = document.documentElement.clientWidth > 640 ? 640 : document.documentElement.clientWidth;
+                document.documentElement.style.fontSize = clientWidth / 7.5 + "px";
+
+                //适应字体调整
+                var div = document.createElement("div");
+                div.style.width = "7.5rem";
+                document.documentElement.appendChild(div);
+                document.documentElement.style.fontSize = document.documentElement.style.fontSize.replace("px", "") * clientWidth / div.clientWidth + "px";
+                document.documentElement.removeChild(div);
+            }
+            var b = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(b), b = setTimeout(a, 300)
+            }, !1), a()
+        }(window);
+    </script>
+
+<body>
+<div id="contentbox">
+
+    <div id="boxheader"><my_user_center_header></my_user_center_header></div>
+
+    <div class="orderMain">
+        <div class="myOrder" href="/reports">
+            <div class="title">
+                <span style="float: left">卖卖卖</span>
+                <span>销售报表</span>
+            </div>
+            <div class="arrow">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+        </div>
+        <div class="orderMenu seller">
+            <a href="/my/sale/waitPay">
+                <div><span>
+                                                <i class="wptFi icon-notpay"></i>
+                    </span>待付款</div>
+            </a>
+            <a href="/my/sale/notDelivery/">
+                <div><span>
+                                                <i class="wptFi icon-time"></i>
+                    </span>未发货</div>
+            </a>
+            <a href="/my/sale/waitReceive/">
+                <div><span>
+                                                <i class="wptFi icon-waitreceive"></i>
+                    </span>待收货</div>
+            </a>
+            <a href="/my/sale/afterSale/">
+                <div><span>
+                                                <i class="wptFi icon-aftersale"></i>
+                    </span>售后</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="menuMain seller">
+        <div class="menuItem balance">
+                <span class="wptFi fi-stack" style="color: #ffad18">
+                    <i class="wptFi icon-square fi-stack-2x"></i>
+                    <i class="wptFi icon-balance fi-color-fff fi-stack-1x5"></i>
+                </span>
+            <div class="title">余额</div>
+            <div class="arrow" href="/balance">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+            <div class="info money">0.00 元</div>
+        </div>
+        <div class="menuItem message">
+                <span class="wptFi fi-stack" style="color: #169ada">
+                    <i class="wptFi icon-square fi-stack-2x"></i>
+                    <i class="wptFi icon-message fi-color-fff fi-stack-1x5"></i>
+                </span>
+            <div class="title">消息中心</div>
+            <div class="arrow" href="/message">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+            <div class="info message">1</div>
+        </div>
+        <div class="menuItem saleList">
+                <span class="wptFi fi-stack" style="color: #2fcbc0">
+                    <i class="wptFi icon-square fi-stack-2x"></i>
+                    <i class="wptFi icon-salelist fi-color-fff fi-stack-1x5"></i>
+                </span>
+            <div class="title">商品区管理</div>
+            <div class="arrow" href="/my/saleList">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+            <div class="info txt">竞拍中 0 单</div>
+        </div>
+        <div class="menuItem article">
+                <span class="wptFi fi-stack" style="color: #169ada">
+                    <i class="wptFi icon-square fi-stack-2x"></i>
+                    <i class="wptFi icon-hidegoodso1 fi-color-fff fi-stack-1x5"></i>
+                </span>
+            <div class="title">微拍预展</div>
+            <div class="arrow" href="/webApp/article/exhibits?type=seller">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+        </div>
+    </div>
+    <div class="menuMain seller">
+        <div class="menuItem sendSaleMsg">
+                <span class="wptFi fi-stack" style="color: #2fcbc0">
+                    <i class="wptFi icon-square fi-stack-2x"></i>
+                    <i class="wptFi icon-mail fi-color-fff fi-stack-1x5"></i>
+                </span>
+            <div class="title">群发消息</div>
+            <div class="arrow" href="/auction/sendSaleMsg">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+        </div>
+        <div class="menuItem productInventory">
+                <span class="wptFi fi-stack" style="color: #86d307">
+                    <i class="wptFi icon-square fi-stack-2x"></i>
+                    <i class="wptFi icon-productinventory fi-color-fff fi-stack-1x5"></i>
+                </span>
+            <div class="title">产品库 / 名匠库</div>
+            <div class="arrow" href="/userManage/productInventory">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+        </div>
+        <div class="menuItem thirdPart">
+                <span class="wptFi fi-stack" style="color: #40ace1">
+                    <i class="wptFi icon-square fi-stack-2x"></i>
+                    <i class="wptFi icon-more fi-color-fff fi-stack-1x5"></i>
+                </span>
+            <div class="title">扩展服务</div>
+            <div class="arrow" href="/my/thirdPart">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+            <div class="info txt">新增营销工具</div>
+        </div>
+        <div class="menuItem help">
+                <span class="wptFi fi-stack" style="color: #3ccec4">
+                    <i class="wptFi icon-square fi-stack-2x"></i>
+                    <i class="wptFi icon-bailintro fi-color-fff fi-stack-1x"></i>
+                </span>
+            <div class="title">帮助中心</div>
+            <div class="arrow" href="http://mp.weixin.qq.com/s/ix8D5gC-42SQ9n458hTnlg">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="menuMain seller">
+        <div class="menuItem buyer">
+                <span class="wptFi fi-stack" style="color: #ffad18">
+                    <i class="wptFi icon-square fi-stack-2x"></i>
+                    <i class="wptFi icon-my-o fi-color-fff fi-stack-1x2"></i>
+                </span>
+            <div class="title">买家中心</div>
+            <div class="arrow" href="/user/index">
+                <i class="wptFi icon-arrowright"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .supportBanner {
+        width: 100%;
+        text-align: center;
+        height: 49px;
+        line-height: 49px;
+        font-size: 12px;
+        border-top: 1px solid #eaeae8;
+        background-color: #F8F8F8;
+        margin-top: 10px;
+        color: #888;
+        visibility: hidden;
+    }
+
+    .supportBanner a {
+        color: #F2B896
+    }
+</style>
+{load href="/static/js/plugin/zepto.min.js" /}
+<script src="/static/js/plugin/usercenter_index.js"></script>
+<div class="supportBanner">
+    由&nbsp;<a href="http://m.weipaitang.com/">微拍堂</a>&nbsp;免费技术支持
+</div>
+
+{include file="common/menu" /}
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<style type="text/css">
+    .mainMenu {
+        position: fixed;
+        width: 100%;
+        max-width: 640px;
+        height: 50px;
+        bottom: 0px;
+        background-color: #FCFCFC;
+        border-top: 1px solid #EAEAE8;
+        font-size: 12px;
+    }
+
+    .mainMenu.max {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .mainMenu div {
+        width: 25%;
+        height: 22px;
+        line-height: 22px;
+        float: left;
+        text-align: center;
+        padding-top: 28px;
+        background-image: url(/static/img/menu.png);
+        background-repeat: no-repeat;
+        background-size: 27px auto;
+        color: #888;
+    }
+
+    .mainMenu div.selected {
+        background-image: url(/static/img/menu.png);
+        color: #00cc;
+    }
+
+    .mainMenu a div {
+        color: #888;
+        position: relative;
+    }
+
+    .mainMenu .myHome {
+        background-position: 50% 3px;
+    }
+
+    .mainMenu .publish {
+        background-position: 50% -56px;
+    }
+
+    .mainMenu .find {
+        background-position: 50% -45px;
+    }
+
+    .mainMenu .category {
+        background-position: 50% -97px;
+    }
+
+    .mainMenu .find .redPoint {
+        position: absolute;
+        top: 7px;
+        padding: 0;
+        left: 50%;
+        margin-left: 8px;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: #DF1F0A;
+        display: none;
+    }
+
+    .mainMenu .my {
+        background-position: 50% -146px;
+    }
+
+    /*活动图标*/
+    .mainMenu .find.activity {
+        height: 25px;
+        background-image: url(/webApp/images/activity/1612131/findIcon.png);
+        background-size: 25px auto;
+        background-position: center 4px;
+        background-repeat: no-repeat;
+    }
+
+    .mainMenu .find.vote .redPoint{
+        display: block;
+    }
+</style>
+<div class="mainMenu">
+    <a href="/index">
+        <div class="myHome selected">首页</div>
+    </a>
+    <a href="/fabu">
+        <div class="category">发布</div>
+    </a>
+
+    <router-link class="tab-item" to="/find">
+        <div class="find">
+            <span>拍卖圈</span>
+            <div class="redPoint"></div>
+        </div>
+    </router-link>
+
+    <a href="/user/index">
+        <div class="my">我的</div>
+    </a>
+</div>

@@ -1,0 +1,996 @@
+
+.topBanner {
+    width: 100%;
+    background-color: #fafafa;
+    border-bottom: 1px solid #bfbfbf;
+    display: table;
+}
+
+.fixtop {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.topBanner .btn {
+    margin: 8px;
+    display: inline-block;
+    float: right;
+    padding: 8px 10px;
+    background-color: #fff;;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 4px;
+    border: 1px solid #fe0100;
+    color: #fe0100;
+}
+
+.topBanner .moreSetCancel, .topBanner .draft {
+    float: left;
+    text-align: left;
+    background-color: #FFF;
+    font-size: 15px;
+    border: 1px solid #5f646e;
+    color: #5f646e;
+}
+
+.editMain {
+    width: 94%;
+    margin: 0 3%;
+}
+
+.editMain .desc {
+    border-bottom: 1px solid #f5f5f5;
+    margin: 0 10px;
+}
+
+.editMain .desc input {
+    border: none;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    padding: 4px 4px;
+    height: 40px;
+    margin-top: 12px;
+    font-size: 15px;
+    border-radius: 2px;
+    color: #373737;
+}
+
+.editMain .desc textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    padding: 4px 4px;
+    height: 120px;
+    margin-top: 12px;
+    font-size: 15px;
+    border-radius: 2px;
+    color: #373737;
+}
+
+.editMain .goodsImgList {
+    clear: both;
+    margin: 10px 10px 4px 10px;
+    display: table;
+}
+
+.editMain .goodsImgList div {
+    position: relative;
+    float: left;
+    width: 80px;
+    margin-right: 2px;
+    margin-left: 4px;
+    height: 80px;
+    display: block;
+    margin-bottom: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+}
+
+.editMain .goodsImgList div.img .delete {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 3px;
+    top: 3px;
+    margin: 0;
+    padding: 0;
+    background-image: url(/Public/img/delete.png);
+    background-size: 100%;
+}
+
+.editMain .goodsImgList div.addImg {
+    background: url(/Public/img/addimg.png) no-repeat;
+    background-size: 80px;
+}
+
+.editMain .saleItem {
+    background: #FFF;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    margin: 0 4%;
+    display: table;
+    width: 92%;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.editMain .saleItem:last-child {
+    border-bottom: none;
+}
+
+.editMain .saleItem.endTime {
+    background-image: url(/Public/img/calendar.png);
+    background-position: 100% center;
+    background-size: auto 68%;
+    background-repeat: no-repeat;
+}
+
+.editMain .saleItem.category {
+    width: 92%;
+    background-image: url(/Public/img/categoryIcon.png);
+    background-size: auto 68%;
+    background-position: 100% center;
+    background-repeat: no-repeat;
+}
+
+.editMain .saleItem.bzj {
+    background-image: url(/Public/img/shield.png);
+    background-position: 100% center;
+    background-size: auto 68%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.editMain .saleItem.bzj.disable {
+    background-image: url(/Public/img/shieldDisable.png);
+}
+
+.editMain .saleItem.bzj.disable:after {
+    content: '';
+    color: #a8a8a8;
+    position: absolute;
+    right: 45px;
+    font-size: 14px;
+    line-height: 48px;
+}
+
+.editMain .saleItem.disable .bidBzjInput span {
+    color: #a8a8a8;
+}
+
+.editMain .saleItem.bzj .bidBzjList {
+    position: absolute;
+    left: -4%;
+    width: 108%;
+    background-color: #FFF;
+    height: 0px;
+    overflow-x: hidden;
+    bottom: 0;
+}
+
+.editMain .saleItem.bzj .bidBzjList div.bzjItem {
+    float: left;
+    display: block;
+    width: 33%;
+    height: 45px;
+    line-height: 45px;
+    color: #999;
+    font-size: 15px;
+    text-align: center;
+}
+
+.editMain .saleItem.bzj .bidBzjList div.disable {
+    color: #a8a8a8;
+}
+
+.editMain .saleItem .lihead {
+    line-height: 48px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    float: left;
+    width: 90px;
+}
+
+.editMain .saleItem .endTimeInput, .editMain .saleItem .category {
+    float: left;
+}
+
+.editMain .saleItem .endTimeInput span, .editMain .saleItem .category {
+    line-height: 48px;
+    font-size: 16px;
+    color: #999;
+    margin: 0 10px;
+}
+
+.endTimeList {
+    width: 100%;
+    background-color: #FFF;
+}
+
+.endTimeList dl dt {
+    width: 100%;
+    clear: both;
+    color: #999;
+    font-size: 15px;
+    text-indent: 10px;
+    padding: 10px;
+}
+
+.endTimeList dl dd {
+    float: left;
+    width: 28%;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    margin: 0px 5px 10px 8px;
+}
+
+.editMain .saleItem .switchBtn {
+    float: right;
+    text-indent: -9999px;
+    display: block;
+    width: 50px;
+    overflow: hidden;
+    height: 30px;
+    background: transparent url(/Public/img/switchButton.png) no-repeat;
+    -webkit-transition: background-position 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 8px 0;
+    background-position: -20px 0px;
+    background-size: 70px;
+    border-radius: 16px;
+}
+
+.editMain .saleItem .switchBtn.on {
+    background-position: 0px 0px;
+}
+
+.editMain .saleItem .numInput, .editMain .saleItem .bidBzjInput {
+    float: left;
+    font-family: "Helvetica neue", Verdana, Geneva, sans-serif;
+    height: 48px;
+    line-height: 48px;
+}
+
+.editMain .saleItem .numInput span, .editMain .saleItem .bidBzjInput span,
+.editMain .saleItem .categoryInput span {
+    line-height: 48px;
+    font-size: 16px;
+    color: #999;
+    margin: 0 10px;
+}
+
+.editMain .saleItem .numInput span.hover {
+    border-right: 2px solid red;
+}
+
+.editMain .tip {
+    color: #8c8c8c;
+    margin: 0px 15px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.wptLoading .wptMask {
+    opacity: 0.4;
+}
+
+.wptLoading .loading .process {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: 5px;
+    color: #FFF;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    text-indent: 0px;
+}
+
+.editMain {
+    width: 100%;
+    margin: 60px 0 0 0;
+    display: table;
+    background-color: #FFF;
+}
+
+.setBox {
+    background-color: #FFF;
+    width: 100%;
+    display: table;
+}
+
+.cert {
+    position: relative;
+    width: 96%;
+    margin: 0 0 0 4%;
+    border-bottom: 1px solid #f5f5f5;
+    display: table;
+    background-image: url(/Public/img/certIcon.png);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    background-size: auto 64%;
+    line-height: 50px;
+    font-size: 16px;
+}
+
+.cert.uploaded:after {
+    content: '已上传';
+    color: #999;
+    position: absolute;
+    right: 50px;
+    font-size: 15px;
+    line-height: 50px;
+    top: 0px;
+}
+
+.wptMultiConfirm .btn-confirm.deleteCert {
+    color: #fe0100;
+}
+
+.optionalTitle {
+    width: 92%;
+    padding: 12px 4%;
+    color: #8c8c8c;
+    background-color: #efeff4;
+}
+
+.wptCategory, .wptEndtime {
+    display: none;
+}
+
+.categoryBox {
+    position: fixed;
+    background: #ededed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1999;
+}
+
+.categoryBox .categoryTitle {
+    display: table;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.categoryBox .categoryTitle .title {
+    float: left;
+    font-size: 16px;
+    color: #8c8c8c;
+    margin-left: 4%;
+}
+
+.categoryBox .categoryTitle .title label {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.categoryBox .categoryTitle .finish {
+    float: right;
+    font-size: 16px;
+    color: #fe0100;
+    width: 50px;
+    height: 50px;
+    padding: 0 4%;
+    text-align: center;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem {
+    display: table;
+    width: 100%;
+    background-color: #FFF;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div:first-child {
+    background-image: url(/Public/img/categoryListIcon.png?t=2);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    float: left;
+    text-indent: 36px;
+    margin-left: 4%;
+    width: 80%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem.selected div:first-child {
+    background-image: url(/Public/img/categoryListIconSelected.png?t=2);
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category1 {
+    background-position: 0 10px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category2 {
+    background-position: 0 -30px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category3 {
+    background-position: 0 -69px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category4 {
+    background-position: 0 -108px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category5 {
+    background-position: 0 -146px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category6 {
+    background-position: 0 -185px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div:last-child {
+    float: right;
+    width: 21px;
+    height: 21px;
+    margin: 14px 7% 14px 0px;
+    background-image: url(/Public/img/checkIcons.png?t=1);
+    background-size: 100% auto;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem.selected div:last-child {
+    background-position: 0px -21px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div span {
+    margin-left: 8px;
+    font-size: 10px;
+    color: #939393;
+}
+
+.wptCategory .wptMask {
+    opacity: 0.4 !important;
+}
+
+.redcolor {
+    color: #fe0100 !important;
+}
+
+.fixednumMask {
+    position: fixed;
+    width: 100%;
+    opacity: 0;
+    top: 0px;
+    bottom: 0px;
+    background-color: #000;
+    display: none;
+    z-index: 999;
+}
+
+.fixednumMain {
+    position: fixed;
+    bottom: -410px;
+    left: 0px;
+    z-index: 1199;
+    background: #F0F0F0;
+    width: 100%;
+    display: none;
+}
+
+.fixednumMain .tipBanner {
+    height: 42px;
+    width: 100%;
+    background: #F0F0F0;
+    border-top: 1px solid #cacaca;
+    font-size: 16px;
+}
+
+.fixednumMain .tipBanner span.title, .fixednumMain .priceBanner span.title {
+    line-height: 42px;
+    float: left;
+    text-indent: 10px;
+    min-width: 65px
+}
+
+.fixednumMain .tipBanner .last, .fixednumMain .priceBanner .editTxt {
+    float: left;
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    margin: 6px 0;
+    color: #7596D9;
+    text-indent: 4px;
+    overflow: hidden;
+    font-size: 20px;
+    font-family: "Helvetica neue", Verdana, Geneva, sans-serif;
+}
+
+.fixednumMain .tipBanner .close {
+    float: right;
+    width: 42px;
+    height: 42px;
+    background-image: url(/Public/img/close.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 28px;
+}
+
+.fixednumMain .tipBanner .finish {
+    float: right;
+    width: 42px;
+    height: 42px;
+    background-size: 30px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #007aff;
+}
+
+.fixednumMain .priceBanner {
+    background: #fff;
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    width: 100%;
+    position: relative;
+}
+
+.fixednumMain .priceBanner .editTxt .hover {
+    border-right: 2px solid red;
+}
+
+.fixednumMain .priceBanner .tips {
+    color: #999;
+    font-size: 14px;
+    margin-right: 10px;
+    overflow: hidden;
+    height: 42px;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.fixednumMain .btnBanner {
+    margin: 0 auto;
+    width: 96%;
+    padding: 10px 0px;
+    display: table;
+}
+
+.fixednumMain .btnBanner .confirmBtn, .fixednumMain .btnBanner .fixedPrice {
+    background: #fe0100;
+    padding: 2.5% 0;
+    border-radius: 4px;
+    width: 66%;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+}
+
+.fixednumMain .btnBanner .fixedPrice {
+    background: #01B7F0;
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.fixednumMain .btnBanner .confirmBtn:only-child {
+    padding: 10px 0;
+    width: 100%;
+}
+
+.fixednumMain .numkey {
+    width: 100%;
+    background: #fff;
+    display: table;
+}
+
+.fixednumMain .numkey ul {
+    padding: 0;
+    margin: 0;
+}
+
+.fixednumMain .numkey ul, .fixednumMain .numkey li {
+    text-decoration: none;
+    list-style: none;
+    vertical-align: middle;
+}
+
+.fixednumMain .numkey ul li {
+    width: 33.1%;
+    border-bottom: 1px solid #b3b3b3;
+    border-right: 1px solid #b3b3b3;
+    height: 50px;
+    float: left;
+    font-size: 28px;
+    font-family: "Helvetica neue", Verdana, Geneva, sans-serif;
+    text-align: center;
+    background: #fff;
+}
+
+.fixednumMain .numkey ul li:nth-child(3n) {
+    border-right: none;
+}
+
+.fixednumMain .numkey ul li.delete {
+    background-image: url(/Public/img/backspace.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    background-color: #D1D5DA;
+}
+
+.fixednumMain .numkey ul li.othernum {
+    background-color: #D1D5DA;
+    line-height: 50px;
+}
+
+.fixednumMain .numkey ul li div {
+    color: #000;
+}
+
+.fixednumMain .numkey ul li span {
+    position: relative;
+    font-size: 12px;
+    top: -18px;
+    color: #000;
+}
+
+.loadNextPage {
+    width: 100%;
+    height: 40px;
+    visibility: visible;
+}
+
+.loadNextPage .loading {
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    background-image: url(/Public/img/loadingData.gif);
+    background-size: auto 70%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-align: center;
+    text-indent: 15px;
+}
+
+.wptMask {
+    position: fixed;
+    height: 100%;
+    opacity: 0;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #000;
+    z-index: 1999;
+}
+
+.wptShare, .wptAlert, .wptConfirm, .wptMultiConfirm, .wptLoading {
+    display: none;
+}
+
+.wptShare .shareTip {
+    position: fixed;
+    width: 96%;
+    height: 286px;
+    magin: 0 2%;
+    top: 0px;
+    background-image: url(/Public/img/share.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: auto 55%;
+    z-index: 9999;
+}
+
+.wptAlert .dialog, .wptConfirm .dialog, .wptMultiConfirm .dialog {
+    position: fixed;
+    background: #ededed;
+    width: 100%;
+    bottom: -180px;
+    z-index: 1999;
+}
+
+.wptAlert .dialog .tip, .wptConfirm .dialog .tip, .wptMultiConfirm .dialog .tip {
+    line-height: 30px;
+    padding: 10px 0px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.wptMultiConfirm .dialog .tip {
+    padding: 0;
+}
+
+.wptAlert .dialog .tip .msg, .wptConfirm .dialog .tip .msg {
+    text-align: center;
+    line-height: 30px;
+}
+
+.wptAlert .dialog .tip .msg.font18, .wptConfirm .dialog .tip .msg.font18 {
+    font-size: 18px;
+}
+
+.wptAlert .dialog .tip .msg.faq, .wptConfirm .dialog .tip .msg.faq {
+    font-size: 17px;
+    background-image: url(/Public/img/faq.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: auto 100%;
+    line-height: 30px;
+    height: 60px;
+    text-align: left;
+    padding-left: 80px;
+    padding-right: 12px;
+}
+
+.wptAlert .dialog .tip .msg.smallFaq, .wptConfirm .dialog .tip .msg.smallFaq {
+    font-size: 18px;
+    background-image: url(/Public/img/faq.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: auto 100%;
+    line-height: 40px;
+    height: 40px;
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 12px;
+}
+
+.wptAlert .btns, .wptConfirm .btns {
+    width: 87%;
+    margin: 0 auto;
+    padding: 15px 0px;
+}
+
+.wptAlert .btns .btn-confirm, .wptAlert .btns .btn-cancel, .wptConfirm .btns .btn-confirm,
+.wptConfirm .btns .btn-cancel {
+    border: 1px solid #ceced1;
+    background: #f7f7f7;
+    padding: 10px 14px;
+    color: #454545;
+    border-radius: 4px;
+    width: 92%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.wptAlert .btns .btn-green, .wptConfirm .btns .btn-green {
+    background-color: #fe0100;
+    color: #fff;
+    border: none;
+}
+
+.wptAlert .btns .btn-cancel, .wptConfirm .btns .btn-cancel {
+    background-color: #858c96;
+    margin: 22px 0 7px 0;
+    color: #fff;
+    border: none;
+}
+
+.wptAlert .btns .btn-delete, .wptConfirm .btns .btn-delete {
+    background-color: #fe0100;
+    color: #fff;
+    border: none;
+}
+
+.wptMultiConfirm .btns {
+    width: 100%;
+    background-color: #D4D4DC;
+}
+
+.wptMultiConfirm .btns .btn-confirm, .wptMultiConfirm .btns .btn-cancel {
+    height: 49px;
+    line-height: 49px;
+    margin-top: 1px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #F3F3F3;
+}
+
+.wptMultiConfirm .btns .btn-cancel {
+    margin-top: 8px;
+}
+
+.wptPassword {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    bottom: 0px;
+    background-color: #efeff4;
+    display: none;
+}
+
+.wptPassword .dialog {
+    width: 90%;
+    margin: 80px auto 0 auto;
+    height: 100px;
+}
+
+.wptPassword .dialog .tip {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.wptPassword .dialog .password {
+    width: 293px;
+    margin: 10px auto 0 auto;
+    height: 48px;
+    border: 1px solid #c4c4c4;
+}
+
+.wptPassword .dialog .password .passwordKey {
+    float: left;
+    width: 48px;
+    border-right: 1px solid #c4c4c4;
+    height: 48px;
+    line-height: 48px;
+    background-color: #FFF;
+    text-align: center;
+    font-size: 20px;
+}
+
+.wptPassword .dialog .password .passwordKey:last-child {
+    border-right: none;
+}
+
+.wptPassword .dialog .password .passwordKey .point {
+    width: 48px;
+    height: 48px;
+    background-image: url(/Public/img/passwordPoint.png);
+    background-position: center;
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+.wptPassword .keyboard {
+    position: absolute;
+    width: 100%;
+    background-color: #FFF;
+    display: table;
+    bottom: 0px;
+}
+
+.wptPassword .keyboard ul {
+    padding: 0;
+    margin: 0;
+}
+
+.wptPassword .keyboard ul, .wptPassword .keyboard li {
+    text-decoration: none;
+    list-style: none;
+    vertical-align: middle;
+}
+
+.wptPassword .keyboard ul li {
+    width: 33.1%;
+    border-bottom: 1px solid #d2d5d8;
+    border-right: 1px solid #d2d5d8;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    font-size: 28px;
+    font-family: "Helvetica neue", Verdana, Geneva, sans-serif;
+    text-align: center;
+    background-color: #FFF;
+    color: #000;
+}
+
+.wptPassword .keyboard ul li:nth-child(3n) {
+    border-right: none;
+}
+
+.wptPassword .keyboard ul li.delete {
+    background-image: url(/Public/img/backspace.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    background-color: #efeff4;
+}
+
+.wptPassword .keyboard ul li.blank {
+    background-color: #efeff4;
+    font-size: 17px;
+}
+
+.wptLoading {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1999;
+}
+
+.wptLoading .loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url(/Public/img/handling.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #FFF;
+    opacity: 0;
+    line-height: 80px;
+    text-align: center;
+    text-indent: 15px;
+    z-index: 9999;
+}
+
+.wptLoading .loading .process {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: 5px;
+    color: #FFF;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    text-indent: 0px;
+}
+
+.wptNotice {
+    position: fixed;
+    bottom: 50px;
+    width: 94%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 30px;
+    padding: 8px 3%;
+    color: #FFF;
+    font-size: 14px;
+    display: none;
+}
+
+.wptNotice .msg {
+    float: left;
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.wptNotice .msg img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.wptNotice .msg span {
+    margin-left: 55px;
+}
+
+.wptNotice .btn {
+    float: left;
+    width: 20%;
+    height: 28px;
+    line-height: 28px;
+    margin: 1px 0;
+    background-color: #C7160A;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+}

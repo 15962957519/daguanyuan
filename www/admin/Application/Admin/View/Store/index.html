@@ -1,0 +1,293 @@
+<include file="Public/min-header"/>
+
+<link href="__PUBLIC__/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/plugins/daterangepicker/moment.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+
+<div class="wrapper">
+    <include file="Public/breadcrumb"/>
+    <section class="content" style="padding:0px 15px;">
+        <!-- Main content -->
+        <div class="container-fluid">
+            <div class="pull-right">
+                <a href="javascript:history.go(-1)" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="返回"><i class="fa fa-reply"></i></a>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body ">
+                    <ul class="nav nav-tabs">
+                        <foreach name="group_list" item="vo">
+                            <li <if condition="$vo['store_level_id'] eq $current_id">class="active"</if>>
+                            <a href="javascript:void(0)" data-url="{:U('Store/index',array('store_level_id'=>$vo['store_level_id']))}" data-toggle="tab" onclick="goset(this)">{$vo.store_name}</a>
+                            </li>
+                        </foreach>
+                    </ul>
+                    <!--表单数据-->
+                    <form method="post" id="handlepost" action="{:U('Store/handle',array('store_level_id'=>$res_message['store_level_id']))}" enctype="multipart/form-data">
+                        <!--通用信息-->
+                        <div class="tab-content" style="padding:20px 0px;">
+                            <div class="tab-pane active" id="tab_tongyong">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                    <tr><p style="font-size: 16px;color: red;">拍店功能</p></tr>
+                                    <tr style="font-size: 16px;color: red;">
+                                        <td class="col-sm-2">店铺名称：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="store_name" value="{$res_message.store_name}" >
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-size: 16px;color: red;">
+                                        <td class="col-sm-2">店铺头像：</td>
+                                        <td class="col-sm-8">
+                                            <input type="file" name="store_img" value="" style="float:left" >
+                                            <img src="__PUBLIC__{$res_message.store_img}" width="50" />
+                                        </td>
+                                    </tr>
+                                    <tr style="font-size: 16px;color: red;">
+                                        <td class="col-sm-2">店铺费用：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="store_cost" value="{$res_message.store_cost}" >元
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">在线拍品：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="line_nums" value="{$res_message.line_nums}" >件
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">拍品预展 ：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="line_time1" value="{$res_message.line_time1}" >小时
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">展示时长：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="line_time2" value="{$res_message.line_time2}" >小时
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">商品推荐：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="is_tuijian" value="1" <if condition="$res_message['is_tuijian'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="is_tuijian" value="0" <if condition="$res_message['is_tuijian'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">认证标识：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="is_mark" value="1" <if condition="$res_message['is_mark'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="is_mark" value="0" <if condition="$res_message['is_mark'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">积分兑换：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="is_change" value="1" <if condition="$res_message['is_change'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="is_change" value="0" <if condition="$res_message['is_change'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">保留价：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="is_price" value="1" <if condition="$res_message['is_price'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="is_price" value="0" <if condition="$res_message['is_price'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">流拍编辑：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="is_editer" value="1" <if condition="$res_message['is_editer'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="is_editer" value="0" <if condition="$res_message['is_editer'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">流拍保留：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="last_time" value="{$res_message.last_time}" >小时
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">成交佣金：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="charges" value="{$res_message.charges}" >%
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p style="font-size: 16px;color: red;">营销中心</p></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">粉丝匹配：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="fans" value="{$res_message.fans}" >
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">群发商品：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="products" value="{$res_message.products}" >天/次
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">群发邮件：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="emails" value="{$res_message.emails}" >件/次
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">摇一摇：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="yaoyao" value="{$res_message.yaoyao}" >次/天
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">头条推广：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="is_head" value="1" <if condition="$res_message['is_head'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="is_head" value="0" <if condition="$res_message['is_head'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">天天特价：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="low_price" value="1" <if condition="$res_message['low_price'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="low_price" value="0" <if condition="$res_message['low_price'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">活动专区：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="special" value="1" <if condition="$res_message['special'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="special" value="0" <if condition="$res_message['special'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">推广收益：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="income" value="1" <if condition="$res_message['income'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="income" value="0" <if condition="$res_message['income'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p style="font-size: 16px;color: red;">资金管理</p></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">提现金额：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="tixian_money" value="{$res_message.tixian_money}" > /次
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">到账周期：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="period" value="{$res_message.period}" >天
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">提现手续费：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="tixian_poundage" value="{$res_message.tixian_poundage}" >%
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">提现方式：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="tixian_style" value="{$res_message.tixian_style}" >
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p style="font-size: 16px;color: red;">售后服务</p></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">服务周期：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="sever_time" value="{$res_message.sever_time}" >年
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-sm-2">服务类型：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="sever_type" value="{$res_message.sever_type}" >
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">在线回复：</td>
+                                        <td class="col-sm-8">
+                                            <input type="text" name="line_anser" value="{$res_message.line_anser}" >小时
+                                            <span id="err_attr_name" style="color:#F00; display:none;"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">专属客服：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="is_kefu" value="1" <if condition="$res_message['is_kefu'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="is_kefu" value="0" <if condition="$res_message['is_kefu'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-sm-2">体现新功能：</td>
+                                        <td class="col-sm-8">
+                                            <input type="radio" name="new_function" value="1" <if condition="$res_message['new_function'] eq 1">checked="checked"</if> /> 是
+                                            <input type="radio" name="new_function" value="0" <if condition="$res_message['new_function'] eq 0">checked="checked"</if> /> 否
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <td><input type="hidden" name="inc_type" value="{$inc_type}"></td>
+                                        <td class="text-right"><input class="btn btn-primary" type="button" onclick="adsubmit()" value="保存"></td></tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </form><!--表单数据-->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    function adsubmit(){
+        /*
+        var site_url = $('input[name="site_url"]').val();
+        var urlReg = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\w \.-]*)*$/;
+        if(!urlReg.exec(site_url))
+        {
+           alert('网站域名格式必须是 http://www.xxx.com');
+           return false;
+        }
+        */
+        $('#handlepost').submit();
+    }
+
+    $(document).ready(function(){
+        //get_province();
+    });
+
+    function goset(obj){
+        window.location.href = $(obj).attr('data-url');
+    }
+</script>
+</body>
+</html>

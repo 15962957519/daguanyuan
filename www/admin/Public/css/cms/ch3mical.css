@@ -1,0 +1,32 @@
+
+#centerwell { position: relative; height: 182px; margin: 0; padding: 0;  overflow: hidden; }
+#centerwell li { position: relative; width: 39px; height: 182px; float: left;  background: white; overflow: hidden; cursor: pointer; margin:0 5px;}
+#centerwell h3 { position: absolute; top: 0; left: 0; margin: 0; text-indent: -9999px; width: 39px; height: 182px; }
+#centerwell p { position:absolute; left:85px; top:40px; width: 215px; padding-top: 40px; color: #5f5f5f; font-size: 15px; line-height: 18px; font-family: GeogrotesqueMedium, Helvetica, Arial, sans-serif; letter-spacing: 0pt;}
+#behance h3 { background: url("../../images/cms/x1.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/x1.gif*/ no-repeat white; }#flicker{width:39px }#linkedin{width:39px }#facebook{width:39px }
+#flicker h3 { background: url("../../images/cms/x2.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/x2.gif*/ no-repeat; }
+
+#linkedin h3 { background: url("../../images/cms/x3.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/x3.gif*/ no-repeat; }
+
+#facebook h3 { background: url("../../images/cms/x4.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/x4.gif*/ no-repeat; }
+#behance { }
+#content { position: relative; width: 618px; padding-bottom: 135px; }
+#primary_content { padding-left: 205px; padding-top: 30px; padding-right: 40px; width: 325px; }
+#primary_content p, #primary_content span, #primary_content em { color: #657381; font-size: 12px; line-height: 16px; letter-spacing: 1px; }
+#primary_content h2 { line-height: 33px; text-decoration: none; font-size: 35px; margin-bottom: 5px; font-family: GeogrotesqueLight, Helvetica, Arial, sans-serif; letter-spacing: 1px; }
+#primary_content span.title.current { display: block; font-size: 15px; margin-bottom: 60px; font-family: GeogrotesqueReg, Helvetica, Arial, sans-serif; }
+#primary_content h2 a, #primary_content h1, #primary_content h2, #primary_content h3 { color: #00aaf0; }
+#primary_content h3 { margin-top: 38px; margin-left: -213px; padding-left: 3px; border-left: #262b30 210px solid; font-size: 18px; font-family: GeogrotesqueReg, Helvetica, Arial, sans-serif; letter-spacing: 1px; margin-bottom: 12px; }
+#primary_content h5, #primary_content span.location { display: block; color: #9eaebe; font-family: GeogrotesqueMedium, Helvetica, Arial, sans-serif; font-size: 13px; letter-spacing: 1px; }
+#primary_content span.title { }
+#positions li { position: relative; margin-bottom: 20px; }
+#positions li em { display: block; margin-bottom: 4px; }
+#positions li span.date { position: absolute; color: #373e46; font-family: GeogrotesqueReg, Helvetica, Arial, sans-serif; top: -1px; left: -90px; width: 85px; }
+#secondary_content { position: absolute; top: 0; right: 0; width: 190px; background: #262b30; padding-top: 144px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; color: #9eaebe; font-size: 11px; overflow: hidden; }
+#secondary_content h5 { color: #00aaf0; font-size: 18px; font-family: GeogrotesqueReg, Helvetica, Arial, sans-serif; margin-bottom: 8px; letter-spacing: 1px; }
+#secondary_content ul li h6 { color: #9eaebe; font-size: 13px; font-family: GeogrotesqueReg, Helvetica, Arial, sans-serif; letter-spacing: 1px; line-height: 23px; }
+#secondary_content ul li p { color: #657381; line-height: 15px; margin-bottom: 15px; }
+#client_list { font-size: 18px; letter-spacing: 1px; font-family: GeogrotesqueReg, Helvetica, Arial, sans-serif; margin-bottom: 12px; margin-top: 40px; color: #00aaf0; }
+#client_names { float: left; width: 200px; margin: 0; padding: 0; list-style: none; color: #657381; line-height: 16px; margin-bottom: 10px; }
+#client_names li { float: left; width: 10em; margin: 0; padding: 0; }
+#thecssawards { position: absolute; top: 20px; right: 0px; z-index: 555; }

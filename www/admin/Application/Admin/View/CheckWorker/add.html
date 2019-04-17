@@ -1,0 +1,108 @@
+<include file="Public/min-header"/>
+<div class="wrapper">
+    <!-- Content Header (Page header) -->
+   <include file="Public/breadcrumb"/>
+    <section class="content">
+    <!-- Main content -->
+    <!--<div class="container-fluid">-->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-list"></i> 添加员工信息</h3>
+            </div>
+            <div class="panel-body">
+                <form action="" method="post" onsubmit="return checkUserUpdate(this);">
+                    <table class="table table-bordered">
+                    <tbody>
+
+                    <tr>
+                        <td>用户名:</td>
+                        <td><input type="text" name="username" value=""></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>手机号:</td>
+                        <td><input type="text" name="phone" value=""></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>邮箱:</td>
+                        <td><input type="text" name="email" value=""></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>职称:</td>
+                        <td><input type="text" name="worker_level" value=""></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>工号:</td>
+                        <td><input type="text" name="worknumber" value=""></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>部门:</td>
+                        <td>
+                            <select name="departmentnd">
+                                <option value ="1">销售部</option>
+                                <option value ="2" >市场部</option>
+                                <option value ="3">财务部</option>
+                                <option value ="4">技术部</option>
+                            </select>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>备注:</td>
+                        <td>
+                            <textarea name="remark" value="" style="width: 80%;height:200px"></textarea>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit" class="btn btn-info">
+                                <i class="ace-icon fa fa-check bigger-110"></i> 保存
+                            </button>
+                            <a href="javascript:history.go(-1)" data-toggle="tooltip" title="" class="btn btn-default pull-right" data-original-title="返回"><i class="fa fa-reply"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </form>
+
+            </div>
+        </div>
+      </div> 
+    </div>    <!-- /.content -->
+   </section>
+</div>
+<script>
+    function ValidateNumber(e, pnumber){
+        if (!/^\d+$/.test(pnumber)){
+            $(e).val(/^\d+/.exec($(e).val()));
+        }
+        return false;
+    }
+    function checkUserUpdate(){
+        var email = $('input[name="email"]').val();
+        var mobile = $('input[name="mobile"]').val();
+        var password = $('input[name="password"]').val();
+        var password2 = $('input[name="password2"]').val();
+        var level = $('input[name="level"]').val();
+
+        var error ='';
+
+        if(error){
+            layer.alert(error, {icon: 2});  //alert(error);
+            return false;
+        }
+        return true;
+
+    }
+</script>
+</body>
+</html>

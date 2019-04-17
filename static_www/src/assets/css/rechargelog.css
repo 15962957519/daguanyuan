@@ -1,0 +1,431 @@
+@charset "UTF-8";
+/*初始化  reset*/
+/* line 5, ../../sass/public/reset.scss */
+body,
+button,
+dd,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+td,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 26, ../../sass/public/reset.scss */
+body,
+button,
+input {
+  font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53, sans-serif;
+}
+
+/* line 32, ../../sass/public/reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input {
+  font-size: 100%;
+}
+
+/* line 43, ../../sass/public/reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 48, ../../sass/public/reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 52, ../../sass/public/reset.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 56, ../../sass/public/reset.scss */
+fieldset,
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+/* line 62, ../../sass/public/reset.scss */
+a,
+button {
+  cursor: pointer;
+}
+
+/*清除浮动*/
+/* line 72, ../../sass/public/reset.scss */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 78, ../../sass/public/reset.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 82, ../../sass/public/reset.scss */
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+
+/* line 8, ../../sass/public/public.scss */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 17, ../../sass/public/public.scss */
+body {
+  background: #F0F0F0;
+  background-color: #F0F0F0 !important;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* line 24, ../../sass/public/public.scss */
+.fles_level_vertical_center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/**
+ * flex
+ */
+/* line 38, ../../sass/public/public.scss */
+.flex_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 44, ../../sass/public/public.scss */
+.flex_box_space_between, .box > .content > .year, .balance_record_container .list > .top, .balance_record_container .list > .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 51, ../../sass/public/public.scss */
+.flex_box_space_between_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* line 59, ../../sass/public/public.scss */
+.flex_box_item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* line 65, ../../sass/public/public.scss */
+.flex_box_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* line 71, ../../sass/public/public.scss */
+.flex_end {
+  justify-content: flex-end;
+}
+
+/* line 75, ../../sass/public/public.scss */
+.flex_text_height_center {
+  display: flex;
+  align-items: center;
+}
+
+/* line 80, ../../sass/public/public.scss */
+.flex_text_height_width_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 86, ../../sass/public/public.scss */
+.flex_column_height_width_center {
+  display: flex;
+  -webkit-display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+/* line 97, ../../sass/public/public.scss */
+.flex_column_space_around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* line 103, ../../sass/public/public.scss */
+.flex_column_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+ * css3其他
+ */
+/* line 115, ../../sass/public/public.scss */
+.text_nowrap, .box > .content > .self_text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 121, ../../sass/public/public.scss */
+.line_clamp, .box > .content > .text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* line 128, ../../sass/public/public.scss */
+.public_box_sizing {
+  box-sizing: boder-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 137, ../../sass/public/public.scss */
+.paddingclear {
+  padding: 0 !important;
+}
+
+/* line 140, ../../sass/public/public.scss */
+.left {
+  float: left;
+}
+
+/* line 143, ../../sass/public/public.scss */
+.right {
+  float: right;
+}
+
+/* line 146, ../../sass/public/public.scss */
+.clear {
+  clear: both;
+}
+
+/* line 150, ../../sass/public/public.scss */
+.top-1 {
+  margin-top: -1px;
+}
+
+/**
+ * 菜单
+ */
+/* line 235, ../../sass/public/public.scss */
+#canvas {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* line 240, ../../sass/public/public.scss */
+#canvas li, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 247, ../../sass/public/public.scss */
+.canvasli {
+  width: 12.5%;
+  text-align: center;
+}
+
+/* line 251, ../../sass/public/public.scss */
+#canvas li {
+  float: left;
+  background: #fff;
+  padding: 0.12rem 0;
+}
+/* line 255, ../../sass/public/public.scss */
+#canvas li .sjydmenu {
+  font-size: 0.18rem;
+  color: #5c5c5c;
+}
+
+/* line 260, ../../sass/public/public.scss */
+.border_right_0 {
+  border-right: 0 !important;
+}
+
+/**
+     * 瀑布流
+ */
+/* line 268, ../../sass/public/public.scss */
+#main {
+  /*定位*/
+  position: relative;
+  width: 100%;
+}
+
+/* line 273, ../../sass/public/public.scss */
+.box {
+  /*内边距*/
+  float: left;
+  width: 50%;
+  background: #F0F0F0;
+  /*商品区图*/
+  /*商品区简介*/
+}
+/* line 279, ../../sass/public/public.scss */
+.box > .pic {
+  /*边框*/
+  width: 100%;
+  margin-top: 0.13rem;
+  position: relative;
+}
+/* line 284, ../../sass/public/public.scss */
+.box > .pic > .hoot {
+  height: 0.5rem;
+  font-size: 0.18rem;
+  /* text-align: right; */
+  position: absolute;
+  color: #fff;
+  right: 0;
+  line-height: 0.36rem;
+  padding: 0.1rem;
+}
+/* line 293, ../../sass/public/public.scss */
+.box > .pic > .hoot > img {
+  height: 100%;
+}
+/* line 297, ../../sass/public/public.scss */
+.box > .pic > .cuttime {
+  height: 0.5rem;
+  line-height: 0.56rem;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 0.25rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 307, ../../sass/public/public.scss */
+.box > .pic > img {
+  width: 100%;
+}
+/* line 312, ../../sass/public/public.scss */
+.box > .content {
+  background: #fff;
+  padding-bottom: 0.24rem;
+  border-radius: 0 0 0.1rem 0;
+}
+/* line 316, ../../sass/public/public.scss */
+.box > .content > .year {
+  height: 0.82rem;
+  line-height: 0.82rem;
+  font-size: 0.25rem;
+  padding: 0 0.22rem;
+}
+/* line 322, ../../sass/public/public.scss */
+.box > .content > .year > .price {
+  color: #A0A0A0;
+}
+/* line 324, ../../sass/public/public.scss */
+.box > .content > .year > .price > .year {
+  color: #FE7458;
+}
+/* line 327, ../../sass/public/public.scss */
+.box > .content > .year > .price > .year1 {
+  color: #FE7458;
+  font-size: 0.45rem;
+}
+/* line 332, ../../sass/public/public.scss */
+.box > .content > .year > .hoot {
+  line-height: 0.98rem;
+  color: #A0A0A0;
+}
+/* line 335, ../../sass/public/public.scss */
+.box > .content > .year > .hoot > img {
+  height: 0.25rem;
+  padding-right: 0.1rem;
+  vertical-align: text-top;
+}
+/* line 342, ../../sass/public/public.scss */
+.box > .content > .text {
+  font-size: 0.28rem;
+  padding: 0 0.22rem;
+  line-height: 0.32rem;
+}
+/* line 348, ../../sass/public/public.scss */
+.box > .content > .self_text {
+  font-size: 0.28rem;
+  padding: 0 0.22rem;
+  line-height: 0.32rem;
+}
+
+/* line 4, ../../sass/balance/balance_record.scss */
+.balance_record_container .list {
+  padding: 0.2rem 0.5rem 0.2rem 0.3rem;
+  font-size: 0.28rem;
+  color: #6F6F6F;
+  border-bottom: 1px solid #D4D4D4;
+}
+/* line 12, ../../sass/balance/balance_record.scss */
+.balance_record_container .list > .bottom {
+  align-items: center;
+  height: 0.7rem;
+}
+/* line 16, ../../sass/balance/balance_record.scss */
+.balance_record_container .list > .bottom > .text {
+  color: #A40C0C;
+}
+/* line 21, ../../sass/balance/balance_record.scss */
+.balance_record_container > div {
+  background: #fff !important;
+}
+/* line 24, ../../sass/balance/balance_record.scss */
+.balance_record_container > .bottom {
+  margin-top: 0.2rem;
+}

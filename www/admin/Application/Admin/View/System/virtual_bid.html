@@ -1,0 +1,74 @@
+<include file="Public/min-header"/>
+
+<div class="wrapper">
+    <include file="Public/breadcrumb"/>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <nav class="navbar navbar-default">
+                            <div class="collapse navbar-collapse">
+                                <p>虚拟链接<span style="color: #ff1910">出价</span>（注意:直接填写商品goods_id,不要有空格,点击提交即可）</p>
+                                <div>
+                                    <input type="text" name="goods_id_bid" value=""  placeholder="goods_id"> <span>http://api.fanghua.jiuxintangwenhua.com/virtual_bid?goods_id=XXXX </span>
+                                </div>
+                                <p></p>
+                                <button type="button" class="btn btn-default" onclick="do_bid()">提交</button>
+                                <p></p>
+
+                                <p>虚拟链接<span style="color: #ff1910">购买</span>（注意:直接填写商品goods_id,不要有空格,点击提交即可）</p>
+                                <div>
+                                    <input type="text" name="goods_id_buy" value=""  placeholder="goods_id"> <span>http://api.fanghua.jiuxintangwenhua.com/virtual_buy?goods_id=XXXX </span>
+                                </div>
+                                <p></p>
+                                <button type="button" class="btn btn-default" onclick="do_buy()">提交</button>
+                                <p></p>
+                            </div>
+                        </nav>
+                    </div>
+
+                </div><!-- /.box -->
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    function do_bid(){
+        var goods_id = $(" input[ name='goods_id_bid' ] ").val();
+        var url = 'http://api.fanghua.jiuxintangwenhua.com/virtual_bid';
+        if(confirm('确认操作')){
+            $.ajax({
+                type : 'post',
+                url : url,
+                data : {goods_id:goods_id},
+                dataType : 'json',
+                success : function(data){
+                    layer.alert(data.message, {icon: 2});
+                },
+                error:function(error){
+                    layer.alert('操作有误', {icon: 2});
+                }
+            })
+        }
+    }
+
+    function do_buy(){
+        var goods_id = $(" input[ name='goods_id_buy' ] ").val();
+        var url = 'http://api.fanghua.jiuxintangwenhua.com/virtual_buy';
+        if(confirm('确认操作')){
+            $.ajax({
+                type : 'post',
+                url : url,
+                data : {goods_id:goods_id},
+                dataType : 'json',
+                success : function(data){
+                    layer.alert(data.message, {icon: 2});
+                },
+                error:function(error){
+                    layer.alert('操作有误', {icon: 2});
+                }
+            })
+        }
+    }
+</script>

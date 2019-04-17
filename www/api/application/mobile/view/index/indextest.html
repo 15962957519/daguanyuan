@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/static/css/weui.min.css"/>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+    <script type="text/javascript" src="/static/js/plugin/zepto.min.js"></script>
+    <script type="text/javascript" src="/static/js/vue.min.js"></script>
+    <script type="text/javascript" src="/static/js/vuex.min.js"></script>
+    <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+
+    <script>
+        //兼容js
+        if (typeof Object.assign != 'function') {
+            Object.assign = function (target, varArgs) { // .length of function is 2
+                'use strict';
+                if (target == null) { // TypeError if undefined or null
+                    throw new TypeError('Cannot convert undefined or null to object');
+                }
+
+                var to = Object(target);
+
+                for (var index = 1; index < arguments.length; index++) {
+                    var nextSource = arguments[index];
+
+                    if (nextSource != null) { // Skip over if undefined or null
+                        for (var nextKey in nextSource) {
+                            // Avoid bugs when hasOwnProperty is shadowed
+                            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                                to[nextKey] = nextSource[nextKey];
+                            }
+                        }
+                    }
+                }
+                return to;
+            };
+        }
+
+        if (!Element.prototype.addEventListener) {
+            var oListeners = {};
+
+            function runListeners(oEvent) {
+                if (!oEvent) {
+                    oEvent = window.event;
+                }
+                for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
+                    if (oEvtListeners.aEls[iElId] === this) {
+                        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) {
+                            oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent);
+                        }
+                        break;
+                    }
+                }
+            }
+
+            Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
+                if (oListeners.hasOwnProperty(sEventType)) {
+                    var oEvtListeners = oListeners[sEventType];
+                    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+                        if (oEvtListeners.aEls[iElId] === this) {
+                            nElIdx = iElId;
+                            break;
+                        }
+                    }
+                    if (nElIdx === -1) {
+                        oEvtListeners.aEls.push(this);
+                        oEvtListeners.aEvts.push([fListener]);
+                        this["on" + sEventType] = runListeners;
+                    } else {
+                        var aElListeners = oEvtListeners.aEvts[nElIdx];
+                        if (this["on" + sEventType] !== runListeners) {
+                            aElListeners.splice(0);
+                            this["on" + sEventType] = runListeners;
+                        }
+                        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
+                            if (aElListeners[iLstId] === fListener) {
+                                return;
+                            }
+                        }
+                        aElListeners.push(fListener);
+                    }
+                } else {
+                    oListeners[sEventType] = {aEls: [this], aEvts: [[fListener]]};
+                    this["on" + sEventType] = runListeners;
+                }
+            };
+            Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
+                if (!oListeners.hasOwnProperty(sEventType)) {
+                    return;
+                }
+                var oEvtListeners = oListeners[sEventType];
+                for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+                    if (oEvtListeners.aEls[iElId] === this) {
+                        nElIdx = iElId;
+                        break;
+                    }
+                }
+                if (nElIdx === -1) {
+                    return;
+                }
+                for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
+                    if (aElListeners[iLstId] === fListener) {
+                        aElListeners.splice(iLstId, 1);
+                    }
+                }
+            };
+        }
+
+        !function () {
+            function a() {
+                var clientWidth = document.documentElement.clientWidth > 640 ? 640 : document.documentElement.clientWidth;
+                document.documentElement.style.fontSize = clientWidth / 7.5 + "px";
+                //适应字体调整
+                var div = document.createElement("div");
+                div.style.width = "7.5rem";
+                document.documentElement.appendChild(div);
+                document.documentElement.style.fontSize = document.documentElement.style.fontSize.replace("px", "") * clientWidth / div.clientWidth + "px";
+                document.documentElement.removeChild(div);
+            }
+
+            var b = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(b), b = setTimeout(a, 300)
+            }, !1), a()
+        }(window);
+
+        function fixSupport() {
+            if ($.os.android) {
+                var bodyWidth = document.body.clientWidth;
+                var bodyHeight = document.documentElement.clientHeight;
+            } else {
+                bodyWidth = $(window).width();
+                bodyHeight = $(window).height();
+            }
+            var dHeight = document.documentElement.offsetHeight;
+            if (dHeight <= bodyHeight) {
+                $('#contentbox').css('minHeight', bodyHeight - 60 - 0);
+            }
+            $(".supportBanner").css("visibility", "visible");
+        }
+        $(function () {
+            fixSupport();
+
+            $(document).off("wptSupport_view:fix").on("wptSupport_view:fix", function () {
+                fixSupport();
+            });
+        });
+
+        //进入详细
+        function directbuyercenter(event) {
+            var el = event.currentTarget;
+            var editArrow = $(el).find('.arrow');
+            console.log(editArrow)
+            if (editArrow.length > 0) {
+                wptRedirect(editArrow.attr('href'));
+            }
+        }
+
+        //自定义函数
+        //跳转
+        function wptRedirect(url, time) {
+            time = typeof time == 'undefined' ? ($.os.android ? 200 : 0) : time;
+
+            if (time > 0) {
+                setTimeout(function () {
+                    location.href = url;
+                }, time);
+            } else {
+                location.href = url;
+            }
+        }
+
+        function checkWebp() {
+            try {
+                return (document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0);
+            } catch (err) {
+                return false;
+            }
+        }
+
+        var weipat = weipat || {};
+        weipat.version = Math.random();
+        FastClick.attach(document.body);// init fastclick
+    </script>
+</head>
+<body>
+<div id='app'></div>
+<script src="/static/js/plugin/index.js?v=1"></script>
+
+<script type="text/javascript" src="/static/js/plugin/swipeSlide.min.js"></script>
+</body>
+</html>

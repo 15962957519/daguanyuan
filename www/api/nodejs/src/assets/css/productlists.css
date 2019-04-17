@@ -1,0 +1,389 @@
+#productlisttemplate .left:after{
+    content:'';
+    display:block;
+    width:100%;
+    height:36px;
+
+}
+#productlisttemplate .icon_lists {
+    color: #333;
+}
+
+#productlisttemplate .icon_lists .icon {
+    min-width: 1em;
+    font-size: 30px;
+    -webkit-transition: font-size 0.25s ease-out 0s;
+    -moz-transition: font-size 0.25s ease-out 0s;
+    transition: font-size 0.25s ease-out 0s;
+
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//w.tianbaoweipai.com/static/font/index.eot?t=1484042365502'); /* IE9*/
+    src: url('//w.tianbaoweipai.com/static/font/index.eot?t=1484042365502#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//w.tianbaoweipai.com/static/font/index.woff?t=1484042365502') format('woff'), /* chrome, firefox */ url('//w.tianbaoweipai.com/static/font/index.ttf?t=1484042365502') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('//w.tianbaoweipai.com/static/font/index.svg?t=1484042365502#index') format('svg'); /* iOS 4.1- */
+}
+
+#productlisttemplate .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    color: inherit;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*图标大小比例*/
+#productlisttemplate .fi-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+#productlisttemplate .fi-stack-0x6,
+#productlisttemplate .fi-stack-0x8,
+#productlisttemplate .fi-stack-1x,
+#productlisttemplate .fi-stack-1x2,
+#productlisttemplate .fi-stack-1x5,
+#productlisttemplate .fi-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    line-height: inherit;
+}
+
+#productlisttemplate .fi-stack-0x6 {
+    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlisttemplate .fi-stack-0x8 {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlisttemplate .fi-stack-1x2 {
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlisttemplate .fi-stack-1x5 {
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlisttemplate .fi-stack-1x {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlisttemplate .fi-stack-2x {
+    font-size: 2em;
+}
+#productlisttemplate  .verifyState1{
+
+    font-size:14px !important;
+}#productlisttemplate  .icon.salelevel{
+
+    font-size:14px ;
+}
+
+#productlisttemplate .icon-iconfuzhi01:before {
+    content: "\f000f";
+}
+
+#productlisttemplate .icon-fenxiang:before {
+    content: "\e631";
+}
+
+#productlisttemplate .icon-xin:before {
+    content: "\e64b";
+}
+
+#productlisttemplate .icon-baoyou:before {
+    content: "\e611";
+}
+
+#productlisttemplate .icon-gerendengji3:before {
+    content: "\e657";
+}
+
+#productlisttemplate .icon-gerendengji4:before {
+    content: "\e658";
+}
+
+#productlisttemplate .icon-gerendengji2:before {
+    content: "\e65a";
+}
+
+#productlisttemplate .icon-gerendengji5:before {
+    content: "\e65b";
+}
+
+#productlisttemplate .icon-gerendengji6:before {
+    content: "\e65c";
+}
+
+#productlisttemplate .icon-baoyou1:before {
+    content: "\e640";
+}
+
+#productlisttemplate .icon-gerendengji1:before {
+    content: "\e67e";
+}
+
+#productlisttemplate .icon-baotui:before {
+    content: "\e6b0";
+}
+
+#productlisttemplate .icon-combinedshape:before {
+    content: "\e61a";
+}
+
+#productlisttemplate .icon-dengji3:before {
+    content: "\e61e";
+}
+
+#productlisttemplate .icon-dengji1:before {
+    content: "\e628";
+}
+
+#productlisttemplate .icon-dengji2:before {
+    content: "\e629";
+}
+
+#productlisttemplate .icon-dengji5:before {
+    content: "\e62c";
+}
+
+#productlisttemplate .icon-dengji6:before {
+    content: "\e62d";
+}
+
+#productlisttemplate .icon-dengji7:before {
+    content: "\e62e";
+}
+
+#productlisttemplate .icon-dengjiv1:before {
+    content: "\e601";
+}
+
+#productlisttemplate .icon-dengjiv3:before {
+    content: "\e602";
+}
+
+#productlisttemplate .icon-dengjiv4:before {
+    content: "\e604";
+}
+
+#productlisttemplate .icon-dengjiv5:before {
+    content: "\e605";
+}
+
+#productlisttemplate .icon-dengjiv2:before {
+    content: "\e607";
+}
+
+#productlisttemplate .icon-huiyuan:before {
+    content: "\e62f";
+}
+
+#productlisttemplate .icon-yanjing:before {
+    content: "\e619";
+}
+
+#productlisttemplate .icon-yanjing1:before {
+    content: "\e63d";
+}
+
+#productlisttemplate .icon-7tianbaotui:before {
+    content: "\e6cc";
+}
+
+#productlisttemplate .icon-anquan:before {
+    content: "\e603";
+}
+
+#productlisttemplate .wptShare, #productlisttemplate  .wpt-share{
+display: none;
+}
+
+
+#productlisttemplate  .wptShare{
+    display: none;
+    position:fixed;
+    top:0;
+    opacity: 0.6;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background-color:#000;
+    z-index:1999;
+}
+
+
+
+#productlisttemplate  .wptShare .wptMask{
+    position:fixed;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background-color:#000;
+    z-index:1999;
+
+}
+#productlisttemplate .sharefriends{
+    width:100%;
+    background:#62b84f;
+    height:40px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    color:#fff;
+    line-height:40px;
+    font-size:16px;
+    margin-top:6px;
+    text-align:center;
+
+}
+#productlisttemplate  .wptShare .shareTip{
+    position:fixed;
+    top:0;
+    width:96%;
+    height:286px;
+    background-image:url(../img/share.png);
+    background-repeat:no-repeat;
+    background-size:auto 55%;
+    background-position:right top;
+    z-index:2000;
+}
+
+#productlisttemplate .share-box{
+    position: fixed;
+    width:7.5rem;
+    top:auto;
+    bottom:50px;
+    background-color: #EFEFF4;
+    z-index: 1999;
+
+
+}
+#productlisttemplate .share-box.fill-ip{
+    animation:flipUp 0.3s ease-out;
+    visibility: visible !important;
+
+}
+
+#productlisttemplate .share-box .bt-share{
+position: relative;
+width:33%;
+font-size:12px;
+float:left;
+text-align: center;
+text-decoration:none;
+padding: 60px 20px;
+
+
+}
+#productlisttemplate .share-box .title{
+    color:#424242;
+    margin:0 auto;
+    text-align: center;
+}
+#productlisttemplate .share-box .title h1{
+    margin:5px auto;
+}
+#productlisttemplate .share-box .bt-sharef .icon{
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:0;
+    left:50%;
+    margin-left:-25px;
+    background:url(../img/friend.png)  no-repeat top left scroll;
+    background-size:contain;
+    border:1px solid #def;
+
+}
+
+
+#productlisttemplate .share-box .bt-sharefg .icon{
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:0;
+    left:50%;
+    border:1px solid #def;
+    margin-left:-25px;
+    background:url(../img/goodfriend.png)  no-repeat top left scroll;
+    background-size:contain;
+
+
+}
+
+#productlisttemplate .saleMain .saleInfo .desc.fullDesc{
+max-height:none;
+overflow-y: auto;
+}
+#productlisttemplate  .verifyState1.membercolorv{
+    color:#c7c7cc;
+    background-color: #757373;
+}
+#productlisttemplate  .verifyState1.membercolorv.ismember{
+    color:#ffffff;
+    background-color: #EE0000;
+}
+
+
+#productlisttemplate  .verifyState1.membercolorv1{
+    color:#c7c7cc;
+    background-color: #757373;
+    background-image:url(/static/img/nomember.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+#productlisttemplate  .verifyState1.membercolorv5{
+    background-image:url(/static/img/diamond.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlisttemplate  .verifyState1.membercolorv4{
+    background-image:url(/static/img/gold_medal.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlisttemplate  .verifyState1.membercolorv3{
+    background-image:url(/static/img/silver.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlisttemplate  .verifyState1.membercolorv2{
+    background-image:url(/static/img/bronze.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}

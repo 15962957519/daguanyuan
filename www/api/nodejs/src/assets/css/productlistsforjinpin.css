@@ -1,0 +1,479 @@
+.l{
+    float: left;
+}
+.r{
+    float:right;
+}
+.pm{
+    width:50% !important;
+}
+
+#productlistsforjinpin .left:after{
+    content:'';
+    display:block;
+    width:100%;
+    height:36px;
+}
+#productlistsforjinpin .icon_lists {
+    color: #333;
+}
+#productlistsforjinpin{
+    max-width: 640px;
+}
+#productlistsforjinpin .icon_lists .icon {
+    min-width: 1em;
+    font-size: 30px;
+    -webkit-transition: font-size 0.25s ease-out 0s;
+    -moz-transition: font-size 0.25s ease-out 0s;
+    transition: font-size 0.25s ease-out 0s;
+
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//w.tianbaoweipai.com/static/font/index.eot?t=1484042365502'); /* IE9*/
+    src: url('//w.tianbaoweipai.com/static/font/index.eot?t=1484042365502#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//w.tianbaoweipai.com/static/font/index.woff?t=1484042365502') format('woff'), /* chrome, firefox */ url('//w.tianbaoweipai.com/static/font/index.ttf?t=1484042365502') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('//w.tianbaoweipai.com/static/font/index.svg?t=1484042365502#index') format('svg'); /* iOS 4.1- */
+}
+
+#productlistsforjinpin .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    color: inherit;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*图标大小比例*/
+#productlistsforjinpin .fi-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+#productlistsforjinpin .fi-stack-0x6,
+#productlistsforjinpin .fi-stack-0x8,
+#productlistsforjinpin .fi-stack-1x,
+#productlistsforjinpin .fi-stack-1x2,
+#productlistsforjinpin .fi-stack-1x5,
+#productlistsforjinpin .fi-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    line-height: inherit;
+}
+
+#productlistsforjinpin .fi-stack-0x6 {
+    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforjinpin .fi-stack-0x8 {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforjinpin .fi-stack-1x2 {
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforjinpin .fi-stack-1x5 {
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforjinpin .fi-stack-1x {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforjinpin .fi-stack-2x {
+    font-size: 2em;
+}
+#productlistsforjinpin  .verifyState1{
+
+    font-size:14px !important;
+}#productlistsforjinpin  .icon.salelevel{
+
+    font-size:14px ;
+}
+
+#productlistsforjinpin .icon-iconfuzhi01:before {
+    content: "\f000f";
+}
+
+#productlistsforjinpin .icon-fenxiang:before {
+    content: "\e631";
+}
+
+#productlistsforjinpin .icon-xin:before {
+    content: "\e64b";
+}
+
+#productlistsforjinpin .icon-baoyou:before {
+    content: "\e611";
+}
+
+#productlistsforjinpin .icon-gerendengji3:before {
+    content: "\e657";
+}
+
+#productlistsforjinpin .icon-gerendengji4:before {
+    content: "\e658";
+}
+
+#productlistsforjinpin .icon-gerendengji2:before {
+    content: "\e65a";
+}
+
+#productlistsforjinpin .icon-gerendengji5:before {
+    content: "\e65b";
+}
+
+#productlistsforjinpin .icon-gerendengji6:before {
+    content: "\e65c";
+}
+
+#productlistsforjinpin .icon-baoyou1:before {
+    content: "\e640";
+}
+
+#productlistsforjinpin .icon-gerendengji1:before {
+    content: "\e67e";
+}
+
+#productlistsforjinpin .icon-baotui:before {
+    content: "\e6b0";
+}
+
+#productlistsforjinpin .icon-combinedshape:before {
+    content: "\e61a";
+}
+
+#productlistsforjinpin .icon-dengji3:before {
+    content: "\e61e";
+}
+
+#productlistsforjinpin .icon-dengji1:before {
+    content: "\e628";
+}
+
+#productlistsforjinpin .icon-dengji2:before {
+    content: "\e629";
+}
+
+#productlistsforjinpin .icon-dengji5:before {
+    content: "\e62c";
+}
+
+#productlistsforjinpin .icon-dengji6:before {
+    content: "\e62d";
+}
+
+#productlistsforjinpin .icon-dengji7:before {
+    content: "\e62e";
+}
+
+#productlistsforjinpin .icon-dengjiv1:before {
+    content: "\e601";
+}
+
+#productlistsforjinpin .icon-dengjiv3:before {
+    content: "\e602";
+}
+
+#productlistsforjinpin .icon-dengjiv4:before {
+    content: "\e604";
+}
+
+#productlistsforjinpin .icon-dengjiv5:before {
+    content: "\e605";
+}
+
+#productlistsforjinpin .icon-dengjiv2:before {
+    content: "\e607";
+}
+
+#productlistsforjinpin .icon-huiyuan:before {
+    content: "\e62f";
+}
+
+#productlistsforjinpin .icon-yanjing:before {
+    content: "\e619";
+}
+
+#productlistsforjinpin .icon-yanjing1:before {
+    content: "\e63d";
+}
+
+#productlistsforjinpin .icon-7tianbaotui:before {
+    content: "\e6cc";
+}
+
+#productlistsforjinpin .icon-anquan:before {
+    content: "\e603";
+}
+
+#productlistsforjinpin .wpt-share{
+    position: fixed;
+
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    bottom:50px;
+    background-color:rgba(0,0,0,0.5);
+display:none;
+
+
+
+}
+
+#productlistsforjinpin .share-box{
+    position: fixed;
+    width:7.5rem;
+    top:auto;
+    bottom:50px;
+    background-color: #EFEFF4;
+    z-index: 1999;
+
+
+}
+#productlistsforjinpin .share-box.fill-ip{
+    animation:flipUp 0.3s ease-out;
+    visibility: visible !important;
+
+}
+
+#productlistsforjinpin .share-box .bt-share{
+position: relative;
+width:33%;
+font-size:12px;
+float:left;
+text-align: center;
+text-decoration:none;
+padding: 60px 20px;
+
+
+}
+#productlistsforjinpin .share-box .title{
+    color:#424242;
+    margin:0 auto;
+    text-align: center;
+}
+#productlistsforjinpin .share-box .title h1{
+    margin:5px auto;
+}
+#productlistsforjinpin .share-box .bt-sharef .icon{
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:0;
+    left:50%;
+    margin-left:-25px;
+    background:url(../img/friend.png)  no-repeat top left scroll;
+    background-size:contain;
+    border:1px solid #def;
+
+}
+
+
+#productlistsforjinpin .share-box .bt-sharefg .icon{
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:0;
+    left:50%;
+    border:1px solid #def;
+    margin-left:-25px;
+    background:url(../img/goodfriend.png)  no-repeat top left scroll;
+    background-size:contain;
+
+
+}
+#productlistsforjinpin .saleMain .title{
+    width:70%;
+    font-size: 0.2rem;
+    font-weight:600;
+    display: inline-block;
+    float: left;
+}
+#productlistsforjinpin .saleMain  .desc.fullDesc{
+    width:100%;
+    position: relative; line-height: 21px; max-height: 64px;overflow: hidden;
+}
+
+#productlistsforjinpin .saleMain  .desc.fullDesc::after{
+    content: "..."; position: absolute; bottom: 0; right: 0; padding-left: 40px;
+    background: -webkit-linear-gradient(left, transparent, #fff 55%);
+    background: -o-linear-gradient(right, transparent, #fff 55%);
+    background: -moz-linear-gradient(right, transparent, #fff 55%);
+    background: linear-gradient(to right, transparent, #fff 55%);
+}
+
+#productlistsforjinpin .saleMain  .bidBtnjinpin{
+    margin-top: 10px;
+}
+#productlistsforjinpin .saleMain .popularity {
+    background-image: url(/static/img/review.png);
+    padding-left: 0px;
+    color:#888;
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 26px;
+    float: right;
+    background-size: 16px;
+    padding: 0 22px 0 10px;
+    line-height: 26px;
+    font-size: 13px;
+    color: #fe0100;
+}
+#productlistsforjinpin .saleMain  .bidBtnjinpin a {
+    width: 76px;
+    display: block;
+    text-align: center;
+    height: 29px;
+    float: left;
+    padding: 2px 1px;
+    line-height: 29px;
+    color: #CC6600;
+    border-color: #CC6600;
+    border: 1px solid;
+    border-radius: 5px;
+}
+#productlistsforjinpin .saleMain  .officialspecial{
+    width: 70px;
+    height: 29px;
+    text-align: center;
+    margin-right: 10px;
+    float: left;
+    line-height: 29px;
+    padding: 2px 0px;
+    color: #270;
+    border-color: #270;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#productlistsforjinpin .saleMain  .price{
+   color:#ff0909;
+}
+#productlistsforjinpin .saleMain  .imgList{
+    width:90%;
+    overflow: auto;
+}
+#productlistsforjinpin .saleMain .saleItem{
+display: block !important;
+}
+#productlistsforjinpin .saleMain  .imgList div{
+    width: auto;
+    height: 176px !important;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 15px;
+    background-position: 50%;
+}
+
+#productlistsforjinpin  .wptShare{
+display: none;
+position:fixed;
+top:0;
+opacity: 0.6;
+bottom:0;
+width:100%;
+height:100%;
+background-color:#000;
+z-index:1999;
+}
+
+
+
+#productlistsforjinpin  .wptShare .wptMask{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background-color:#000;
+    z-index:1999;
+
+}
+
+#productlistsforjinpin  .wptShare .shareTip{
+    position:fixed;
+    top:0;
+    width:96%;
+    height:286px;
+    background-image:url(../img/share.png);
+    background-repeat:no-repeat;
+    background-size:auto 55%;
+    background-position:right top;
+    z-index:2000;
+}
+
+
+#productlistsforjinpin  .verifyState1.membercolorv1{
+    color:#c7c7cc;
+    background-color: #757373;
+    background-image:url(/static/img/nomember.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+#productlistsforjinpin  .verifyState1.membercolorv5{
+    background-image:url(/static/img/diamond.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlistsforjinpin  .verifyState1.membercolorv4{
+    background-image:url(/static/img/gold_medal.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlistsforjinpin  .verifyState1.membercolorv3{
+    background-image:url(/static/img/silver.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlistsforjinpin  .verifyState1.membercolorv2{
+    background-image:url(/static/img/bronze.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlistsforjinpin  .verifyState1.membercolorv{
+    color:#c7c7cc;
+    background-color: #757373;
+}
+#productlistsforjinpin  .verifyState1.membercolorv.ismember{
+    color:#ffffff;
+    background-color: #EE0000;
+}
+

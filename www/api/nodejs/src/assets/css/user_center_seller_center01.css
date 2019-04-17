@@ -1,0 +1,109 @@
+.icon_lists {
+    color: #333;
+}
+
+.icon_lists .icon {
+    position:relative;
+    min-width: 1em;
+    font-size: 30px;
+    -webkit-transition: font-size 0.25s ease-out 0s;
+    -moz-transition: font-size 0.25s ease-out 0s;
+    transition: font-size 0.25s ease-out 0s;
+}
+
+@font-face {
+    font-family: "usercenter01";
+    src: url('//w.tianbaoweipai.com/static/font/usercenter01.eot?t=1484042365502'); /* IE9*/
+    src: url('//w.tianbaoweipai.com/static/font/usercenter01.eot?t=1484042365502#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//w.tianbaoweipai.com/static/font/usercenter01.woff?t=1484042365502') format('woff'), /* chrome, firefox */ url('//w.tianbaoweipai.com/static/font/usercenter01.ttf?t=1484042365502') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('//w.tianbaoweipai.com/static/font/usercenter01.svg?t=1484042365502#usercenter01') format('svg'); /* iOS 4.1- */
+}
+
+
+.verifyProcessMain .tianbaoweipai,#gerenverifyProcess_individual .tianbaoweipai, .verifyMain  .tianbaoweipai,#paymenting .tianbaoweipai,#foucswebsite .tianbaoweipai{
+    font-family: "usercenter01" !important;
+    min-width: 1em;
+    color: inherit;
+    font-size: inherit;
+    font-style: normal;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*图标大小比例*/
+.fi-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+.fi-stack-0x6,
+.fi-stack-0x8,
+.fi-stack-1x,
+.fi-stack-1x2,
+.fi-stack-1x5,
+.fi-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    line-height: inherit;
+}
+
+.fi-stack-0x6 {
+    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+.fi-stack-0x8 {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+.fi-stack-1x2 {
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+.fi-stack-1x5 {
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+.fi-stack-1x {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+.fi-stack-2x {
+    font-size: 2em;
+}
+
+.border:after{
+    position: absolute;
+    content: '';
+    background-color: #D9D9D9;
+}
+.border.horizonBottom:after{
+    width:100%;
+    height:1px;
+
+}
+.border.horizonBottom:after{
+    left:0;
+    bottom:0;
+
+}

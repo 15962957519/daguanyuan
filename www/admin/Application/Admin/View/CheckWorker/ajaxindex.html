@@ -1,0 +1,85 @@
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <td style="width: 1px;" class="text-center">
+                编号
+            </td>
+            <td class="text-center">
+                姓名
+            </td>
+            <td class="text-center">
+                手机号
+            </td>
+            <td class="text-left">
+                邮箱
+            </td>
+            <td class="text-left">
+                职称
+            </td>
+
+            <td class="text-center">
+                工号
+            </td>
+            <td class="text-center">
+                部门
+            </td>
+            <td class="text-center">
+                状态
+            </td>
+            <td class="text-center">
+                添加时间
+            </td>
+            <td class="text-center">操作</td>
+        </tr>
+        </thead>
+        <tbody>
+
+        <volist name="worklist" id="list">
+            <tr>
+                <td class="text-center">
+                    {$list.id}
+                </td>
+                <td class="text-center">{$list.username}</td>
+                <td class="text-left">{$list.phone}</td>
+                <td class="text-left">{$list.email}</td>
+                <td class="text-left">{$list.worker_level}</td>
+                <td class="text-left">{$list.worknumber}</td>
+                <td class="text-left">
+                    <if condition="$list['departmentnd'] eq 1">
+                        销售部
+                        <elseif condition="$list['departmentnd'] eq 2"/>
+                        市场部
+                        <elseif condition="$list['departmentnd'] eq 3"/>
+                        财务部
+                        <elseif condition="$list['departmentnd'] eq 4"/>
+                        技术部
+                    </if>
+                </td>
+                <td class="text-center">
+                    <img width="20" height="20" src="__PUBLIC__/images/<if condition='$list[enabled] eq 1'>yes.png<else />cancel.png</if>" onclick="changeTableVal('check_worker','id','{$list.id}','enabled',this)"/>
+                </td>
+
+                <td class="text-center">{$list.addtime|date='Y-m-d H:i:s',###}</td>
+
+                <td class="text-center">
+                    <a href="{:U('Admin/CheckWorker/detail',array('id'=>$list[id]))}" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="编辑"><i class="fa fa-eye"></i></a>
+                    <a href="javascript:void(0);" data-href="{:U('Admin/CheckWorker/del',array('id'=>$list[id]))}" onclick="del('{$list[id]}',this)" id="button-delete6" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="删除"><i class="fa fa-trash-o"></i></a>
+                </td>
+            </tr>
+        </volist>
+
+        </tbody>
+    </table>
+
+</div>
+<div class="row">
+    <div class="col-sm-6 text-left"></div>
+    <div class="col-sm-6 text-right">{$page}</div>
+</div>
+<script>
+    $(".pagination  a").click(function(){
+        var page = $(this).data('p');
+        ajax_get_table('search-form2',page);
+    });
+</script>

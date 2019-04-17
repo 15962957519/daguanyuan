@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="天宝微拍、微信拍卖、朋友圈拍卖、在线拍卖、线上拍卖">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta charset="UTF-8">
+    <title>77888</title>
+    {load href="/static/js/vue.min.js" /}
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+    <script src="//cdn.bootcss.com/reqwest/2.0.5/reqwest.min.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+
+</head>
+<body>
+<div id="app">
+    <p>
+        <!-- 使用 router-link 组件来导航. -->
+        <!-- 通过传入 `to` 属性指定链接. -->
+        <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/bar">Go to Bar</router-link>
+    </p>
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
+</div>
+
+
+<div id="app1">
+
+<span>{{val}}</span>
+
+
+</div>
+<script type="text/javascript">
+    var vm = new Vue({
+        el : "#app1",
+        data:function(){
+            return {
+                val:'liqipeng'
+            }
+
+        },
+        computed : {
+            _val:{
+                _set:function(vaule){
+                    this.val=value;
+                },
+                _get:function(vaule){
+                     return this.val;
+                }
+            }
+        }
+    });
+
+
+    // 1. 定义（路由）组件。
+    // 可以从其他文件 import 进来
+    const Foo = { template: '<div>foo</div>' }
+    const Bar = { template: '<div>bar</div>' }
+
+    //定义路由
+    const routes = [
+        { path: '/foo', component: Foo },
+        { path: '/bar', component: Bar }
+    ]
+
+    // 3. 创建 router 实例，然后传 `routes` 配置
+    // 你还可以传别的配置参数, 不过先这么简单着吧。
+    const router = new VueRouter({
+        routes // （缩写）相当于 routes: routes
+    })
+
+
+    // 4. Create and mount the root instance.
+    // Make sure to inject the router with the router option to make the
+    // whole app router-aware.
+    const app = new Vue({
+        router
+    }).$mount('#app')
+
+</script>
+
+
+</body>
+</html>

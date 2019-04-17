@@ -1,0 +1,357 @@
+/* 全局样式 */
+body {font-size:12px;background:url("../../images/cms/bg.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/bg.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/bg.gif*/ ;overflow-x:hidden;}
+.top_bg{height:143px;background:url("../../images/cms/top_bg.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/top_bg.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/top_bg.gif*/ no-repeat;}
+.top{width:1001px;margin:0 auto;}
+.logo{width:334px;float:left;margin-top:20px;}
+.nav{width:462px;float:right;}
+.nav ul li{float:left;margin:0 5px;}
+.adv{width:100%;}
+.nav_1 a{display:block;width:40px;height:150px;background:url("../../images/cms/nav_1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_1.png*/ no-repeat;}
+.nav_1 a:hover{background:url("../../images/cms/nav_11.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_11.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_11.png*/ no-repeat;}
+.nav_11 a{display:block;background:url("../../images/cms/nav_11.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_11.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_11.png*/ no-repeat;}
+
+
+.nav_2 a{display:block;width:40px;height:150px;background:url("../../images/cms/nav_2.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_2.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_2.png*/ no-repeat;}
+.nav_2 a:hover{background:url("../../images/cms/nav_22.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_22.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_22.png*/ no-repeat;}
+.nav_22 a{display:block;background:url("../../images/cms/nav_22.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_22.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_22.png*/ no-repeat;}
+
+.nav_3 a{display:block;width:40px;height:150px;background:url("../../images/cms/nav_3.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_3.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_3.png*/ no-repeat;}
+.nav_3 a:hover{background:url("../../images/cms/nav_33.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_33.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_33.png*/ no-repeat;}
+.nav_33 a{display:block;background:url("../../images/cms/nav_33.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_33.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_33.png*/ no-repeat;}
+
+
+.nav_4 a{display:block;width:40px;height:150px;background:url("../../images/cms/nav_4.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_4.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_4.png*/ no-repeat;}
+.nav_4 a:hover{background:url("../../images/cms/nav_44.png.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_44.png*/ no-repeat;}
+.nav_44 a{display:block;background:url("../../images/cms/nav_44.png.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_44.png*/ no-repeat;}
+
+.nav_5 a{display:block;width:40px;height:118px;background:url("../../images/cms/nav_5.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_5.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_5.png*/ no-repeat;}
+.nav_5 a:hover{background:url("../../images/cms/nav_55.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_55.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_55.png*/ no-repeat;}
+.nav_55 a{display:block;background:url("../../images/cms/nav_55.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_55.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_55.png*/ no-repeat;}
+
+.nav_6 a{display:block;width:40px;height:150px;background:url("../../images/cms/nav_6.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_6.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_6.png*/ no-repeat;}
+.nav_6 a:hover{background:url("../../images/cms/nav_66.png.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_66.png*/ no-repeat;}
+.nav_66 a{display:block;background:url("../../images/cms/nav_66.png.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_66.png*/ no-repeat;}
+
+.nav_7 a{display:block;width:40px;height:150px;background:url("../../images/cms/nav_7.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_7.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_7.png*/ no-repeat;}
+.nav_7 a:hover{background:url("../../images/cms/nav_77.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_77.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_77.png*/ no-repeat;}
+.nav_77 a{display:block;background:url("../../images/cms/nav_77.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_77.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_77.png*/ no-repeat;}
+
+.nav_8 a{display:block;width:40px;height:150px;background:url("../../images/cms/nav_8.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_8.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_8.png*/ no-repeat;}
+.nav_8 a:hover{background:url("../../images/cms/nav_88.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_88.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_88.png*/ no-repeat;}
+.nav_88 a{display:block;background:url("../../images/cms/nav_88.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_88.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_88.png*/ no-repeat;}
+
+
+.nav_9 a{display:block;width:40px;height:150px;background:url("../../images/cms/nav_9.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_9.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_9.png*/ no-repeat;}
+.nav_9 a:hover{background:url("../../images/cms/nav_99.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_99.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_99.png*/ no-repeat;}
+.nav_99 a{display:block;background:url("../../images/cms/nav_99.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_99.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/nav_99.png*/ no-repeat;}
+
+#full-screen-slider { width:100%; height:396px; float:left; position:relative}
+#slides { display:block; width:100%; height:396px; list-style:none; padding:0; margin:0; position:relative}
+#slides li { display:block; width:100%; height:100%; list-style:none; padding:0; margin:0; position:absolute}
+#slides li a { display:block; width:100%; height:100%; text-indent:-9999px}
+#pagination { display:block; list-style:none; position:absolute; width:980px;margin-left:-220px !important;left:50%;top:400px; z-index:9900;  padding:5px 15px 5px 0; }
+.line{border-bottom:1px solid #ddd;width:504px;margin:0 auto;}
+#pagination li { display:block; list-style:none;  float:left; margin-left:30px; border-radius:5px;background:url("../../images/cms/dot1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/dot1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/dot1.png*/ no-repeat;width:21px;height:21px; }
+#pagination li a { display:block; padding-left:3px;padding-top:2px;}
+#pagination li.current { background:url("../../images/cms/dot2.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/dot2.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/dot2.png*/ no-repeat;}
+.search{width:1004px;height:136px;background:url("../../images/cms/search.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/search.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/search.png*/ no-repeat;margin:0 auto;margin-top:19px;}
+.fx ul li{float:left;margin:0 3px;margin-top:25px}
+.fx {margin-left:110px;}
+.tel{float:left;width:376px;margin-left:40px;margin-top:20px;display:inline;}
+.sea{float:right;width:480px;height:39px;background:url("../../images/cms/search_bg.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/search_bg.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/search_bg.png*/ no-repeat;margin-top:20px;margin-right:40px;}
+.in{width:356px;height:25px;line-height:25px;float:left;border:0px;margin-top:6px;margin-left:3px;padding-left:10px;color:#989898;}
+.btn{width:85px;float:left;height:30px;border:0px;margin-left:10px;background:none;}
+.zj{width:1001px;margin:0 auto;margin-top:20px;}
+.zj_left{width:620px;float:left;}
+.zj_right{width:352px;float:right;}
+#SlideDeck_Bug51879568 img{display:none;}
+.slidedeck dt{background:url("../../images/cms/a2.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/a2.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/a2.png*/ no-repeat !important;}
+.zj_dh{width:464px;height:41px;background:url("../../images/cms/zj_dh.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/zj_dh.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/zj_dh.gif*/ no-repeat;margin-left:80px;margin-top:15px;}
+.zj_font1{float:left;margin-top:11px;margin-left:30px;display:inline;}
+.zj_font2{float:left;margin-top:11px;margin-left:35px;display:inline;}
+.zj_font3{float:left;margin-top:13px;margin-left:35px;display:inline;}
+.zj_font4{float:left;margin-top:11px;margin-left:35px;display:inline;}
+.cp{width:1001px;margin:0 auto;margin-top:38px;}
+.cp_left{width:622px;float:left;}
+.d_1{width:624px;height:49px;background:url("../../images/cms/d_1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/d_1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/d_1.png*/ no-repeat;}
+.d_11{width:624px;height:49px;background:url("../../images/cms/d_11.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/d_11.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/d_11.png*/ no-repeat;}
+.d_2{width:624px;height:192px;overflow:hidden;background:url("../../images/cms/d_2.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/d_2.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/d_2.png*/ repeat-y;}
+.d_22{width:624px;overflow:hidden;}
+.cj_list{width:628px;height:600px;background:url("../../images/cms/cj_bg.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/cj_bg.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/cj_bg.png*/ repeat;}
+.d_3{width:624px;height:12px;background:url("../../images/cms/d_3.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/d_3.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/d_3.png*/ no-repeat;}
+.cj_title{height:31px;background:#f8efe0;width:614px;margin:0 auto;}
+.cp_right{width:354px;float:right;}
+.cj{margin-top:20px;}
+.cj_left{width:51px;float:left;margin-left:5px;margin-top:5px}
+.cj_right{width:567px;float:left;}
+.t_1{width:355px;height:40px;background:url("../../images/cms/t1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/t1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/t1.png*/ no-repeat;}
+.t_2{width:355px;height:400px;background:url("../../images/cms/t2.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/t2.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/t2.png*/ repeat-y;}
+.t_3{width:355px;height:11px;background:url("../../images/cms/t3.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/t3.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/t3.png*/ no-repeat;}
+.fr{float:right;margin-right:10px;margin-top:10px;}
+.fr a{color:#fff;}
+.barpro_a ul li a{font-family:"楷体";color:#fff;cursor:pointer;display:block;width:51px;height:93px;background:url("../../images/cms/hover.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/hover.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/hover.gif*/ no-repeat;margin:1px 0px;font-size:22px;text-align:center;padding-top:20px;}
+.cur1 a{display:block;background:none !important;color:#645750 !important;}
+.barpro ul {margin-left:20px;}
+.barpro ul li{float:left;margin:0 10px;}
+.barpro ul p img{padding-top:12px;float:left;}
+.barpro ul li a{float:left;font-family:microsoft yahei,arial;padding-top:7px;display:block;font-size:19px;color:#645750;font-weight:bold;}
+.pp_list ul{margin-left:5px;}
+.pp_list ul li{float:left;position:relative;z-index:1;margin:0 2px;}
+.pp_list img{border:1px solid #d5c7ba;}
+.pp_list div{display:block;text-align:center;position:absolute;top:120px;z-index:99;color:#fff;height:25px;background:#807c74;width:132px;margin-left:1px;#margin-left:-133px;}
+.page a{float:left;}
+.cj1{width:160px;float:left;margin-left:20px;font-weight:bold;text-align:center;height:25px;display:inline;}
+.cj2{width:40px;float:left;font-weight:bold;text-align:center;height:25px;display:inline;}
+.cj3{width:181px;float:left;font-weight:bold;text-align:center;height:25px;display:inline;}
+.cj4{width:83px;float:left;font-weight:bold;text-align:center;height:25px;display:inline;}
+.cj5{width:104px;float:left;font-weight:bold;text-align:center;height:25px;display:inline;}
+.cj11{width:160px;float:left;margin-left:20px;text-align:center;height:25px;display:inline;}
+.cj22{width:40px;float:left;text-align:center;height:25px;display:inline;}
+.cj33{width:181px;float:left;text-align:center;height:25px;display:inline;}
+.cj44{width:83px;float:left;text-align:center;height:25px;display:inline;}
+.cj55{width:104px;float:left;text-align:center;height:25px;display:inline;}
+.cj111{width:160px;float:left;margin-left:20px;text-align:center;background:#e8e8e8;height:25px;display:inline;}
+.cj222{width:40px;float:left;text-align:center;background:#e8e8e8;height:25px;display:inline;}
+.cj333{width:181px;float:left;text-align:center;background:#e8e8e8;height:25px;display:inline;}
+.cj444{width:83px;float:left;text-align:center;background:#e8e8e8;height:25px;display:inline;}
+.cj555{width:104px;float:left;text-align:center;background:#e8e8e8;height:25px;display:inline;}
+.cur a{color:#fff !important;}
+.tj{width:311px;margin:0 auto;}
+.pageo{position:absolute;}
+.first a{color:#ff0000 !important;}
+.tj dl{padding-top:20px;}
+.tj dt{width:110px;float:left;margin-top:5px;}
+.tj dt img{padding:4px;border:1px solid #ddd;}
+.tj dd{width:178px;float:left;margin-left:20px;}
+.tj h3 a{display:block;font-size:14px;color:#b70005;font-weight:bold;}
+.tj li{color:#555;}
+.list{width:311px;margin:0 auto;margin-top:5px;}
+.list ul li{line-height:31px;padding-left:5px}
+.list ul li a{color:#555;}
+.list ul li span{float:right;color:#555;margin-right:5px}
+.list_bg{background:#e8e8e8;}
+.pm_sp{margin-top:30px;}
+.t_11{width:355px;height:40px;background:url("../../images/cms/t1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/t1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/t1.png*/ no-repeat;}
+.t_22{width:355px;height:292px;background:url("../../images/cms/t2.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/t2.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/t2.png*/ repeat-y;}
+.t_33{width:355px;height:11px;background:url("../../images/cms/t3.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/t3.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/t3.png*/ no-repeat;}
+.sp_bg{width:322px;height:138px;background:url("../../images/cms/sp_bg.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/sp_bg.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/sp_bg.gif*/ 0 15px no-repeat;margin:0 auto;}
+.sp_bg img{padding-top:22px;margin-left:5px;}
+.list1 {width:320px;margin:0 auto;}
+.list1 ul{margin-top:0px;}
+.list1 ul li{background:url("../../images/cms/dot.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/dot.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/dot.gif*/ 0 10px no-repeat;padding-left:25px;width:135px;float:left;line-height:32px;}
+.team{width:1011px;margin:0 auto;margin-top:30px;}
+.a_1{width:1011px;height:52px;clear: both;background:url("../../images/cms/a_1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/a_1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/a_1.png*/ no-repeat;}
+.a_2{width:1011px;height:221px;overflow:hidden;background:url("../../images/cms/a_2.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/a_2.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/a_2.png*/ repeat-y;}
+.a_3{width:1011px;height:13px;background:url("../../images/cms/a_3.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/a_3.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/a_3.png*/ no-repeat;}
+.barpro1 ul {margin-left:60px;}
+.barpro1 ul li{float:left;margin:0 10px;}
+.barpro1 ul li a{float:left;font-family:microsoft yahei,arial;padding-top:7px;display:block;font-size:19px;color:#645750;font-weight:bold;}
+.barpro2 ul {margin-left:60px;}
+.barpro2 ul li{float:left;margin:0 10px;}
+.barpro2 ul li a{float:left;font-family:microsoft yahei,arial;padding-top:4px;display:block;font-size:19px;color:#645750;font-weight:bold;}
+.fr1{float:right;margin-right:20px;margin-top:10px;}
+.fr1 a{color:#fff;}
+.fr2{float:right;margin-right:20px;margin-top:7px;}
+.fr2 a{color:#fff;}
+#demo {overflow:hidden;width: 980px;margin-left:15px;}
+#indemo {float: left;width: 800%;}
+#demo1 {float: left;}
+#demo1 ul li{float:left;text-align:center;margin:0 10px;}
+#demo2 {float: left;}
+#demo2 ul li{float:left;text-align:center;margin:0 10px;}
+.ys{width:1011px;margin:0 auto;margin-top:30px;}
+.b_1{width:1011px;height:46px;background:url("../../images/cms/b_1.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/b_1.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/b_1.gif*/ no-repeat;}
+.b_2{width:1011px;height:426px;overflow:hidden;background:url("../../images/cms/a_2.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/a_2.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/a_2.png*/ repeat-y;}
+.b_3{width:1011px;height:13px;background:url("../../images/cms/a_3.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/a_3.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/a_3.png*/ no-repeat;}
+.ys_bg{width:986px;height:410px;background:url("../../images/cms/ys_bg.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/ys_bg.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/ys_bg.gif*/ 0 15px no-repeat;margin:0 auto;}
+.block{width:194px;height:170px;padding-top:15px;margin-left:20px;float:left;display:inline;}
+.ys_1{font-family:microsoft yahei,arial;font-size:18px;color:#b70005;text-align:center;}
+.ys_1 a{font-family:microsoft yahei,arial;font-size:18px;color:#b70005;text-align:center;}
+.ys_2{color:#555;font-size:12px;line-height:24px;}
+.ys_3 img{border:4px solid #d9cdc0;}
+.ys_3 {margin-top:10px;}
+.l_2{margin-left:50px}
+.l_3{margin-left:60px}
+.l_4{margin-left:60px}
+.t_a{margin-top:30px;}
+.footer{height:277px;background:url("../../images/cms/footer_bg.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/footer_bg.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/footer_bg.png*/ top center no-repeat;margin-top:40px;}
+.footer1000{width:1001px;margin:0 auto;padding-top:45px;}
+.f_left{width:161px;float:left;}
+.f_cent{width:351px;float:left;margin-left:40px;color:#555;line-height:25px;}
+.f_cent img{margin-top:3px;vertical-align:middle;}
+.f_right{width:435px;float:right;}
+.link{padding-top:20px;color:#fff;color:#555;}
+.link ul li {float:left;margin:0 0px;}
+.link ul li  a{margin:0 8px;color:#555;}
+.add{height:56px;background:#dfd2c1;text-align:center;line-height:24px;padding-top:10px}
+/*藏品宝典*/
+.cp_banner{height:136px;background:#000;}
+.list_banner{width:1001px;margin:0 auto;height:135px;background:url("../../images/cms/list_bg1.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/list_bg1.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/list_bg1.gif*/ no-repeat;}
+.list_banner1{width:1001px;margin:0 auto;height:135px;background:url("../../images/cms/list_bg1.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/list_bg1.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/list_bg1.gif*/ no-repeat;}
+.location{width:1001px;margin:0 auto;text-align:right;color:#ff0000;margin-top:30px;}
+.location a{color:#000;}
+.cp_zx{width:1001px;margin:0 auto;margin-top:50px;}
+.cp_pic{width:1001px;margin:0 auto;}
+.cp_pic1{width:315px;height:290px;border:1px solid #b8b7b4;margin-top:20px;float:left;}
+.cp_pic2{width:315px;height:320px;border:1px solid #b8b7b4;margin-top:20px;float:left;margin-left:24px;}
+.cp_pic3{width:315px;height:320px;border:1px solid #b8b7b4;margin-top:20px;float:right;}
+.cp_1{text-align:center;margin-top:30px;}
+.cp_2{text-align:left;width:261px;margin:0 auto;margin-top:10px;font-size:14px;font-weight:bold;color:#000;}
+.cp_3{text-align:left;width:261px;margin:0 auto;margin-top:9px;color:#7d7c7c;line-height:22px}
+.cp_4{text-align:center;margin-top:20px;}
+.cp_list{width:1021px;margin:0 auto;margin-top:50px;}
+.cp_page{width:720px;text-align:center;margin:0 auto;padding-bottom:80px;}
+.cp_pagess{width:500px;text-align:center;margin:0 auto;padding-bottom:80px;margin-top:510px}
+.page{margin-top:10px;margin-left:240px}
+.pre {display:block;width:16px;height:16px;background:url("../../images/cms/page5.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/page5.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/page5.gif*/ no-repeat;margin:0 10px;margin-top:3px;}
+.pre:hover{display:block;width:16px;height:16px;background:url("../../images/cms/page7.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/page7.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/page7.gif*/ no-repeat;}
+.next_1{display:block;width:16px;height:16px;background:url("../../images/cms/page3.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/page3.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/page3.gif*/ no-repeat;margin:0 10px;margin-top:3px;}
+.next_1:hover{display:block;width:16px;height:16px;background:url("../../images/cms/page4.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/page4.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/page4.gif*/ no-repeat;}
+.page ul li a{background:#FFF;margin:0 1px;margin-top:1px;display:block;height:20px;width:20px;border:1px solid #d5c7ba;text-align:center;float:left;}
+.page ul li{float:left;}
+.page ul li a:hover{color:#ff0000;}
+.first a{color:#ff0000 !important;}
+/*公司简介*/
+.about{width:1001px;margin:0 auto;margin-top:70px;}
+.about ul li{float:left;margin:0 25px;display:inline;}
+.about_zx{width:1001px;margin:0 auto;margin-top:70px;}
+.about_block1{width:222px;float:left;margin-left:25px;}
+.about_block2{width:222px;float:left;margin-left:40px;}
+.about_block2{width:222px;float:left;margin-left:40px;}
+.about_block4{width:222px;float:left;margin-left:40px;}
+.about_left{width:152px;height:220px;float:left;text-align:center;}
+.about_left img{padding:9px;}
+.about_left img:hover{padding:5px;border:4px solid #ff0000;}
+.about_right{width:47px;float:left;margin-top:10px;}
+.about_info{width:1001px;margin:0 auto;margin-top:30px;line-height:26px;}
+/*
+.a_left{width:480px;float:left;}
+.a_left b{font-size:16px;color:#161616;}
+.a_right{width:480px;float:right;}
+.a_right b{font-size:16px;color:#161616;}
+/*
+.top50{margin-top:50px}
+.top501{padding-top:50px}
+/*新闻内容*/
+.ar_body{width:1001px;margin:0 auto;margin-top:50px;color:#4b4b4b;}
+.ar_title{font-size:16px;color:#4b4b4b;text-align:center;font-weight:bold;}
+.ar_info{color:#929292;font-size:14px;text-align:center;margin-top:10px;}
+.ar_line{margin-top:10px}
+.ar_left{width:480px;float:left;margin-top:25px;}
+.ar_right{width:480px;float:right;margin-top:25px;}
+.ar_body{line-height:24px;}
+.ar_body b{color:#4b4b4b;}
+.ar_pic{position:absolute;top:610px;margin-left:340px;}
+.ar_pic img{padding:4px;border:1px solid #ddd;}
+.list_fy{width:1001px;margin:0 auto;height:30px;background:url("../../images/cms/list_fx_bg.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/list_fx_bg.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/list_fx_bg.png*/ no-repeat;margin-top:50px;}
+.list_fy1{width:1001px;margin:0 auto;height:30px;background:url("../../images/cms/list_fx_bg1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/list_fx_bg1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/list_fx_bg1.png*/ no-repeat;margin-top:0px;}
+.fx_0{float:right;margin-right:65px;color:#ff0000;margin-top:3px;}
+.fx_1{float:right;margin-right:10px;margin-top:5px;display:inline;}
+.fx_2{float:right;margin-right:10px;margin-top:5px;display:inline;}
+.fx_3{float:right;margin-right:10px;margin-top:5px;display:inline;}
+.fx_4{float:right;margin-right:30px;margin-top:5px;display:inline;}
+.fx_5{float:right;margin-right:60px;margin-top:5px;display:inline;}
+.pre1{width:1001px;margin:0 auto;}
+.pre1 p a{color:#000;}
+.pre1 p{margin-top:10px;}
+/*拍卖*/
+.pm{width:1001px;margin:0 auto;text-align:center;margin-top:50px;}
+.pm_title{font-family:microsoft yahei,arial;font-size:30px;color:#b70005;}
+.pm_left{width:605px;float:left;margin-top:30px;}
+.pm_right{width:333px;float:right;margin-top:30px;height:377px;border:1px solid #cbc9c9;}
+.pm_right p{text-align:left;padding-left:20px;padding-top:13px;padding-bottom:13px;border-bottom:1px solid #cbc9c9;padding-right:10px;color:#555;}
+.pm_info{border:0px !important;}
+.pm_right span{color:#b70005;}
+.cp_jj{width:999px;border:1px solid #cbc9c9;border-bottom:0px;margin:0 auto;overflow:hidden;padding-top:20px;padding-bottom:20px;margin-top:40px;font-size:12px;}
+.cp_jj b{color:#555;font-weight:bold;font-size:14px;padding-left:20px;}
+.cp_jj em{font-weight:bold;font-size:14px;color:#ff0000;}
+.cp_article{margin:0 30px;line-height:35px;margin-top:10px;}
+/*产品列表*/
+/* 焦点图 */
+.focus{width:1001px;height:239px;position:relative;margin-top:0px;float:center}
+.f426x240{width:1001px;height:239px;overflow:hidden}
+.f426x240 img{width:1001px;height:239px;}
+.rslides{position:relative;list-style:none;padding:0}
+.rslides_nav{height:51px;width:31px;position:absolute;-webkit-tap-highlight-color:rgba(0,0,0,0);top:50%;left:0;opacity:0.5;text-indent:-9999px;overflow:hidden;background:url("../../images/cms/ar1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/ar1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/ar1.png*/ no-repeat;margin-top:-28px;margin-left:10px;}
+.rslides_nav:active{opacity:1.0}
+.rslides_nav.next{left:auto;background:url("../../images/cms/ar2.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/ar2.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/ar2.png*/ no-repeat;right:0}
+.rslides_tabs{margin:12px auto;clear:both;text-align:center;margin-top:5px;}
+.rslides_tabs li{display:inline;float:none;_float:left;*float:left;margin-right:0px}
+.rslides_tabs a{text-indent:-9999px;overflow:hidden;width:19px;height:11px;background:url("../../images/cms/dot1.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/dot1.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/dot1.gif*/ no-repeat;display:inline-block;_display:block;*display:block;}
+.rslides_tabs .rslides_here a{background:url("../../images/cms/dot2.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/dot2.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/dot2.gif*/ no-repeat;}
+.banner1{width:1001px;margin:0 auto;margin-top:20px;border:4px solid #b70005;padding:8px 5px;}
+.cp_k_left{width:199px;float:left;}
+.cp_k_left img{padding-top:5px;padding-left:4px}
+.cp_k_right{width:283px;float:right;}
+.cp_pic_list{width:1001px;margin:0 auto;margin-top:30px;}
+.cp_k{width:484px;height:200px;background:url("../../images/cms/cp_bg.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/cp_bg.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/cp_bg.gif*/ no-repeat;float:left;margin:0 8px;margin-top:30px;display:inline;}
+.k1{float:left;margin-top:5px;margin-left:10px;width:131px;}
+.k2{float:left;margin-top:5px;margin-left:10px;width:130px;text-align:left;}
+.k3{float:left;margin-top:15px;margin-left:10px;width:131px;}
+.k4{float:left;margin-top:15px;margin-left:10px;width:130px;text-align:left;}
+.k5{margin-top:15px;margin-left:10px;}
+.k6{height:78px;margin-top:10px;margin-left:10px;}
+.k7{text-align:right;color:#ff0000;}
+.k7 a{color:#ff0000;font-weight:bold;margin-right:5px;}
+/*求购*/
+.qg_title{width:1001px;margin:0 auto;margin-top:45px;}
+.qg_list{width:1001px;margin:0 auto;}
+.#menu{ height:420px;}
+ul#menu, ul#menu ul {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
+ul#menu a {
+  display: block;
+  text-decoration: none;
+}
+ul#menu ul {
+ border-left:1px solid #ddd;
+ border-right:1px solid #ddd;
+ border-bottom:1px solid #ddd;
+}
+.hf_bg{width:977px;height:158px;background:url("../../images/cms/hf_bg.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/hf_bg.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/hf_bg.png*/ no-repeat;margin-left:10px;}
+ul#menu li a {
+  color: #000;
+}
+ul#menu li a:hover {
+  color:#ff0000;
+}
+ul#menu li ul li a {
+  background: #ccc;
+  color: #000;
+  padding-left: 20px;
+}
+ul#menu li ul li a:hover {
+  background: #aaa;
+  border-left: 5px #000 solid;
+  padding-left: 15px;
+}
+.code { border: 1px solid #ccc; list-style-type: decimal-leading-zero; padding: 5px; margin: 0; }
+.code code { display: block; padding: 3px; margin-bottom: 0; }
+.code li { background: #ddd; border: 1px solid #ccc; margin: 0 0 2px 2.2em; }
+.indent1 { padding-left: 1em; }
+.indent2 { padding-left: 2em; }
+.line_1 td{height:35px;border:1px solid #ddd;text-align:center;border-top:0px}
+.hf_left{width:672px;float:left;padding-top:30px;padding-left:30px;color:#fff;font-size:12px;line-height:24px;}
+.hf_right{width:250px;float:left;padding-top:30px;margin-left:20px;color:#fff;font-size:12px;line-height:24px;}
+.hf_left span{width:80px;float:left;display:block;font-weight:bold;font-size:14px;}
+.hf_left em{width:563px;float:left;}
+.date{float:right; margin-right:40px;}
+.hf_right span{width:50px;float:left;display:block;font-weight:bold;font-size:14px;}
+.hf_right em{width:190px;float:left;}
+#code,#code_hover,#gotop1{ width:36px; height:88px; background:url("../../images/cms/icon.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/icon.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/icon.png*/ no-repeat; position:fixed; right:50px; cursor:pointer;
+_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+}
+#gotop1{  background:url("../../images/cms/top.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/top.gif*//*tpa=www.bopaitang.comtemplets/qinhantang/images/top.gif*/ no-repeat; bottom:67px; _margin-bottom:67px;}
+.list_banner ul li a{line-height:18px;padding-top:7px;display:block;font-family:"黑体";color:#fff;font-size:16px;width:30px;height:103px;text-align:center;margin:0 20px;}
+.list_banner ul {padding-top:20px;margin-left:250px;}
+.list_banner ul li a:hover{background:url("../../images/cms/list_hover1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/list_hover1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/list_hover1.png*/ no-repeat;}
+.list_banner ul li{float:left;}
+.hover a{background:url("../../images/cms/list_hover1.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/list_hover1.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/list_hover1.png*/ no-repeat !important;}
+.list_banner1 ul li a{line-height:18px;padding-top:7px;display:block;font-family:"黑体";color:#fff;font-size:16px;width:30px;height:103px;text-align:center;margin:0 20px;}
+.list_banner1 ul {padding-top:20px;margin-left:250px;}
+.list_banner1 ul li a:hover{background:url("../../images/cms/list_hover.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/list_hover.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/list_hover.png*/ no-repeat;}
+.list_banner1 ul li{float:left;}
+.hover1 a{background:url("../../images/cms/list_hover.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/list_hover.png*//*tpa=www.bopaitang.comtemplets/qinhantang/images/list_hover.png*/ no-repeat !important;}

@@ -1,0 +1,78 @@
+<include file="Public/min-header"/>
+<div class="wrapper">
+    <include file="Public/breadcrumb"/>
+    <section class="content">
+        <div class="row">
+           <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fa fa-list"></i>  员工列表
+                    </h3>
+                </div>
+                <div class="panel-body">
+                <nav class="navbar navbar-default">      
+                    <div class="collapse navbar-collapse">
+                      <form action="{:U('CheckWorker/index')}" id="search-form2" class="navbar-form form-inline" role="search" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="username" placeholder="搜索姓名">
+                        </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" name="phone" placeholder="搜索手机号">
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" name="worknumber" placeholder="搜索工号">
+                          </div>
+                          <button type="button" onclick="ajax_get_table('search-form2',1)" class="btn btn-info"><i class="fa fa-search"></i> 筛选</button>
+                          <div class="form-group pull-right">
+                              <a href="{:U('CheckWorker/add')}" class="btn btn-primary pull-right"><i class="fa fa-plus"></i>添加员工</a>
+                          </div>
+                      </form>
+                  </div>
+                </nav>
+
+                    <div id="ajax_return">
+
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<script>
+    // 删除操作
+    function del(id,t)
+    {
+        if(!confirm('确定要删除吗?'))
+            return false;
+        location.href = $(t).data('href');
+    }
+
+
+    $(document).ready(function(){
+        ajax_get_table('search-form2',1);
+    });
+
+
+    // ajax 抓取页面
+    function ajax_get_table(tab,page){
+        cur_page = page; //当前页面 保存为全局变量
+        $.ajax({
+            type : "POST",
+            url:"/Admin/CheckWorker/ajaxindex/p/"+page,//+tab,
+            data : $('#'+tab).serialize(),// 你的formid
+            success: function(data){
+                $("#ajax_return").html('');
+                $("#ajax_return").append(data);
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>

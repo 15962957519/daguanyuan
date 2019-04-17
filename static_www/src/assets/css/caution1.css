@@ -1,0 +1,602 @@
+@charset "UTF-8";
+/*初始化  reset*/
+/* line 5, ../../sass/public/reset.scss */
+body,
+button,
+dd,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+td,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 26, ../../sass/public/reset.scss */
+body,
+button,
+input {
+  font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53, sans-serif;
+}
+
+/* line 32, ../../sass/public/reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input {
+  font-size: 100%;
+}
+
+/* line 43, ../../sass/public/reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 48, ../../sass/public/reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 52, ../../sass/public/reset.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 56, ../../sass/public/reset.scss */
+fieldset,
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+/* line 62, ../../sass/public/reset.scss */
+a,
+button {
+  cursor: pointer;
+}
+
+/*清除浮动*/
+/* line 72, ../../sass/public/reset.scss */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 78, ../../sass/public/reset.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 82, ../../sass/public/reset.scss */
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+
+/* line 8, ../../sass/public/public.scss */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* line 11, ../../sass/public/public.scss */
+body {
+  background: #F0F0F0;
+  background-color: #F0F0F0 !important;
+  margin: 0;
+}
+
+/* line 17, ../../sass/public/public.scss */
+.fles_level_vertical_center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/**
+ * flex
+ */
+/* line 31, ../../sass/public/public.scss */
+.flex_box, .shopup_container > .shopup_all_panel > .shopup_item > .item_ts > div, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_ts > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 37, ../../sass/public/public.scss */
+.flex_box_space_between, .box > .content > .year, .shopup_container > .shopup_all_panel > .shopup_item, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item, .shopup_container > .shopup_all_panel > .shopup_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 44, ../../sass/public/public.scss */
+.flex_box_space_between_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* line 52, ../../sass/public/public.scss */
+.flex_box_item, .shopup_container > .shopup_all_panel > .shopup_item, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item, .shopup_container > .shopup_all_panel > .shopup_item > .item_ts, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_ts {
+
+}
+
+/* line 58, ../../sass/public/public.scss */
+.flex_box_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* line 64, ../../sass/public/public.scss */
+.flex_end {
+  justify-content: flex-end;
+}
+
+/* line 68, ../../sass/public/public.scss */
+.flex_text_height_center, .shopup_container > .header, .shopup_container > .shopup_all_panel > .title, .shopup_container > .shopup_all_panel > .shopup_item > .item_l, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_l, .shopup_container .shopup_liberty > .title, .shopup_container .suggest > .title {
+  display: flex;
+  align-items: center;
+}
+
+/* line 73, ../../sass/public/public.scss */
+.flex_text_height_width_center, .shopup_container > .header > div > .level, .shopup_container > .shopup_all_panel > .shopup_item > .item_l > span, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_l > span, .shopup_container > .shopup_all_panel > .shopup_item > .item_r, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_r, .shopup_container > .shopup_all_panel > .shopup_item > .item_ts > .item_r, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_ts > .item_r {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 79, ../../sass/public/public.scss */
+.flex_column_height_width_center {
+  display: flex;
+  -webkit-display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+/* line 90, ../../sass/public/public.scss */
+.flex_column_space_around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/**
+ * css3其他
+ */
+/* line 101, ../../sass/public/public.scss */
+.text_nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* line 107, ../../sass/public/public.scss */
+.line_clamp, .box > .content > .text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* line 114, ../../sass/public/public.scss */
+.public_box_sizing {
+  box-sizing: boder-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 123, ../../sass/public/public.scss */
+.paddingclear {
+  padding: 0 !important;
+}
+
+/* line 126, ../../sass/public/public.scss */
+.clear {
+  clear: both;
+}
+
+/* line 130, ../../sass/public/public.scss */
+.top-1 {
+  margin-top: -1px;
+}
+
+/**
+ * 菜单
+ */
+/* line 200, ../../sass/public/public.scss */
+#canvas {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* line 205, ../../sass/public/public.scss */
+#canvas li, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 212, ../../sass/public/public.scss */
+.canvasli {
+  width: 12.5%;
+  text-align: center;
+}
+
+/* line 216, ../../sass/public/public.scss */
+#canvas li {
+  float: left;
+  background: #fff;
+  padding: 0.12rem 0;
+}
+/* line 220, ../../sass/public/public.scss */
+#canvas li .sjydmenu {
+  font-size: 0.18rem;
+  color: #5c5c5c;
+}
+
+/* line 225, ../../sass/public/public.scss */
+.border_right_0 {
+  border-right: 0 !important;
+}
+
+/**
+     * 瀑布流
+ */
+/* line 233, ../../sass/public/public.scss */
+#main {
+  /*定位*/
+  position: relative;
+  width: 100%;
+}
+
+/* line 238, ../../sass/public/public.scss */
+.box {
+  /*内边距*/
+  float: left;
+  width: 50%;
+  background: #F0F0F0;
+  /*商品区图*/
+  /*商品区简介*/
+}
+/* line 244, ../../sass/public/public.scss */
+.box > .pic {
+  /*边框*/
+  width: 100%;
+  margin-top: 0.13rem;
+  position: relative;
+}
+/* line 249, ../../sass/public/public.scss */
+.box > .pic > .hoot {
+  height: 0.5rem;
+  font-size: 0.18rem;
+  /* text-align: right; */
+  position: absolute;
+  color: #fff;
+  right: 0;
+  line-height: 0.36rem;
+  padding: 0.1rem;
+}
+/* line 258, ../../sass/public/public.scss */
+.box > .pic > .hoot > img {
+  height: 100%;
+}
+/* line 262, ../../sass/public/public.scss */
+.box > .pic > .cuttime {
+  height: 0.5rem;
+  line-height: 0.56rem;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 0.25rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 272, ../../sass/public/public.scss */
+.box > .pic > img {
+  width: 100%;
+}
+/* line 277, ../../sass/public/public.scss */
+.box > .content {
+  background: #fff;
+  padding-bottom: 0.24rem;
+  border-radius: 0 0 0.1rem 0;
+}
+/* line 281, ../../sass/public/public.scss */
+.box > .content > .year {
+  height: 0.82rem;
+  line-height: 0.82rem;
+  font-size: 0.25rem;
+  padding: 0 0.22rem;
+}
+/* line 287, ../../sass/public/public.scss */
+.box > .content > .year > .price {
+  color: #A0A0A0;
+}
+/* line 289, ../../sass/public/public.scss */
+.box > .content > .year > .price > .year {
+  color: #FE7458;
+}
+/* line 292, ../../sass/public/public.scss */
+.box > .content > .year > .price > .year1 {
+  color: #FE7458;
+  font-size: 0.45rem;
+}
+/* line 297, ../../sass/public/public.scss */
+.box > .content > .year > .hoot {
+  line-height: 0.98rem;
+  color: #A0A0A0;
+}
+/* line 300, ../../sass/public/public.scss */
+.box > .content > .year > .hoot > img {
+  height: 0.25rem;
+  padding-right: 0.1rem;
+  vertical-align: text-top;
+}
+/* line 307, ../../sass/public/public.scss */
+.box > .content > .text {
+  font-size: 0.28rem;
+  padding: 0 0.22rem;
+  line-height: 0.32rem;
+}
+
+/* line 7, ../../sass/shopup/shopup.scss */
+.shopup_container > .header {
+  height: 1.45rem;
+  background: #fff;
+  border: 1px solid #F8F8F8;
+  border-left: 0;
+  border-right: 0;
+  padding: 0 0.25rem 0 0.27rem;
+}
+/* line 16, ../../sass/shopup/shopup.scss */
+.shopup_container > .header > img {
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 50%;
+}
+/* line 21, ../../sass/shopup/shopup.scss */
+.shopup_container > .header > div {
+  padding-left: 0.08rem;
+}
+/* line 23, ../../sass/shopup/shopup.scss */
+.shopup_container > .header > div > .name {
+  padding-left: 0.15rem;
+  font-size: 0.3rem;
+}
+/* line 27, ../../sass/shopup/shopup.scss */
+.shopup_container > .header > div > .level {
+  height: 0.38rem;
+  padding: 0 0.15rem;
+  border-radius: 0.2rem;
+  border: 1px solid #EFEFEF;
+  color: #B6B6B6;
+}
+/* line 37, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel {
+  background-color: #fff;
+  padding: 0 0.25rem 0 0.27rem;
+  margin-top: 0.07rem;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.3rem;
+}
+/* line 43, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .title {
+  height: 0.67rem;
+  font-size: 0.32rem;
+  color: #242424;
+  padding: 0 0.1rem;
+}
+/* line 49, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .title > span {
+  padding: 0 0.2rem;
+  color: #989898;
+  font-size: 0.2rem;
+}
+/* line 56, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item {
+  align-items: center;
+  height: 0.98rem;
+  border: 2px solid #ad3208;
+  padding-left: 0.17rem;
+  padding-right: 0.14rem;
+  margin-top: 0.16rem;
+}
+/* line 66, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item:visited, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item:visited {
+  border-color: #FF6B4E;
+  background: rgba(255, 107, 78, 0.1);
+}
+/* line 70, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item:hover, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item:hover {
+  background: rgba(255, 107, 78, 0.1);
+}
+.shopup_item_hover{ background: rgba(255, 107, 78, 0.1);}
+/* line 74, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item:active, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item:active {
+  border-color: #FF6B4E;
+  background: rgba(255, 107, 78, 0.1);
+}
+/* line 78, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item:focus, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item:focus {
+  border-color: #FF6B4E;
+  background: rgba(255, 107, 78, 0.1);
+}
+/* line 82, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item > .item_l, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_l {
+  font-size: 0.38rem;
+}
+/* line 85, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item > .item_l > div, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_l > div {
+  line-height: 40px;
+  color: #66462d;
+}
+/* line 87, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item > .item_l > div > img, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_l > div > img {
+  height: 0.8rem;
+}
+/* line 91, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item > .item_l > span, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_l > span {
+  background-color: #983DFE;
+  color: #fff;
+  font-size: 0.21rem;
+  height: 0.27rem;
+  border-radius: 0.15rem;
+  border: 1px solid transparent;
+  width: 0.58rem;
+  position: relative;
+  top: -.24rem;
+  left: 1px;
+}
+/* line 105, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item > .item_r, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_r {
+  width: 0.89rem;
+  height: 0.44rem;
+  font-size: 0.28rem;
+  color: #FF6B4E;
+  border: 1px solid;
+  border-radius: 0.21rem;
+}
+/* line 114, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item > .item_ts, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_ts {
+  justify-content: center;
+  line-height: 0.5rem;
+  width: 0.6rem;
+}
+/* line 118, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item > .item_ts > div, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_ts > div {
+  font-size: 0.38rem;
+  justify-content: center;
+}
+/* line 123, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item > .item_ts > .item_r, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_ts > .item_r {
+  background:#ad3208;
+  height: 1.5rem;
+  font-size: 0.28rem;
+  color: #Fff;
+  margin: auto;
+}
+/* line 133, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_item > .item_ts > .item_s, .shopup_container > .shopup_all_panel > .shopup_list > .shopup_item > .item_ts > .item_s {
+  color: #FF6B4E;
+  line-height: 0.4rem;
+  font-size: 0.28rem;
+}
+/* line 140, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_list > .shopup_item {
+  height: 1.5rem;
+  width: 48.7%;
+}
+/* line 145, ../../sass/shopup/shopup.scss */
+.shopup_container > .shopup_all_panel > .shopup_list > .shopup_item_ {
+  width: 0.12rem;
+}
+/* line 150, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty {
+  margin-top: 0.14rem;
+  background-color: #fff;
+}
+/* line 153, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty > .title {
+  padding: 0 0.08rem;
+  height: 0.71rem;
+  color: #66462d;
+}
+/* line 158, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty > .title > img {
+  height: 0.45rem;
+  margin-right: 0.1rem;
+}
+/* line 162, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty > .title .top {
+
+}
+/* line 165, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty > .title .bottom {
+  font-size: 0.13rem;
+}
+/* line 169, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty > .content {
+  padding: 0.06rem 0.25rem;
+}
+/* line 171, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty > .content > table {
+  width: 100%;
+  font-size: 0.24rem;
+  color: #fff;
+}
+/* line 175, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty > .content > table tr {
+  width: 20%;
+}
+/* line 177, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty > .content > table tr th {
+  height: 0.36rem;
+  color: #66462d;
+  border: 1px solid;
+}
+/* line 181, ../../sass/shopup/shopup.scss */
+.shopup_container .shopup_liberty > .content > table tr th > img {
+  height: 0.36rem;
+}
+/* line 189, ../../sass/shopup/shopup.scss */
+.shopup_container .suggest {
+  margin-top: 0.25rem;
+  background-color: #fff;
+}
+/* line 192, ../../sass/shopup/shopup.scss */
+.shopup_container .suggest > .title {
+  height: 0.62rem;
+  color: #000000;
+  font-size: 0.32rem;
+  border-bottom: 1px solid #999696;
+}
+/* line 198, ../../sass/shopup/shopup.scss */
+.shopup_container .suggest > .title > div {
+  width: 0.06rem;
+  height: 100%;
+  background-color: #66462d;
+  margin-right: 0.28rem;
+}
+/* line 205, ../../sass/shopup/shopup.scss */
+.shopup_container .suggest > .content {
+  padding: 0 0.25rem 0.2rem 0.25rem;
+  font-size: 0.28rem;
+  color: #000000;
+}
+/* line 209, ../../sass/shopup/shopup.scss */
+.shopup_container .suggest > .content > span {
+  color: #0000EB;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="天宝微拍、微信拍卖、朋友圈拍卖、在线拍卖、线上拍卖">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta charset="UTF-8">
+    <title>天宝微拍</title>
+    <script src="/static/js/plugin/main.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    !function () {
+        function a() {
+            var clientWidth = document.documentElement.clientWidth > 640 ? 640 : document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = clientWidth / 7.5 + "px";
+            //适应字体调整
+            var div = document.createElement("div");
+            div.style.width = "7.5rem";
+            document.documentElement.appendChild(div);
+            document.documentElement.style.fontSize = document.documentElement.style.fontSize.replace("px", "") * clientWidth / div.clientWidth + "px";
+            document.documentElement.removeChild(div);
+        }
+        var b = null;
+        window.addEventListener("resize", function () {
+            clearTimeout(b), b = setTimeout(a, 300)
+        }, !1), a()
+    }(window);
+
+</script>
+
+
+<div id="main_container" class="main_container">
+    <div class="left">
+        <div class="content">
+            <div class="BoxHeader clear">
+                <div class="ContentAuto">
+                    <div class="fl HeaderContentLeft">
+                        <a class="Digitaka" href="#">关注</a><a href="#">精选</a>
+                    </div>
+                    <div class="fr HeaderContentRight">
+                        <a href="#"><img src="/static/img/xj.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- 图片轮播 -->
+            <div class="slide" id="slide3">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="http://d10.yihaodianimg.com/V00/M04/32/59/CgQDsVQDEtaAVv4BAAEFc6n3fws75000.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="dot">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="Switch clear">
+                <ul class="clear">
+                    <li class="fl active">
+                        <div class="SwitchBg" style='background:url("/static/img/category.png") no-repeat 0px -9px;'></div>
+                        <p>玉翠珠宝</p>
+                    </li>
+                    <li class="fl active">
+                        <div class="SwitchBg" style='background:url("/static/img/category.png") no-repeat 0px -70px;'></div>
+                        <p>书画篆刻</p>
+                    </li>
+                    <li class="fl active">
+                        <div class="SwitchBg" style='background:url("/static/img/category.png") no-repeat 0px -132px;'></div>
+                        <p>茶酒滋补</p>
+                    </li>
+                    <li class="fl active">
+                        <div class="SwitchBg" style='background:url("/static/img/category.png") no-repeat 0px -194px;'></div>
+                        <p>紫砂陶瓷</p>
+                    </li>
+                    <li class="fl active">
+                        <div class="SwitchBg" style='background:url("/static/img/category.png") no-repeat 0px -255px;'></div>
+                        <p>工艺作品</p>
+                    </li>
+                    <li class="fl active">
+                        <div class="SwitchBg" style='background:url("/static/img/category.png") no-repeat 0px -316px;'></div>
+                        <p>文玩杂项</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 商品区列表 -->
+            <div id="productlisttemplate"><productlist></productlist></div>
+        </div>
+
+        {include file="common/menu" /}
+
+    </div>
+</div>
+
+
+<script src="/static/js/plugin/index.js"></script>
+<script type="text/javascript" src="/static/js/plugin/zepto.min.js"></script>
+<script type="text/javascript" src="/static/js/plugin/swipeSlide.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#slide3').swipeSlide({
+            continuousScroll:true,
+            speed : 3000,
+            transitionType : 'cubic-bezier(0.22, 0.69, 0.72, 0.88)',
+            firstCallback : function(i,sum,me){
+                me.find('.dot').children().first().addClass('cur');
+            },
+            callback : function(i,sum,me){
+                me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+            }
+        });
+    });
+</script>
+</body>
+</html>

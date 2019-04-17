@@ -1,0 +1,24 @@
+{
+    "name": "shopex/teegon",
+    "description": "SDK for shopex teegon platform",
+    "keywords": ["shopex", "teegon", "api", "sdk"],
+    "homepage": "http://github.com/shopex/teegon-open-php-sdk",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Elrond G",
+            "email": "guocheng@shopex.cn",
+            "homepage": "http://www.shopex.cn/"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shopex\\TeegonClient\\": "src/"
+        }
+    }
+}

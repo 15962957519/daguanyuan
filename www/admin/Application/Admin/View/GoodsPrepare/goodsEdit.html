@@ -1,0 +1,96 @@
+<include file="Public/min-header"/>
+
+<div class="wrapper">
+    <include file="Public/breadcrumb"/>
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="box box-info">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">添加/编辑商品区</h3>
+                        <a href="{:U('GoodsPrepare/goodsList')}" data-toggle="tooltip" title="" class="btn btn-default pull-right" data-original-title="返回"><i class="fa fa-reply"></i></a>
+                    </div>
+                    <form class="form-horizontal" action="{:U('GoodsPrepare/goodsEdit')}" id="add_post" method="post">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="goods_name" class="col-sm-2 control-label">商品区名称</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" value="{$info.goods_name}" name="goods_name" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="original_img" class="col-sm-2 control-label">商品区图片</label>
+                                <div class="col-sm-8">
+                                    <img src="__COLLECT_IMG_PATH__{$info.original_img}" style="width:200px;height:auto">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="start_price" class="col-sm-2 control-label">起步价</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control"  value="{$info.start_price}" name="start_price" id="start_price" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="every_add_price" class="col-sm-2 control-label">每次加价</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" value="{$info.every_add_price}" name="every_add_price" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">商品区描述</label>
+                                <div class="col-sm-8">
+                                    <textarea class="form-control" id="goods_remark" name="goods_remark" title="">{$info.goods_remark}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">
+                                    <input type="hidden" name="act" value="{$act}">
+                                    <input type="hidden" name="id" value="{$info.id}"></label>
+                                <div class="col-sm-8">
+                                    <button type="button"  onclick="checkForm()" class="btn btn-info pull-right">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-footer row">
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+
+    function checkForm(){
+        if($('input[name="goods_name"]').val() == ''){
+            alert("请填写商品区名称！");
+            return false;
+        }
+
+        if($('input[name="start_price"]').val() == ''){
+            alert("请填写起步价！");
+            return false;
+        }
+
+        if($('#every_add_price').val() == ''){
+            alert("请填写每次加价！");
+            return false;
+        }
+        if($('#goods_remark').val() == ''){
+            alert("请填写商品区描述");
+            return false;
+        }
+
+        $('#add_post').submit();
+    }
+</script>
+</body>
+</html><SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>

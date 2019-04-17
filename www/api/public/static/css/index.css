@@ -1,0 +1,2099 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body, button, input, select, textarea /* for ie */
+{
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+ul{
+    display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+.clearfix::after {
+    content: ".";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+}
+
+  .clearfix {
+    zoom: 1;
+}
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+
+code, kbd, pre, samp {
+    font-family: courier new, courier, monospace;
+}
+
+small {
+    font-size: 12px;
+}
+
+/** 重置列表元素 **/
+ul, ol {
+    list-style: none;
+}
+li{
+    text-align: -webkit-match-parent;
+}
+html {
+    background-color: #F2F2F2;
+    height: 100%;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+    vertical-align: baseline;
+    font-style: normal;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    /* 防止点击闪烁 */
+    /* 缩放网页，文字大小不变 */
+    -webkit-text-size-adjust:none;
+}
+
+/** 重置文本格式元素 **/
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a:visited {color:purple;text-decoration:none;}
+body{
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 14px;
+    font-family: Helvetica, STHeiti, Microsoft YaHei, Verdana, Arial, Tahoma, sans-serif;
+    background-color: #F2F2F2;
+    max-width: 640px;
+}
+#app{
+    height:100%;
+}
+#appuser{
+    height:100%;
+}
+#main_container {
+    background-color: #fff;
+}
+
+.slide li img[lazy="error"],
+.slide li img[lazy="loading"]{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:48px;
+    height:48px;
+    margin:-24px;
+}
+
+
+
+button {
+    cursor: pointer;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul, ol, li, dt, dl, dd {
+    text-decoration: none;
+    list-style: none;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited {
+    color: #373737;
+    text-decoration: none;
+}
+
+.dispalyfiex {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+@media (min-width: 320px) and (max-width: 370px) {
+    .ContentLsit ul li .ContentInfo {
+        width: 79% !important;
+    }
+
+    .ContentLsit ul li .ContentInfo .ImgList ul li {
+        width: 32% !important;
+    }
+
+    .Switch ul li {
+        width: 26% !important;
+    }
+
+    .endTime .tmpLikeBox {
+        width: 60px !important;
+    }
+
+    .ContentInfo .likeBox ul li {
+        width: 17px !important;
+        height: 17px !important;
+    }
+
+    .ContentInfo .likeBox ul li {
+        margin-bottom: 4px !important;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 412px) {
+    .Switch ul li {
+        width: 27% !important;
+    }
+}
+
+/*
+*tesing
+*/
+
+#main_container .BoxHeader {
+    width: 100%;
+    height: 38px;
+    background: #fe0002;
+    line-height: 38px;
+}
+
+#main_container .ContentAuto {
+    margin: 0px 15px;
+    height: 100%
+}
+#main_container .HeaderContentLeft{
+    height:100%;
+    overflow:hidden;
+    vertical-align:middle;
+}
+#main_container .HeaderContentLeft a {
+    height: 25px;
+    color: white;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+#main_container .HeaderContentLeft a.Digitaka {
+    background: white;
+    color: #00cccc;
+}
+
+#main_container .HeaderContentRight {
+    height: 100%;
+    color:#FFF;
+}
+#main_container .HeaderContentRight a{
+    color:#FFF;
+}
+#main_container .HeaderContentRight .Digitaka{
+    background-color: #fff;
+    padding: 4px 9px 4px;
+    font-size: 16px;
+    border-radius: 4px;
+    color: #fe0002;
+}
+
+
+#main_container .HeaderContentRight img {
+    width: 25px;
+}
+
+.slide {
+    position: relative;
+    max-width: 640px;
+    height:160px;
+    overflow: hidden;
+}
+
+.slide:after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 50%;
+}
+
+.slide ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide li {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide li:first-child {
+    z-index: 1;
+}
+
+.slide li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    max-height: 100%;
+    width: 100%;
+}
+
+.slide .dot {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 5;
+    font-size: 0;
+}
+
+.slide .dot span {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-left: 5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.slide .dot .cur {
+    background-color: #fff;
+}
+
+.Switch {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.Switch ul {
+    margin: 0px 15px;
+}
+
+.Switch ul li {
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    list-style: none;
+    color: #666;
+    float: left;
+    width: 28%;
+    padding: 5px 0px 0px 0px;
+    margin-right: 30px;
+}
+
+.Switch ul li:nth-child(3n-3) {
+    margin-right: 0px;
+}
+
+.Switch ul li .SwitchBg {
+    width: 69px;
+    height: 69px;
+    border-radius:15px;
+    border:1px solid #f19c97;
+    margin: 0px auto;
+}
+
+.Switch ul li .SwitchBg p img {
+    width: 100%;
+}
+
+.ContentLsit {
+    width: 100%;
+    margin-top: 25px;
+    padding-bottom: 20px;
+}
+
+.ContentLsit ul li .Avatar {
+    width: 15%;
+}
+
+.ContentLsit ul li .Avatar .AvatarImg {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.ContentLsit ul li .Avatar .AvatarImg img,
+.ContentLsit ul li .ContentInfo .ImgList ul li a img {
+    width: 100%;
+}
+
+.ContentLsit ul li .Avatar .DirectMessage {
+    width: 50px;
+    height: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.ContentLsit ul li .ContentInfo {
+    margin-left: 15px;
+    width: 80%;
+    word-wrap: break-word;
+    line-height: 22px;
+}
+
+.ContentLsit ul li .ContentInfo .ContentInfoText h2,
+.ContentLsit ul li .ContentInfo .ContentInfoText h3,
+.ContentLsit ul li .ContentInfo .ContentInfoText p {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.ContentLsit ul li .ContentInfo .ContentInfoText h3 {
+    color: red;
+}
+
+.ContentLsit ul li .ContentInfo .ContentInfoText .FullText a {
+    color: #00cccc;
+}
+
+.ContentLsit ul li .ContentInfo .ImgList {
+    margin-top: 10px;
+}
+
+.ContentLsit ul li .ContentInfo .ImgList ul li {
+    width: 32.5%;
+    float: left;
+    margin-bottom: 2px;
+    margin-right: 3px;
+}
+
+.ContentLsit ul li .ContentInfo .ImgList ul li:nth-child(3n-3) {
+    margin-right: 0px;
+}
+
+.ContentReaction {
+    margin-top: 5px;
+}
+
+.ContentReaction .ReactionLeft p {
+    font-size: 9px;
+    line-height: 15px;
+}
+
+.ContentReaction .ReactionLeft p:nth-child(1),
+.ContentReaction .ReactionLeft p:nth-child(2) {
+    width: 30px;
+    height: 15px;
+    text-align: center;
+    color: white;
+}
+
+.ContentReaction .ReactionLeft p:nth-child(1) {
+    background: #ff9900;
+}
+
+.ContentReaction .ReactionLeft p:nth-child(2) {
+    background: #00cccc;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.ContentReaction .ReactionLeft p:nth-child(3) {
+    color: #999;
+}
+
+.ContentReaction .ReactionRight {
+    line-height: 15px;
+}
+
+.ContentReaction .ReactionRight a span {
+    margin-right: 4px;
+    font-size: 10px;
+    color: #999;
+}
+
+.ContentReaction .ReactionRight a img {
+    margin-right: 4px;
+}
+
+.ContentInfo .likeBox {
+    background-color: #ececec;
+    position: relative;
+    text-align: center;
+    margin-top: 6px;
+    display: table;
+    max-height: 57px;
+    padding: 5px;
+}
+
+.ContentInfo .likeBox:after {
+    content: '';
+    position: absolute;
+    border-color: rgba(236, 236, 236, 0) rgba(236, 236, 236, 0) #ececec rgba(236, 236, 236, 0);
+    border-style: solid;
+    border-width: 6px;
+    height: 0;
+    width: 0;
+    top: -12px;
+    left: 13px;
+}
+
+.ContentInfo .likeBox ul li {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.ContentInfo .likeBox ul li:nth-child(10n-10) {
+    margin-right: 0px;
+}
+
+.ContentInfo .likeBox ul li a img {
+    width: 100%;
+}
+
+.ContentInfo .likeBox ul li.More {
+    border: 2px solid #ccc;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+}
+
+.ContentInfo .likeBox ul li.More i {
+    width: 3px;
+    height: 3px;
+    background: #ccc;
+    display: inline-block;
+    margin: -5px 2px 0px 2px;
+    border-radius: 50%;
+}
+
+.endTime,
+.bidBtn {
+    margin-top: 10px;
+}
+
+.endTime .tmpLikeBox {
+    width: 74px;
+    height: 30px;
+    background: #b02a2a;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    position: relative;
+}
+
+.endTime .tmpLikeBox:after {
+    content: '';
+    position: absolute;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #b02a2a;
+    border-style: solid;
+    border-width: 6px;
+    height: 0;
+    width: 0;
+    top: 9px;
+    right: -11px;
+}
+
+.endTime .saleEndTime {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.endTime .saleEndTime i {
+    color: #b02a2a;
+}
+
+.bidBtn {
+    position: relative;
+}
+
+.bidBtn button {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background: #33cc00;
+    text-align: center;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+.bidBtn a {
+    color: #6699cc;
+    position: absolute;
+    left: -31px;
+    top: 7px;
+}
+
+.likeBoxInfo ul li {
+    width: 32.5%;
+    float: left;
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+    border-right: 1px solid #ccc;
+}
+
+.likeBoxInfo ul li:nth-child(3n-3) {
+    border-right: none;
+}
+
+.likeBoxInfo ul li span {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px;
+    margin-right: 4px;
+}
+
+.bidList {
+    padding: 5px;
+    background: #ececec;
+
+}
+
+.bidList ul li .bidListLeft {
+    font-size: 15px;
+}
+
+.bidList ul li .bidListLeft p {
+    line-height: 25px;
+    color: #00cccc;
+}
+
+.bidList ul li .bidListLeft p:nth-child(2) {
+    color: #b02a2a;
+}
+
+.bidListLeftImg {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.bidListLeftImg img {
+    width: 100%;
+}
+
+.bidListRight .LX {
+    width: 48px;
+    height: 27px;
+    background: url("/img/border.png") no-repeat;
+    background-size: 100% 100%;
+    line-height: 27px;
+    text-align: center;
+    margin-left: 65px;
+    margin-top: 2px;
+    color: red;
+}
+
+.bidListRight p {
+    font-size: 13px;
+    color: #999;
+    text-align: right;
+    margin-top: 2px;
+}
+
+.myinfoContainer {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background-image: url(/static/img/myinfoBg.jpg?t=3);
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.myinfoContainer .avatarBox {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #FFF;
+    bottom: 0;
+    right: 5%;
+    margin-bottom: -30px;
+}
+
+.myinfoContainer .avatar {
+    width: 76px;
+    height: 76px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 2px;
+}
+
+.myinfoContainer .uncheck {
+    position: absolute;
+    width: 76px;
+    right: 5%;
+    height: 20px;
+    line-height: 20px;
+    bottom: -20px;
+    text-align: center;
+    margin-right: 2px;
+    font-size: 12px;
+    color: rgb(212, 212, 212);
+    background-color: rgba(34, 41, 44, 0.2);
+    overflow: hidden;
+}
+
+.myinfoContainer .checked {
+    position: absolute;
+    width: 76px;
+    right: 5%;
+    height: 20px;
+    margin-right: 2px;
+    line-height: 20px;
+    bottom: -20px;
+    text-align: center;
+    font-size: 12px;
+    color: #FFF;
+    background-color: rgba(34, 41, 44, 0.4);
+    overflow: hidden;
+}
+
+.myinfoContainer .nickname {
+    font-weight: bold;
+    position: absolute;
+    height: 20px;
+    line-height: 20px;
+    bottom: -30px;
+    right: 3%;
+    margin-right: 100px;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    overflow: hidden;
+}
+
+.saleMain .saleInfo .nickname .verifyState1 {
+    float: left;
+    width: 24px;
+    height: 18px;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 3px;
+    margin-right: 4px;
+    text-align: center;
+    border-radius: 1px;
+    background-color: #e71619;
+}
+
+.saleMain .saleInfo .nickname .verifyState2 {
+    float: left;
+    width: 24px;
+    height: 18px;
+    margin-top: 3px;
+    margin-right: 4px;
+    border-radius: 1px;
+    background-repeat: no-repeat;
+    background-image: url("/static/img/cert.png");
+    background-size: 100% 70px;
+    background-position: center -37px;
+}
+
+.saleMain .saleInfo .nickname .salelevel {
+    float: left;
+    width: 24px;
+    height: 18px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin-right: 5px;
+    margin-top: 3px;
+    border-radius: 1px;
+    background-color: #f6ae69;
+}
+
+.saleMain .saleInfo .nickname .salelevel.lv1 {
+    background-position: 0px 0px;
+}
+
+.saleMain .saleInfo .nickname .salelevel.lv2 {
+    background-position: 0px -19px;
+}
+
+.saleMain .saleInfo .nickname .salelevel.lv3 {
+    background-position: 0px -38px;
+}
+
+.saleMain .saleInfo .nickname .salelevel.lv4 {
+    background-position: 0px -58px;
+}
+
+.saleMain .saleInfo .nickname .salelevel.lv5 {
+    background-position: 0px -77px;
+}
+
+.saleMain .saleInfo .nickname .salelevel.lv6 {
+    background-position: 0px -96px;
+}
+
+.saleMain .saleInfo .nickname .salelevel.lv7 {
+    background-position: 0px -116px;
+}
+
+.myinfoContainer .signature {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    height: 20px;
+    line-height: 20px;
+    top: 144px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFF;
+    overflow: hidden;
+}
+
+.myinfoContainer .statics {
+    position: absolute;
+    width: 283px;
+    height: 36px;
+    top: 175px;
+    left: 50%;
+    margin-left: -141.5px;
+}
+
+.myinfoContainer .statics .staticsItem {
+    float: left;
+    width: 70px;
+    line-height: 18px;
+    font-size: 13px;
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 12px;
+}
+
+.myinfoContainer .statics .line {
+    float: left;
+    width: 1px;
+    height: 26px;
+    margin: 5px 0;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.myinfoContainer .visit {
+    font-weight: bold;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    margin-left: 50px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.myinfoContainer .visit .item {
+    font-size: 12px;
+    color: #FFF;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 2px;
+    padding: 2px 4px;
+}
+
+.myinfoContainer .visit .item span {
+    font-size: 12px;
+}
+
+.vote {
+    position: absolute;
+    left: 5%;
+    bottom: 10px;
+    width: 60px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.vote .text {
+    color: #FFF;
+    line-height: 30px;
+    text-align: center;
+}
+
+.voted {
+    background-image: url(/static/img/voted.png);
+}
+
+.unvote {
+    background-image: url(/static/img/unvote.png);
+}
+
+.saleMain {
+    position: relative;
+    width: 94%;
+    margin: 0 3%;
+    margin-top: 10px;
+    background-color: #fff;
+}
+#productlistsforindex,#productlisttemplate{
+    margin-bottom:50px;
+}
+.saleMain .saleItem {
+    padding-top: 13px;
+    display: table;
+    width: 100%;
+    border-top: #eaeae8 solid 1px;
+}
+
+.saleMain .saleItem:first-child {
+    border-top: none;
+}
+
+.saleMain .saleItem .avatar {
+    float: left;
+    width: 16%;
+    margin-right: 4px;
+}
+.saleMain .saleItem .avatar  span{
+    width: 50px;
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+    text-align: center;
+    height:24px;
+    line-height:24px;
+    padding:0;
+    color:#00cccc;
+    border-radius: 4px;
+    margin-top:5px;
+    border:1px solid   #00cccc;
+}
+
+.saleMain .saleItem .avatar img {
+    border-radius: 1px;
+    min-height: 40px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.saleMain .saleItem .avatar .follow {
+    width: 90%;
+    height: 30px;
+    background: url(/static/img/follow.png) no-repeat 50%;
+    background-size: 100%;
+}
+
+.saleMain .saleInfo {
+    float: left;
+    width: 82%;
+}
+
+.saleMain .saleInfo .nickname {
+    color: rgb(62, 112, 167);
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel {
+    float: left;
+    width: 28px;
+    height: 15px;
+    margin-top: 2px;
+    margin-right: 4px;
+    background-image: url(/static/img/sellerLevels.png);
+    background-size: 28px auto;
+    background-repeat: no-repeat;
+}
+
+.saleMain .saleInfo .nickname .saleAttr {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.saleMain .saleInfo .nickname .saleAttr .attention {
+    background-image: url("/static/img/follow1.png");
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    background-size: 18px 80%;
+    background-position: 2px center;
+    text-align: center;
+    border-radius: 2px;
+    padding: 0 4px;
+    font-size: 12px;
+    background-color: rgb(187, 52, 36);
+    padding-left: 20px;
+}
+
+.saleMain .saleInfo .nickname .saleAttr .cert {
+    background-image: url(/static/img/saleCert.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+}
+
+.saleMain .saleInfo .nickname .saleAttr .recommend {
+    display: block;
+    background-image: url(/static/img/recommend.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 17px;
+    width: 41px;
+    margin-left: 10px;
+    float: right;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv1 {
+    background-position: 0px 0px;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv2 {
+    background-position: 0px -15px;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv3 {
+    background-position: 0px -30px;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv4 {
+    background-position: 0px -45px;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv5 {
+    background-position: 0px -60px;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv6 {
+    background-position: 0px -75px;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv7 {
+    background-position: 0px -90px;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv8 {
+    background-position: 0px -105px;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv9 {
+    background-position: 0px -130px;
+}
+
+.saleMain .saleInfo .nickname .sellerLevel.lv10 {
+    background-position: 0px -145px;
+}
+
+.saleMain .saleInfo .nickname a, .saleMain .saleInfo .nickname a:visited {
+    color: #576B95;
+    text-decoration: none;
+}
+
+.saleMain .saleInfo .title {
+    color: rgb(43, 43, 43);
+    line-height: 20px;
+    word-break: break-all;
+    margin-top: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.saleMain .saleInfo .desc {
+    color: #333;
+    line-height: 28px;
+    word-break: break-all;
+    margin: 8px 0 0 0;
+    max-height: 100px;
+    overflow-y: hidden;
+    font-size: 15px
+}
+
+.saleMain .saleInfo .publishTime {
+    float: right;
+    color: #999;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.saleMain .saleInfo .descChange {
+    float: right;
+    color: rgb(87, 107, 149);
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.saleMain .saleInfo .imgList {
+    width: 100%;
+    display: table;
+    margin-top: 4px;
+}
+
+.saleMain .saleInfo .imgList div {
+    float: left;
+    width: 31%;
+    height: 99px;
+    margin: 1px;
+    border:1px solid #F0F0F0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: contain;
+    border:1px solid #F0F0F0;
+    cursor: url(/static/img/big.cur), auto;
+}
+
+.saleMain .saleInfo .imgList div.clickImg {
+    opacity: 0.5;
+}
+
+.saleMain .saleInfo .createTime img {
+    display: inline-block;
+    border: 0;
+}
+
+.saleMain .saleInfo .createTime, .saleMain .saleInfo .stateInfo {
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    padding: 6px 0 2px 0;
+}
+
+.saleMain .saleInfo .createTime .enableReturn {
+    vertical-align: middle;
+    margin: -2px 0px 0 0;
+    height: 16px;
+}
+
+.saleMain .saleInfo .createTime .freePost {
+    vertical-align: middle;
+    margin: -2px 0px 0 0;
+    height: 16px;
+}
+
+.saleMain .saleInfo .createTime .hasBzj {
+    vertical-align: middle;
+    margin: -2px 0px 0 0;
+    height: 16px;
+}
+
+.saleMain .saleInfo .stateInfo.hide {
+    display: none;
+}
+
+.saleMain .saleInfo .createTime .saleDel, .saleMain .saleInfo .createTime .saleToggle {
+    margin-left: 5px;
+    color: #60729A;
+}
+
+.saleMain .saleInfo .shareIt, .saleMain .saleInfo .popularity {
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 26px;
+    float: right;
+    background-size: 16px;
+    padding: 0 22px 0 10px;
+    line-height: 26px;
+    font-size: 13px;
+    color: #fe0100;
+    text-inden t: 0px;
+    background-position:
+}
+
+.saleMain .saleInfo .likeIt {
+    background-image: url(/static/img/like.png?t=1);
+    background-position: right -16px;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 26px;
+    float: right;
+    background-size: 18px;
+    padding: 0 22px 0 10px;
+    line-height: 26px;
+    font-size: 13px;
+    color: #fe0100;
+    text-indent: 0px;
+}
+
+.saleMain .saleInfo .shareIt {
+    font-size: 13px;
+    background-size: 13px;
+    padding-right: 15px;
+    color: #999;
+}
+
+.saleMain .saleInfo .likeIt.liked {
+    background-position: right 4px;
+}
+
+.saleMain .saleInfo .shareIt {
+    background-image: url(/static/img/shareIcon1.png);
+}
+
+.saleMain .saleInfo .popularity {
+    background-image: url(/static/img/review.png);
+    padding-left: 0px;
+}
+
+.saleMain .saleInfo .likeBox {
+    background-color: #f6f6f6;
+    position: relative;
+    padding: 6px 0 0 0;
+    text-align: center;
+    margin-top: 6px;
+    display: table;
+    width: 100%;
+    max-height: 57px;
+}
+
+.saleMain .saleInfo .likeBox:after {
+    content: '';
+    position: absolute;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #F0F1F2 rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-width: 6px;
+    height: 0;
+    width: 0;
+    top: -12px;
+    right: 53px;
+}
+
+.saleMain .saleInfo .likeBox .likeRow {
+    display: block;
+}
+
+.saleMain .saleInfo .likeBox .likeAvatar, .saleMain .saleInfo .likeBox .getMoreLike {
+    height: 25.9px;
+    width: 25.9px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    border-radius: 1px;
+    margin: 0 0 5px 5px;
+    border-radius: 50%;
+}
+
+.saleMain .saleInfo .likeBox .getMoreLike {
+    margin: 0 0 5px 5px;
+    border: 1px solid #9a9da5;
+    color: #9a9da5;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.saleMain .saleInfo .likeBox .getMoreLike:empty {
+    background: url(/static/img/up.png) no-repeat 50%;
+    background-size: 50%;
+}
+
+.saleMain .saleInfo .tmpLikeBox {
+    display: none;
+}
+
+.saleMain .saleInfo .stateInfo .state {
+    position: relative;
+    float: left;
+    background-color: #fe0100;
+    color: #FFF;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.saleMain .saleInfo .stateInfo .state.end {
+    background-color: #CCC;
+    color: #FFF;
+}
+
+.saleMain .saleInfo .stateInfo .state i {
+    position: absolute;
+    right: -8px;
+    color: #fe0100;
+    font-size: 26px;
+    line-height: 26px;
+    z-index: -1;
+}
+
+.saleMain .saleInfo .endTime {
+    text-align: right;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.saleMain .saleInfo .endTime span {
+    float: left;
+    margin-left: 10px;
+}
+
+.saleMain .saleInfo .endTime span {
+    font-size: 14px;
+}
+
+.saleMain .saleInfo .countdownTip {
+    clear: both;
+    float: right;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 16px;
+    background: url(/static/img/attentionRed.png) no-repeat 0 50%;
+    background-size: 14px;
+    display: none;
+}
+
+.saleMain .saleInfo .bidBtns {
+    width: 100%;
+    display: table;
+}
+
+.saleMain .saleInfo .bidBtns .price {
+    display: none;
+}
+
+.saleMain .saleInfo .bidBtns .bidBtn, .saleMain .saleInfo .bidBtns .shareBtnLayer,
+.saleMain .saleInfo .bidBtns .saleOpenBtn, .saleMain .saleInfo .bidBtns .saleEndBtn {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    background-color: #fe0100;
+    margin-top: 6px;
+}
+
+.saleMain .saleInfo .bidBtns .bidBtn.hide {
+    display: none;
+}
+
+.saleMain .saleInfo .bidBtns .saleOpenBtn {
+    background-color: #1ab6ef;
+}
+
+.saleMain .saleInfo .bidBtns .saleOpenBtn em {
+    padding: 0 5px;
+}
+
+.saleMain .saleInfo .bidBtns .saleEndBtn {
+    background-color: #ccc;
+}
+
+.saleMain .saleInfo .bidBtns .updateBid {
+    position: relative;
+}
+
+.saleMain .saleInfo .bidBtns .updateBid.hide {
+    display: none;
+}
+
+.saleMain .saleInfo .bidBtns .shareBtnLayer {
+    display: table;
+    width: 100%;
+}
+
+.saleMain .saleInfo .bidBtns .shareBtnLayer {
+    background-color: #62b84f;
+    width: 100%;
+    float: left;
+}
+
+.saleMain .saleInfo .bidBtns .updateBid button {
+    position: absolute;
+    left: -53px;
+    color: #0067BD;
+    height: 40px;
+    width: 50px;
+    top: -40px;
+    text-align: center;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.saleMain .saleInfo .bidBtns .updateBid i {
+    color: #999;
+    font-size: 12px;
+    display: block
+}
+
+.saleMain .saleInfo .bidList {
+    width: 99.6%;
+    background: #FFF;
+}
+
+.saleMain .saleInfo .bidList .ddli {
+    background: #EEE;
+    margin-top: 4px;
+    width: 96%;
+    padding: 4px 2%;
+    overflow: hidden;
+}
+
+.saleMain .saleInfo .bidList .ddli:last-child {
+    margin-bottom: 2px;
+    border-bottom: none;
+}
+
+.saleMain .saleInfo .bidList .ddli .state {
+    float: right;
+    text-align: right;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidTime {
+    color: #737373;
+    float: right;
+    width: 120px;
+    margin: 28px 0px 0px -20px;
+    position: absolute;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState {
+    width: 100px;
+    float: right;
+    border-radius: 3px;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState span {
+    display: block;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState .bidOut {
+    margin-top: 2px;
+    float: right;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState .bidOut:after {
+    content: "出局";
+    padding: 2px 10px;
+    color: #FFF;
+    background-color: #CCC;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState .bidLeader {
+    margin-top: 2px;
+    float: right;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState .bidLeader:after {
+    padding: 2px 10px;
+    color: #FFF;
+    content: "领先";
+    background-color: #fe0100;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState .bidDeal {
+    margin-top: 2px;
+    float: right;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState .bidDeal:after {
+    padding: 2px 10px;
+    color: #FFF;
+    content: "";
+    background-color: #fe0100;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState .bidDealOut:after {
+    padding: 2px 10px;
+    color: #FFF;
+    content: "出局";
+    background-color: #CCC;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.saleMain .saleInfo .bidList .ddli .state .bidState .bidHasOrder:after {
+    padding: 2px 10px;
+    color: #FFF;
+    content: "成交";
+    background-color: #fe0100;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar {
+    float: left;
+    width: 50px;
+    height: 45px;
+    margin-right: 7px;
+    position: relative;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar img {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels {
+    position: absolute;
+    width: 50px;
+    height: 13px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(/static/img/buyerLevels.png?t=4);
+    background-size: 50px auto;
+    background-repeat: no-repeat;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv1 {
+    background-position: 0px 0px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv2 {
+    background-position: 0px -13px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv3 {
+    background-position: 0px -26px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv4 {
+    background-position: 0px -39px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv5 {
+    background-position: 0px -52px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv6 {
+    background-position: 0px -65px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv7 {
+    background-position: 0px -78px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv8 {
+    background-position: 0px -91px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv9 {
+    background-position: 0px -104px;
+}
+
+.saleMain .saleInfo .bidList .ddli .avatar .buyerLevels.lv10 {
+    background-position: 0px -117px;
+}
+
+.saleMain .saleInfo .bidList .ddli .bidUser {
+    line-height: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #576B95;
+    float: left;
+    width: 50px;
+}
+
+.saleMain .saleInfo .bidList .ddli .bidUser .name {
+    line-height: 20px;
+    overflow: hidden;
+    width: 133px;
+}
+
+.saleMain .saleInfo .bidList .ddli .bidUser .name a {
+    color: #576B95;
+}
+
+.saleMain .saleInfo .bidList .ddli .bidUser .price {
+    line-height: 20px;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #fe0100;
+}
+
+.saleMain .saleInfo .bidList .bidMore {
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.saleMain .saleInfo .moneyInfo, .saleMain .saleInfo .moneyInfoExtend,
+.saleMain .saleInfo .moneyInfoPrice {
+    font-size: 12px;
+    display: table;
+    width: 100%;
+    margin-top: 7px;
+    color: #999;
+}
+
+.saleMain .saleInfo .moneyInfo div, .saleMain .saleInfo .moneyInfoExtend div,
+.saleMain .saleInfo .moneyInfoPrice div {
+    float: left;
+    width: 33%;
+    display: -webkit-box;
+    /* : Safari, iOS, Android browser, older WebKit browsers. */
+    display: -webkit-flex; /* Chrome 21+ */
+    display: flex; /* Opera 12.1, Firefox 22+ */ /**/ /**/
+    -webkit-box-pack: center; /**/
+    -webkit-justify-content: center;
+    justify-content: center;
+    height: 12px;
+}
+
+.saleMain .saleInfo .moneyInfo div:nth-child(2) {
+    border: 1px solid #cfd1d4;
+    border-width: 0 1px;
+}
+
+.saleMain .saleInfo .moneyInfoExtend div:nth-child(2) {
+    border: 1px solid #cfd1d4;
+    border-width: 0 0 0 1px;
+    width: 66%;
+}
+
+.saleMain .saleInfo .moneyInfoPrice div:nth-child(1) {
+    width: 50%;
+}
+
+.saleMain .saleInfo .moneyInfoPrice div:nth-child(2) {
+    border: 1px solid #cfd1d4;
+    border-width: 0 0 0 1px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.saleMain .saleInfo .moneyInfo div span, .saleMain .saleInfo .moneyInfoExtend div span,
+.saleMain .saleInfo .moneyInfoPrice div span {
+    background-image: url(/static/img/qjb.png?t=2);
+    background-repeat: no-repeat;
+    background-size: 13px;
+    text-indent: 16px;
+    display: block;
+    line-height: 12px;
+    background-position: left -2px;
+}
+
+.saleMain .saleInfo .moneyInfo div:nth-child(2) span {
+    background-position: left -25px;
+}
+
+.saleMain .saleInfo .moneyInfo div:last-child span {
+    background-position: left -49px;
+}
+
+.saleMain .saleInfo .moneyInfoExtend div span.yan {
+    background-image: url(/static/img/yan.png);
+}
+
+.saleMain .saleInfo .moneyInfoExtend div span.yikoujia {
+    background-image: url(/static/img/yikoujia.png);
+    background-size: 29px 12px;
+    text-indent: 33px;
+}
+
+.saleMain .saleInfo .moneyInfoExtend div span.referencePrice {
+    background-image: url(/static/img/referencePrice.png);
+    background-size: 29px 12px;
+    text-indent: 33px;
+}
+
+.saleMain .saleInfo .moneyInfoPrice div span.referencePrice {
+    background-image: url(/static/img/referencePrice.png);
+    background-size: 29px 12px;
+    text-indent: 33px;
+}
+
+.saleMain .saleInfo .moneyInfoPrice div span.yikoujia {
+    background-image: url(/static/img/yikoujia.png);
+    background-size: 29px 12px;
+    text-indent: 33px;
+}
+
+.goShake, .shopEmpty {
+    position: absolute;
+    top: 85px;
+    bottom: 51px;
+    display: block;
+    width: 100%;
+    background: url(/static/img/text.png?t=1) no-repeat 50%;
+    background-size: 200px auto;
+}
+
+.shopEmpty {
+    background-image: url(/static/img/shopEmpty.png);
+}
+
+.adminMenu {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    width: 32px;
+    height: 32px;
+    background-image: url(/static/img/salesearch.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.loadNextPage {
+    width: 100%;
+    height: 40px;
+    visibility: visible;
+}
+
+.loadNextPage .loading {
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    background-image: url(/static/img/loadingData.gif);
+    background-size: auto 70%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-align: center;
+    text-indent: 15px;
+}
+
+.wptAlert .dialog, .wptConfirm .dialog, .wptMultiConfirm .dialog {
+    position: fixed;
+    background: #ededed;
+    width: 100%;
+    bottom: -180px;
+    z-index: 1999;
+}
+
+.wptAlert .dialog .tip, .wptConfirm .dialog .tip, .wptMultiConfirm .dialog .tip {
+    line-height: 30px;
+    padding: 10px 0px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.wptMultiConfirm .dialog .tip {
+    padding: 0;
+}
+
+.wptAlert .dialog .tip .msg, .wptConfirm .dialog .tip .msg {
+    text-align: center;
+    line-height: 30px;
+}
+
+.wptAlert .dialog .tip .msg.font18, .wptConfirm .dialog .tip .msg.font18 {
+    font-size: 18px;
+}
+
+.wptAlert .dialog .tip .msg.faq, .wptConfirm .dialog .tip .msg.faq {
+    font-size: 17px;
+    background-image: url(/static/img/faq.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: auto 100%;
+    line-height: 30px;
+    height: 60px;
+    text-align: left;
+    padding-left: 80px;
+    padding-right: 12px;
+}
+
+.wptAlert .dialog .tip .msg.smallFaq, .wptConfirm .dialog .tip .msg.smallFaq {
+    font-size: 18px;
+    background-image: url(/static/img/faq.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: auto 100%;
+    line-height: 40px;
+    height: 40px;
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 12px;
+}
+
+.wptAlert .btns, .wptConfirm .btns {
+    width: 87%;
+    margin: 0 auto;
+    padding: 15px 0px;
+}
+
+.wptAlert .btns .btn-confirm, .wptAlert .btns .btn-cancel, .wptConfirm .btns .btn-confirm,
+.wptConfirm .btns .btn-cancel {
+    border: 1px solid #ceced1;
+    background: #f7f7f7;
+    padding: 10px 14px;
+    color: #454545;
+    border-radius: 4px;
+    width: 92%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.wptAlert .btns .btn-green, .wptConfirm .btns .btn-green {
+    background-color: #fe0100;
+    color: #fff;
+    border: none;
+}
+
+.wptAlert .btns .btn-cancel, .wptConfirm .btns .btn-cancel {
+    background-color: #858c96;
+    margin: 22px 0 7px 0;
+    color: #fff;
+    border: none;
+}
+
+.wptAlert .btns .btn-delete, .wptConfirm .btns .btn-delete {
+    background-color: #fe0100;
+    color: #fff;
+    border: none;
+}
+
+.wptMultiConfirm .btns {
+    width: 100%;
+    background-color: #D4D4DC;
+}
+
+.wptMultiConfirm .btns .btn-confirm, .wptMultiConfirm .btns .btn-cancel {
+    height: 49px;
+    line-height: 49px;
+    margin-top: 1px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #F3F3F3;
+}
+
+.wptMultiConfirm .btns .btn-cancel {
+    margin-top: 8px;
+}
+
+.wptPassword {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    bottom: 0px;
+    background-color: #efeff4;
+    display: none;
+    z-index: 1200;
+}
+
+.wptPassword .dialog {
+    width: 90%;
+    margin: 80px auto 0 auto;
+    height: 100px;
+}
+
+.wptPassword .dialog .tip {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.wptPassword .dialog .password {
+    width: 293px;
+    margin: 10px auto 0 auto;
+    height: 48px;
+    border: 1px solid #c4c4c4;
+}
+
+.wptPassword .dialog .password .passwordKey {
+    float: left;
+    width: 48px;
+    border-right: 1px solid #c4c4c4;
+    height: 48px;
+    line-height: 48px;
+    background-color: #FFF;
+    text-align: center;
+    font-size: 20px;
+}
+
+.wptPassword .dialog .password .passwordKey:last-child {
+    border-right: none;
+}
+
+.wptPassword .dialog .password .passwordKey .point {
+    width: 48px;
+    height: 48px;
+    background-image: url(/static/img/passwordPoint.png);
+    background-position: center;
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+.wptPassword .keyboard {
+    position: absolute;
+    width: 100%;
+    background-color: #FFF;
+    display: table;
+    bottom: 0px;
+}
+
+.wptPassword .keyboard ul {
+    padding: 0;
+    margin: 0;
+}
+
+.wptPassword .keyboard ul, .wptPassword .keyboard li {
+    text-decoration: none;
+    list-style: none;
+    vertical-align: middle;
+}
+
+.wptPassword .keyboard ul li {
+    width: 33.1%;
+    border-bottom: 1px solid #d2d5d8;
+    border-right: 1px solid #d2d5d8;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    font-size: 28px;
+    font-family: "Helvetica neue", Verdana, Geneva, sans-serif;
+    text-align: center;
+    background-color: #FFF;
+    color: #000;
+}
+
+.wptPassword .keyboard ul li:nth-child(3n) {
+    border-right: none;
+}
+
+.wptPassword .keyboard ul li.delete {
+    background-image: url(/static/img/backspace.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    background-color: #efeff4;
+}
+
+.wptPassword .keyboard ul li.blank {
+    background-color: #efeff4;
+    font-size: 17px;
+}
+
+.wptLoading {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1999;
+}
+
+.wptLoading .loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url(/static/img/handling.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #FFF;
+    opacity: 0;
+    line-height: 80px;
+    text-align: center;
+    text-indent: 15px;
+    z-index: 9999;
+}
+
+.wptLoading .loading .process {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: 5px;
+    color: #FFF;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    text-indent: 0px;
+}
+
+.wptNotice {
+    position: fixed;
+    bottom: 50px;
+    width: 94%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 30px;
+    padding: 8px 3%;
+    color: #FFF;
+    font-size: 14px;
+    display: none;
+}
+
+.wptNotice .msg {
+    float: left;
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.wptNotice .msg img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.wptNotice .msg span {
+    margin-left: 55px;
+}
+
+.wptNotice .btn {
+    float: left;
+    width: 20%;
+    height: 28px;
+    line-height: 28px;
+    margin: 1px 0;
+    background-color: #C7160A;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.recharge {
+    padding-bottom: 20px;
+    border-radius: 8px;
+}
+
+.recharge a div {
+    height: 30px;
+    line-height: 30px;
+    background: #FE0100;
+    color: #FFF !important;
+    text-align: center;
+    font-size: 14px;
+}
+
+.recharge a div:nth-child(2) {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.carousel-inner {
+    width: 100%;
+}
+
+.carousel-inner .item img {
+    width: 100%;
+    height: 250px;
+}
+
+.saleMain .saleInfo .imgList img {
+    display: block;
+    float: left;
+    width: 32%;
+    margin: 1px;
+}
+
+.category {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background-image: url(/static/img/category.png);
+    background-position: center 0;
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.category1 {
+    background-position: center 0;
+}
+
+.category2 {
+    background-position: center -80px;
+}
+
+.category3 {
+    background-position: center -160px;
+}
+
+.category4 {
+    background-position: center -240px;
+}
+
+.category5 {
+    background-position: center -320px;
+}
+
+.category6 {
+    background-position: center -400px;
+}
+
+.col-xs-4 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.cate0 {
+    display: inline-block;
+    color: #fe0100;
+}
+
+.cate0:after {
+    display: block;
+    content: ' ';
+    width: 100%;
+    background: #fe0100;
+    position: relative;
+    top: 4px;
+    height: 2px;
+}
+

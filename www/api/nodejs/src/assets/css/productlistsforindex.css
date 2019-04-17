@@ -1,0 +1,388 @@
+#productlistsforindex .left:after{
+    content:'';
+    display:block;
+    width:100%;
+    height:36px;
+
+}
+#productlistsforindex .icon_lists {
+    color: #333;
+}
+
+#productlistsforindex .icon_lists .icon {
+    min-width: 1em;
+    font-size: 30px;
+    -webkit-transition: font-size 0.25s ease-out 0s;
+    -moz-transition: font-size 0.25s ease-out 0s;
+    transition: font-size 0.25s ease-out 0s;
+
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//w.tianbaoweipai.com/static/font/index.eot?t=1484042365502'); /* IE9*/
+    src: url('//w.tianbaoweipai.com/static/font/index.eot?t=1484042365502#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//w.tianbaoweipai.com/static/font/index.woff?t=1484042365502') format('woff'), /* chrome, firefox */ url('//w.tianbaoweipai.com/static/font/index.ttf?t=1484042365502') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('//w.tianbaoweipai.com/static/font/index.svg?t=1484042365502#index') format('svg'); /* iOS 4.1- */
+}
+
+#productlistsforindex .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    color: inherit;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*图标大小比例*/
+#productlistsforindex .fi-stack {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+#productlistsforindex .fi-stack-0x6,
+#productlistsforindex .fi-stack-0x8,
+#productlistsforindex .fi-stack-1x,
+#productlistsforindex .fi-stack-1x2,
+#productlistsforindex .fi-stack-1x5,
+#productlistsforindex .fi-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    line-height: inherit;
+}
+
+#productlistsforindex .fi-stack-0x6 {
+    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforindex .fi-stack-0x8 {
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforindex .fi-stack-1x2 {
+    transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforindex .fi-stack-1x5 {
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforindex .fi-stack-1x {
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
+
+#productlistsforindex .fi-stack-2x {
+    font-size: 2em;
+}
+#productlistsforindex  .verifyState1{
+
+    font-size:14px !important;
+}#productlistsforindex  .icon.salelevel{
+
+    font-size:14px ;
+}
+
+#productlistsforindex .icon-iconfuzhi01:before {
+    content: "\f000f";
+}
+
+#productlistsforindex .icon-fenxiang:before {
+    content: "\e631";
+}
+
+#productlistsforindex .icon-xin:before {
+    content: "\e64b";
+}
+
+#productlistsforindex .icon-baoyou:before {
+    content: "\e611";
+}
+
+#productlistsforindex .icon-gerendengji3:before {
+    content: "\e657";
+}
+
+#productlistsforindex .icon-gerendengji4:before {
+    content: "\e658";
+}
+
+#productlistsforindex .icon-gerendengji2:before {
+    content: "\e65a";
+}
+
+#productlistsforindex .icon-gerendengji5:before {
+    content: "\e65b";
+}
+
+#productlistsforindex .icon-gerendengji6:before {
+    content: "\e65c";
+}
+
+#productlistsforindex .icon-baoyou1:before {
+    content: "\e640";
+}
+
+#productlistsforindex .icon-gerendengji1:before {
+    content: "\e67e";
+}
+
+#productlistsforindex .icon-baotui:before {
+    content: "\e6b0";
+}
+
+#productlistsforindex .icon-combinedshape:before {
+    content: "\e61a";
+}
+
+#productlistsforindex .icon-dengji3:before {
+    content: "\e61e";
+}
+
+#productlistsforindex .icon-dengji1:before {
+    content: "\e628";
+}
+
+#productlistsforindex .icon-dengji2:before {
+    content: "\e629";
+}
+
+#productlistsforindex .icon-dengji5:before {
+    content: "\e62c";
+}
+
+#productlistsforindex .icon-dengji6:before {
+    content: "\e62d";
+}
+
+#productlistsforindex .icon-dengji7:before {
+    content: "\e62e";
+}
+
+#productlistsforindex .icon-dengjiv1:before {
+    content: "\e601";
+}
+
+#productlistsforindex .icon-dengjiv3:before {
+    content: "\e602";
+}
+
+#productlistsforindex .icon-dengjiv4:before {
+    content: "\e604";
+}
+
+#productlistsforindex .icon-dengjiv5:before {
+    content: "\e605";
+}
+
+#productlistsforindex .icon-dengjiv2:before {
+    content: "\e607";
+}
+
+#productlistsforindex .icon-huiyuan:before {
+    content: "\e62f";
+}
+
+#productlistsforindex .icon-yanjing:before {
+    content: "\e619";
+}
+
+#productlistsforindex .icon-yanjing1:before {
+    content: "\e63d";
+}
+
+#productlistsforindex .icon-7tianbaotui:before {
+    content: "\e6cc";
+}
+
+#productlistsforindex .icon-anquan:before {
+    content: "\e603";
+}
+
+#productlistsforindex .wpt-share{
+    position: fixed;
+
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    bottom:50px;
+    background-color:rgba(0,0,0,0.5);
+display:none;
+
+
+
+}
+
+#productlistsforindex .share-box{
+    position: fixed;
+    width:7.5rem;
+    top:auto;
+    bottom:50px;
+    background-color: #EFEFF4;
+    z-index: 1999;
+
+
+}
+#productlistsforindex .share-box.fill-ip{
+    animation:flipUp 0.3s ease-out;
+    visibility: visible !important;
+
+}
+
+#productlistsforindex .share-box .bt-share{
+position: relative;
+width:33%;
+font-size:12px;
+float:left;
+text-align: center;
+text-decoration:none;
+padding: 60px 20px;
+
+
+}
+#productlistsforindex .share-box .title{
+    color:#424242;
+    margin:0 auto;
+    text-align: center;
+}
+#productlistsforindex .share-box .title h1{
+    margin:5px auto;
+}
+#productlistsforindex .share-box .bt-sharef .icon{
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:0;
+    left:50%;
+    margin-left:-25px;
+    background:url(../img/friend.png)  no-repeat top left scroll;
+    background-size:contain;
+    border:1px solid #def;
+
+}
+
+
+#productlistsforindex .share-box .bt-sharefg .icon{
+    position: absolute;
+    width:50px;
+    height:50px;
+    top:0;
+    left:50%;
+    border:1px solid #def;
+    margin-left:-25px;
+    background:url(../img/goodfriend.png)  no-repeat top left scroll;
+    background-size:contain;
+
+
+}
+
+#productlistsforindex .saleMain .saleInfo .desc.fullDesc{
+max-height:none;
+overflow-y: auto;
+}
+
+#productlistsforindex  .wptShare{
+display: none;
+position:fixed;
+top:0;
+opacity: 0.6;
+bottom:0;
+width:100%;
+height:100%;
+background-color:#000;
+z-index:1999;
+}
+
+
+
+#productlistsforindex  .wptShare .wptMask{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    ringht:0;
+    width:100%;
+    height:100%;
+    background-color:#000;
+    z-index:1999;
+
+}
+
+#productlistsforindex  .wptShare .shareTip{
+    position:fixed;
+    top:0;
+    width:96%;
+    height:286px;
+    background-image:url(../img/share.png);
+    background-repeat:no-repeat;
+    background-size:auto 55%;
+    background-position:right top;
+    z-index:2000;
+}
+
+
+#productlistsforindex  .verifyState1.membercolorv1{
+    color:#c7c7cc;
+    background-color: #757373;
+    background-image:url(/static/img/nomember.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+#productlistsforindex  .verifyState1.membercolorv5{
+    background-image:url(/static/img/diamond.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlistsforindex  .verifyState1.membercolorv4{
+    background-image:url(/static/img/gold_medal.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlistsforindex  .verifyState1.membercolorv3{
+    background-image:url(/static/img/silver.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlistsforindex  .verifyState1.membercolorv2{
+    background-image:url(/static/img/bronze.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFF;
+    background-position:center;
+}
+#productlistsforindex  .verifyState1.membercolorv{
+    color:#c7c7cc;
+    background-color: #757373;
+}
+#productlistsforindex  .verifyState1.membercolorv.ismember{
+    color:#ffffff;
+    background-color: #EE0000;
+}

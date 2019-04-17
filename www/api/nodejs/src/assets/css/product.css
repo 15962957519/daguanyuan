@@ -1,0 +1,553 @@
+
+.topBanner .btn {
+    margin: 8px;
+    display: inline-block;
+    float: right;
+    padding: 8px 10px;
+    background-color: #fff;;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius:4px;
+    border: 1px solid #fe0100;
+    color: #fe0100;
+}
+.topBanner span{
+display: inline-block;
+padding: 8px;
+line-height: 16px;
+margin: 8px;
+}
+.topBanner .moreSetCancel, .topBanner .draft {
+    float: left;
+    text-align: left;
+    background-color: #FFF;
+    font-size: 15px;
+    border: 1px solid #5f646e;
+    color: #5f646e;
+}
+
+#productuve .editMain {
+    margin: 0 1%;
+    width: 98%;
+    display: table;
+    background-color: #FFF;
+}
+
+#productuve .editMain .desc {
+    border-bottom: 1px solid #f5f5f5;
+    margin: 0 10px;
+}
+
+#productuve .editMain .desc input {
+    border: none;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    padding: 4px 4px;
+    height: 40px;
+    margin-top: 12px;
+    font-size: 15px;
+    border-radius: 2px;
+    color: #373737;
+}
+
+.editMain .desc textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    padding: 4px 4px;
+    height: 120px;
+    margin-top: 12px;
+    font-size: 15px;
+    border-radius: 2px;
+    color: #373737;
+}
+
+.editMain .goodsImgList {
+    clear: both;
+    margin: 10px 10px 4px 10px;
+    display: table;
+}
+.editMain .goodsImgList:after{display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden;}
+.editMain .goodsImgList div {
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 2px;
+    margin-left: 4px;
+    display: block;
+    background-color:#fff;
+    border:1px solid #ccc;
+    font-size:0;
+    *font-size:200px;
+    text-align:center;
+    margin-bottom: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    overflow:hidden;
+}
+.editMain .goodsImgList div img{
+    display: inline;
+    vertical-align: middle;
+    margin:0;
+    padding:0;
+    border:0;
+    max-width:100%;
+    max-height:100%;
+}
+.editMain .goodsImgList div:after{display:inline-block; width:0; height:100%; content:"center"; vertical-align:middle; overflow:hidden;}
+.editMain .goodsImgList  .delete {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: block;
+    right: 3px;
+    top: 3px;
+    margin: 0;
+    margin-left:-10px;
+    padding: 0;
+    background-image: url(../img/delete.png);
+    background-size: 100%;
+}
+
+.editMain .goodsImgList div.addImg {
+    background: url(../img/addimg.png) no-repeat;
+    background-size: 80px;
+}
+
+.editMain .saleItem {
+    background: #FFF;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    margin: 0 4%;
+    display: table;
+    width: 92%;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.editMain .saleItem:last-child {
+    border-bottom: none;
+}
+
+.editMain .saleItem.endTime {
+    background-image: url(../img/calendar.png);
+    background-position: 100% center;
+    background-size: auto 68%;
+    background-repeat: no-repeat;
+}
+
+.editMain .saleItem.category {
+    width: 92%;
+    background-image: url(../img/categoryIcon.png);
+    background-size: auto 68%;
+    background-position: 100% center;
+    background-repeat: no-repeat;
+}
+
+.editMain .saleItem.bzj {
+    background-image: url(/Public/img/shield.png);
+    background-position: 100% center;
+    background-size: auto 68%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.editMain .saleItem.bzj.disable {
+    background-image: url(/Public/img/shieldDisable.png);
+}
+
+.editMain .saleItem.bzj.disable:after {
+    content: '';
+    color: #a8a8a8;
+    position: absolute;
+    right: 45px;
+    font-size: 14px;
+    line-height: 48px;
+}
+
+.editMain .saleItem.disable .bidBzjInput span {
+    color: #a8a8a8;
+}
+
+.editMain .saleItem.bzj .bidBzjList {
+    position: absolute;
+    left: -4%;
+    width: 108%;
+    background-color: #FFF;
+    height: 0px;
+    overflow-x: hidden;
+    bottom:0;
+}
+
+.editMain .saleItem.bzj .bidBzjList div.bzjItem {
+    float: left;
+    display: block;
+    width: 33%;
+    height: 45px;
+    line-height: 45px;
+    color: #999;
+    font-size: 15px;
+    text-align: center;
+}
+
+.editMain .saleItem.bzj .bidBzjList div.disable {
+    color: #a8a8a8;
+}
+
+.editMain .saleItem .lihead {
+    line-height: 48px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    float: left;
+    width: 90px;
+}
+/*新添加样式*/
+.editMain .hh{
+    background: #FFF;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    margin: 0 4%;
+    display: table;
+    width: 92%;
+    border-bottom: 1px solid #F5F5F5;
+}
+/*新添加样式*/
+.editMain .hh . ff {
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    float: left;
+    width: 90px;
+
+
+}
+
+.editMain .saleItem .endTimeInput, .editMain .saleItem .category {
+    float: left;
+}
+
+.editMain .saleItem .endTimeInput span, .editMain .saleItem .category {
+    line-height: 48px;
+    font-size: 16px;
+    color: #999;
+    margin: 0;
+}
+
+.endTimeList {
+    width: 100%;
+    background-color: #FFF;
+}
+
+
+
+.endTimeList dl dt {
+    width: 100%;
+    clear: both;
+    color: #999;
+    font-size: 15px;
+    text-indent: 10px;
+    padding: 10px;
+}
+
+.endTimeList dl dd {
+    float: left;
+    width: 28%;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    margin: 0px 5px 10px 8px;
+}
+
+.editMain .saleItem .switchBtn {
+    float: right;
+    text-indent: -9999px;
+    display: block;
+    width: 60px;
+    overflow: auto;
+    height: auto;
+    -webkit-transition: background-position 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 8px 0;
+    background-position: -20px 0px;
+    background-size: 70px;
+    border-radius: 16px;
+}
+
+.editMain .saleItem .switchBtn.on {
+    background-position: 0px 0px;
+}
+
+.editMain .saleItem .numInput, .editMain .saleItem .bidBzjInput {
+    float: left;
+    font-family: "Helvetica neue", Verdana, Geneva, sans-serif;
+    height: 48px;
+    line-height: 48px;
+}
+
+.editMain .saleItem .numInput span, .editMain .saleItem .bidBzjInput span,
+.editMain .saleItem .categoryInput span {
+    line-height: 48px;
+    font-size: 16px;
+    color: #999;
+    margin: 0 10px;
+}
+
+.editMain .saleItem .numInput span.hover {
+    border-right: 2px solid red;
+}
+
+.editMain .tip {
+    color: #8c8c8c;
+    margin: 0px 15px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.wptLoading .wptMask {
+    opacity: 0.4;
+}
+
+.wptLoading .loading .process {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: 5px;
+    color: #FFF;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    text-indent: 0px;
+}
+
+#category{
+max-width:640px;
+display:inline;
+}
+ #category .wptCategory,.wptEndtime{
+position:fixed;
+left:0;
+right:0;
+top:0;
+bottom:-200px;
+width:100%;
+height:100%;
+display:none;
+}
+.wptCategory .categoryBox .categoryList .categoryItem {
+    display: table;
+    width: 100%;
+    background-color: #FFF;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div:first-child {
+    background-image: url(../img/categoryListIcon.png?t=2);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    float: left;
+    text-indent: 36px;
+    margin-left: 4%;
+    width: 80%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem.selected div:first-child
+{
+    background-image: url(../img/categoryListIconSelected.png?t=2);
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category1 {
+    background-position: 0 10px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category2 {
+    background-position: 0 -30px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category3 {
+    background-position: 0 -69px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category4 {
+    background-position: 0 -108px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category5 {
+    background-position: 0 -146px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div.category6 {
+    background-position: 0 -185px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div:last-child {
+    float: right;
+    width: 21px;
+    height: 21px;
+    margin: 14px 7% 14px 0px;
+    background-image: url(../img/checkIcons.png?t=1);
+    background-size: 100% auto;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem.selected div:last-child
+{
+    background-position: 0px -21px;
+}
+
+.wptCategory .categoryBox .categoryList .categoryItem div span {
+    margin-left: 8px;
+    font-size: 10px;
+    color: #939393;
+}
+
+.wptCategory .wptMask {
+    opacity: 0.4 !important;
+}
+.picker-items >div:first-child{
+display: none;
+}
+.picker-items >div:last-child{
+display: none;
+}
+
+#datePlugin {
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1111111;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#datePlugin * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-clip: padding-box;
+}
+#datePlugin .d-date-box {
+    position: absolute;
+    bottom: 0;
+    margin:0 auto;
+    left:0;
+    right:0;
+    background-color: #fff;
+    width: 100%;
+}
+#datePlugin .d-date-title {
+    text-align: left;
+    font-weight: 700;
+    width:92px;
+    display: inline-block;
+    padding: 10px;
+    color: #f70;
+    height: 41px;
+    line-height:41px;
+    overflow: hidden;
+}
+
+#datePlugin .d-date-title-current {
+    text-align: left;
+    font-weight: 700;
+    width:auto;
+    display: inline-block;
+    padding: 10px;
+    color: #f70;
+    height: 41px;
+    line-height:41px;
+    overflow: hidden;
+}
+#datePlugin .d-date-title-current p{
+   display: inherit;
+}
+
+
+#datePlugin .d-date-info {
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+}
+#datePlugin .d-date-wrap {
+    margin-top: 10px;
+    width: 100%;
+    display: inline-block;
+    height: 120px;
+    position: relative;
+}
+#datePlugin .d-time-wrap {
+    border-top: 1px solid #f70;
+}
+#datePlugin .d-time-wrap .d-date-cell {
+    width: 50%;
+}
+#datePlugin .d-date-mark {
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+#datePlugin .d-date-cell {
+    float: left;
+    width: 33.33333%;
+    height: 100%;
+    overflow: hidden;
+}
+#datePlugin .d-date-cell li {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+#datePlugin .d-date-btns .d-btn {
+    background: #2ecabf;
+    display: inline-block;
+    width: 50%;
+    margin:0;
+    border: none;
+    border-top: 1px solid #ddd;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 0;
+}
+#datePlugin .d-date-btns #d-okBtn {
+    /*    background: #f70;*/
+    /*border-bottom-left-radius: 5px;*/
+    border-right: 1px solid #ddd;
+}
+#datePlugin .d-date-btns #d-cancleBtn {
+    background: #f77;
+    /* border-bottom-right-radius: 5px;*/
+}
+.d-date-box{
+    max-width:640px;
+}
+#immediatelyproduct{
+    width: 94%;
+    margin: 30px 3% 20px;
+    border: none;
+    background: #fe0100;
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+}

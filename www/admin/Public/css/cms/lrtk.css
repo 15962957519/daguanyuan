@@ -1,0 +1,49 @@
+/* ����ͼ�� �Ѽ����� www.lanrentuku.com */
+
+h2{margin: 0;}
+.drawers-wrapper{position: relative;height:330px;}
+.drawer{background:transparent url("../images/sideboxlight_bg.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/sideboxlight_bg.gif*/ repeat-y scroll 0pt; color:#76797C; font-size:12px; line-height:1.3em;}
+.boxcap{height:5px; left:0pt; position:absolute; width:100%; z-index:100; background:transparent url("../images/sidenav_capbottom.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/sidenav_capbottom.png*/ no-repeat scroll 0%; margin-top:-5px;}
+.captop{background-image:url("../images/box_188captop.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/box_188captop.png*/; bottom:auto; top:0pt; margin-top:0;}
+.drawers{margin-bottom:15px; color:#76797C; font-size:11px; line-height: 18px;}
+.drawers A{color:#666666; text-decoration:none; font-family:"Lucida Grande",Geneva,Arial,Verdana,sans-serif; font-size-adjust:none; font-style:normal; font-variant:normal; font-weight:normal;}
+.drawer li{border-bottom:1px solid #E5E5E5; line-height:16px; padding:6px 0pt;}
+UL{list-style: none; padding: 0;}
+UL.drawers{margin: 0;}
+.drawer-handle{background: url("../images/cp_title.png")/*tpa=www.bopaitang.comtemplets/qinhantang/images/cp_title.png*/ no-repeat ; color:#333333; cursor:default; font-size:12px; font-weight:normal; height:36px; width:901px;margin:0 auto;font-weight:bold;padding-top:15px;padding-left:100px}
+.drawer-handle.open{background: url("../images/cp_title2.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/cp_title2.gif*/ no-repeat ;}
+.drawer UL{border-bottom:1px solid #ddd; padding-bottom:0pt;background: url("../images/cp_title3.gif")/*tpa=www.bopaitang.comtemplets/qinhantang/images/cp_title3.gif*/ repeat-y ;width:851px;padding-left:100px;padding-right:50px;line-height:24px;padding-bottom:20px;font-family:"����";}
+.drawer-content UL{padding-top: 7px;}
+.drawer-content LI A{display:block; overflow:hidden;}
+.alldownloads li{border:0pt none; line-height:18px; padding:0pt;}
+
+.qqqq{
+	overflow:hidden;
+}
+.qqqq .qqqq{
+	padding:10px 0 0 10px;
+}
+.qqqq li{
+	float:left;
+	width:155px;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+.qqqq li img{
+	display:block;
+	padding:1px;
+	border:1px solid #ccc;
+	width:150px;
+	height:104px;
+}
+.qqqq li h3{
+	height:40px;
+	line-height:20px;
+	overflow:hidden;
+	text-align:center;
+}
+.qqqq li .click{
+	color:#666;
+	text-align:center;
+	display:block;
+}

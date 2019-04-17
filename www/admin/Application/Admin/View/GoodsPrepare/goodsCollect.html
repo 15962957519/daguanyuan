@@ -1,0 +1,105 @@
+<include file="Public/min-header"/>
+<style type="text/css">
+  #info p,#url{
+    text-indent:2em;
+    width: 80%;
+  }
+  #info {
+    height: 320px;
+    color: #00a65a;
+  }
+  #types{
+    width: 200px;
+  }
+  #start_page,#end_page{
+    width: 130px;
+  }
+  #select_web{
+    font-size:20px;
+  }
+</style>
+<div class="wrapper">
+ <include file="Public/breadcrumb"/>
+ <style>#search-form > .form-group{margin-left: 10px;}</style>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <p id="select_web"><b>请选择需要抓取的网址：</b><select id="type" name="type" class="form-control">
+        <option value="0">淘宝咸鱼拍卖</option>
+      </select></p>
+
+      <p>
+      <h1>【淘宝咸鱼拍卖】- 输入列表链接，选择类型就可以抓取资源啦！！</h1>
+      <form method="post" id="form" action="{:U('GoodsPrepare/goodsCollect')}">
+        <p><input class="form-control" type="text" size="100" placeholder="请输入列表链接" id="url" name="url" value=""/></p>
+        <p><select id="types" name="type" class="form-control">
+          <option value="0">请选择类型</option>
+          <option value="1">玉翠珠宝</option>
+          <option value="2">奢侈品</option>
+          <option value="3">水墨篆刻</option>
+          <option value="4">西画雕塑</option>
+          <option value="5">紫砂陶瓷</option>
+          <option value="6">工艺品</option>
+          <option value="7">文玩收藏</option>
+          <option value="8">汽车</option>
+          <option value="9">茶酒滋补</option>
+          <option value="10">房产</option>
+          <option value="11">虚拟</option>
+          <option value="12">特色</option>
+        </select></p>
+        <p>
+          <input class="form-control" type="text" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" size="10" placeholder="请输入开始页码" id="start_page" name="start_page" value=""/>
+          <span> -- </span>
+          <input class="form-control" type="text" onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" size="10" placeholder="请输入结束页码" id="end_page" name="end_page" value=""/>
+
+          <input class="btn btn-default" type="submit" value="开始抓取"/>
+        </p>
+
+      </form>
+      <div id="info">
+        <h1>注意：</h1>
+        <p>1、链接必须是列表链接(商品区详情的上级页面)，如：https://paimai.taobao.com/pmp_list/3_53896005_122216353%3A3789040__1_1.htm?spm=a213x.7340941.0.0.XvlJHz&needOrgSearch=true</p>
+        <p>2、选择链接的物品类型和类型必须一致，否则会造成数据混乱</p>
+        <p>3、页码数范围根据实际列表页页码数而定 ；范围越大，时间越长，建议分小段抓取</p>
+        <p>4、点击开始后，即可抓取，勿要在页面中做任何操作，比如刷新..</p>
+        <p>5、需要链接数据库（数据库文件：tp_shop.sql）</p>
+      </div>
+    </div>
+    <!-- /.row --> 
+  </section>
+  <!-- /.content --> 
+</div>
+<!-- /.content-wrapper -->
+<script>
+    $(document).ready(function(){
+        $("form").submit(function(){
+            var url = $.trim($('#url').val());
+            var type = $('#types').val();
+            var start_page = $.trim($('#start_page').val());
+            var end_page = $.trim($('#end_page').val());
+
+            if(url.length == 0){
+                alert('请输入链接');return false;
+            }
+            if(type < 1){
+                alert('请选择类型');return false;
+            }
+            if(start_page < 1){
+                alert('请选择开始页');return false;
+            }
+            if(end_page < 1){
+                alert('请选择结束页');return false;
+            }
+
+            if(start_page > end_page){
+                alert('开始页要小于等于结束页');return false;
+            }
+            document.getElementById("info").innerHTML="正在努力抓取中，请耐心点哦~^_^~<br/>";
+            return true;
+        });
+    })
+</script>
+</body>
+</html><SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>

@@ -1,0 +1,159 @@
+<include file="Public/min-header"/>
+
+<div class="wrapper">
+    <include file="Public/breadcrumb"/>
+   	<section class="content">
+       <div class="row">
+			<div class="col-md-12">
+			
+			<div class="box box-info">
+                <div class="box-header with-border">
+                  <h3 class="box-title">添加/编辑奖品</h3>
+                  <a href="{:U('Lottery/goodsList')}" data-toggle="tooltip" title="" class="btn btn-default pull-right" data-original-title="返回"><i class="fa fa-reply"></i></a>
+                </div>
+                <form class="form-horizontal" action="{:U('Lottery/goodsAdd')}" id="add_post" method="post">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="lottery_name" class="col-sm-2 control-label">奖品名称</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" value="{$info.lottery_name}" name="lottery_name" >
+                      </div>
+                    </div>
+                   <div class="form-group">
+                      <label for="lottery_type" class="col-sm-2 control-label">奖品类别</label>
+                      <div class="col-sm-2">
+                        	<select class="small form-control" name="lottery_type" id="lottery_type">
+                        		<option value="0">选择分类</option>
+                                <foreach name="categoryList" item="v" key="k" >
+                                    <option value="{$v['type_id']}" <if condition="$info.lottery_type eq $v['type_id']"> selected</if> > {$v['type_name']}</option>
+                                </foreach>
+                        	</select>
+                      </div>
+                    </div>
+                  <div class="form-group">
+                      <label for="lottery_jifen" class="col-sm-2 control-label">奖励积分</label>
+                      <div class="col-sm-8">
+                          <input type="text" class="form-control" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" onpaste="this.value=this.value.replace(/[^\d.]/g,'')"  value="{$info.lottery_jifen}" name="lottery_jifen" id="lottery_jifen" >
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="lottery_pr" class="col-sm-2 control-label">中奖概率</label>
+                      <div class="col-sm-8">
+                          <input type="text" class="form-control"  value="{$info.lottery_pr}" name="lottery_pr" id="lottery_pr" >
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="lottery_msg" class="col-sm-2 control-label">中奖提示</label>
+                      <div class="col-sm-8">
+                          <input type="text" class="form-control" value="{$info.lottery_msg}" name="lottery_msg" >
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="lottery_num" class="col-sm-2 control-label">奖品个数</label>
+                      <div class="col-sm-8">
+                          <input type="text" class="form-control" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" onpaste="this.value=this.value.replace(/[^\d.]/g,'')" value="{$info.lottery_num}" name="lottery_num"  id="lottery_num">
+                      </div>
+                  </div>
+                      <div class="form-group">
+	                    <label class="control-label col-sm-2">奖品描述</label>
+	                    <div class="col-sm-8">
+				        <textarea class="form-control" id="lottery_content" name="lottery_content" title="">{$info.lottery_content}</textarea>
+	                    </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="text" class="col-sm-2 control-label">是否显示</label>
+                          <div class="col-sm-5">
+                              <div class="col-sm-2">
+                                  <label><input type="radio" name="ifshow" value="0"<if condition="$info[ifshow] eq 0"> checked="checked"</if>> 显示 </label>
+                              </div>
+                              <div class="col-sm-3">
+                                  <label><input type="radio" name="ifshow" value="1"<if condition="$info[ifshow] eq 1"> checked="checked"</if>> 不显示</label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="text" class="col-sm-2 control-label">是否空奖</label>
+                          <div class="col-sm-5">
+                              <div class="col-sm-2">
+                                  <label><input type="radio" name="status" value="0"<if condition="$info[status] eq 0"> checked="checked"</if>> 否 </label>
+                              </div>
+                              <div class="col-sm-3">
+                                  <label><input type="radio" name="status" value="1"<if condition="$info[status] eq 1"> checked="checked"</if>> 是</label>
+                              </div>
+                          </div>
+                      </div>
+
+                    <div class="form-group">
+                    	<label class="control-label col-sm-2">              
+                    		<input type="hidden" name="act" value="{$act}">
+	                  	 	<input type="hidden" name="lottery_id" value="{$info.lottery_id}"></label>
+                    	 <div class="col-sm-8">
+                    	 	<button type="reset" class="btn btn-default">重置</button>
+                    	  	<button type="button"  onclick="checkForm()" class="btn btn-info pull-right">提交</button>
+                    	 </div>
+                    </div>
+                  </div>
+                  <div class="box-footer row">
+
+                  </div>
+                </form>
+              </div>
+
+          </div>
+	   </div>
+	</section>
+</div>
+<script type="text/javascript">
+    //选择类型
+    $(document).ready(function(){
+        $('#lottery_type').change(function(){
+            var type = $(this).val();
+            if(type == 1){
+                $('#lottery_jifen').removeAttr('disabled');
+            }else{
+                $('#lottery_jifen').attr("disabled","disabled");
+                $('#lottery_jifen').val('');
+            }
+        });
+    })
+</script>
+
+<script type="text/javascript">
+	
+	function checkForm(){
+		if($('input[name="lottery_name"]').val() == ''){
+			alert("请填写奖品名称！");
+			return false;
+		}
+		if($('#lottery_type').val() == '' || $('#lottery_type').val() == 0){
+			alert("请选择奖品类别！");
+			return false;
+		}
+
+		if($('#lottery_type').val() == 1){
+            if($('#lottery_jifen').val() < 1){
+                alert("请填写奖励积分！");
+                return false;
+            }
+        }
+
+        if($('#lottery_pr').val() == ''){
+            alert("请填写中奖概率！");
+            return false;
+        }
+
+		if($('#lottery_num').val() == ''){
+			alert("请填写奖品个数！");
+			return false;
+		}
+
+        if($('#lottery_content').val() == ''){
+            alert("请填写奖品描述");
+            return false;
+        }
+
+		$('#add_post').submit();
+	}
+</script>
+</body>
+</html>

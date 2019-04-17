@@ -1,0 +1,118 @@
+/** 重置文本格式元素 **/
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a:visited {text-decoration:none;}
+.icon_lists .icon {
+    position: relative;
+    min-width: 1em;
+    font-size: 30px;
+    -webkit-transition: font-size 0.25s ease-out 0s;
+    -moz-transition: font-size 0.25s ease-out 0s;
+    transition: font-size 0.25s ease-out 0s;
+
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('//w.tianbaoweipai.com/static/font/paycat.eot?t=1484042365502'); /* IE9*/
+    src: url('//w.tianbaoweipai.com/static/font/paycat.eot?t=1484042365502#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//w.tianbaoweipai.com/static/font/paycat.woff?t=1484042365502') format('woff'), /* chrome, firefox */ url('//w.tianbaoweipai.com/static/font/paycat.ttf?t=1484042365502') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('//w.tianbaoweipai.com/static/font/paycat.svg?t=1484042365502#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+#orderlistsaller .iconfontpay {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    color: inherit;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo-sousuo:before {
+    content: "\e61a";
+}
+
+
+
+ .topMenu {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    display: table;
+    z-index: 999;
+
+}
+
+ .topMenu .buyAndSell {
+    width: 63%;
+    display: table;
+    height:39px;
+    line-height: 39px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 1px solid #fe0100;
+    margin-top: 10px;
+
+}
+
+ .topMenu .buyAndSell .router-link-active {
+    background-color: #fe0100;
+    color: #fff;
+}
+
+ .topMenu .buyAndSell .buy {
+    float: left;
+    width: 50%;
+    font-size: 15px;
+    text-align: center;
+}
+
+ .topMenu .buyAndSell .sell {
+    float: left;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+}
+
+ .buyAndSell .now {
+    background-color: #fe0100;
+    color: #fff;
+}
+
+ .buyAndSell .buy {
+    float: left;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+}
+
+ .buyAndSell .sell {
+    float: left;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+}
+
+ .topMenu ul {
+    width: 94%;
+    padding: 0 5%;
+}
+
+ .topMenu ul li {
+    width: 16%;
+    float: left;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 10px 2%;
+}
+
+ .topMenu ul > .router-link-active {
+    color: #fe0100;
+    border-bottom: 2px solid #fe0100;
+}

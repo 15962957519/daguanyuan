@@ -1,0 +1,103 @@
+<include file="Public/min-header"/>
+<div class="wrapper">
+    <include file="Public/breadcrumb"/>
+    <section class="content">
+        <div class="row">
+           <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i class="fa fa-list"></i>&nbsp;用户问题列表
+                    </h3>
+                </div>
+                <div class="panel-body">
+                <nav class="navbar navbar-default">      
+                    <div class="collapse navbar-collapse">
+                      <form action="{:U('Fans/index')}" id="search-form2" class="navbar-form form-inline" role="search" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="user_id" placeholder="搜索用户ID">
+                        </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" name="nickname" placeholder="搜索用户昵称">
+                          </div>
+                          <button type="button" onclick="ajax_get_table('search-form2',1)" class="btn btn-info"><i class="fa fa-search"></i> 筛选</button>
+                      </form>       
+                  </div>
+                </nav>
+                <div id="ajax_return">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <td style="width: 1px;" class="text-center">
+                                    <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);">
+                                </td>
+                                <td class="text-center">
+                                    编号
+                                </td>
+                                <td class="text-center">
+                                    用户ID
+                                </td>
+                                <td class="text-center">
+                                    粉丝用户ID
+                                </td>
+                                <td class="text-center">
+                                    关注时间
+                                </td>
+
+                                <td class="text-center">操作</td>
+                            </tr>
+                            </thead>
+
+                        </table>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 text-left"></div>
+                        <div class="col-sm-6 text-right">{$page}</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+           </div>
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<script>
+    // 删除操作
+    function del(id,t)
+    {
+        if(!confirm('确定要删除吗?'))
+            return false;
+        location.href = $(t).data('href');
+    }
+
+
+    $(document).ready(function(){
+        ajax_get_table('search-form2',1);
+
+    });
+
+
+    // ajax 抓取页面
+    function ajax_get_table(tab,page){
+
+        cur_page = page; //当前页面 保存为全局变量
+        $.ajax({
+            type : "POST",
+            url:"/index.php/Admin/Fans/ajaxindex/p/"+page,//+tab,
+            data : $('#'+tab).serialize(),// 你的formid
+            success: function(data){
+                $("#ajax_return").html('');
+                $("#ajax_return").append(data);
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>

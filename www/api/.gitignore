@@ -1,0 +1,13 @@
+.idea
+composer.lock
+*.log
+nodejs/node_modules
+/runtime
+runtime/
+/cache/*
+/cachetoken
+#application/500.php
+#application/database.php
+
+
+

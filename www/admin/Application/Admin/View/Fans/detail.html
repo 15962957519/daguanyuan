@@ -1,0 +1,124 @@
+<include file="Public/min-header"/>
+<div class="wrapper">
+    <!-- Content Header (Page header) -->
+   <include file="Public/breadcrumb"/>
+    <section class="content">
+    <!-- Main content -->
+    <!--<div class="container-fluid">-->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-list"></i> 详情信息</h3>
+            </div>
+            <div class="panel-body">
+                <form action="" method="post" onsubmit="return checkUserUpdate(this);">
+                    <table class="table table-bordered">
+                    <tbody>
+
+                    <tr>
+                        <td>用户名:</td>
+                        <td><input type="text" name="user_name" value="{$question.user_name}"></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>问题反馈图片:</td>
+                        <td>
+                            <img src="#" style="width:200px;height:100px;">
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>问题反馈时间:</td>
+                        <td>
+                            <input type="text" name="msg_time" value="{$question.msg_time|date='Y-m-d H:i:s',###}">
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>问题类型:</td>
+                        <td>
+                            <if condition="$question['msg_type'] eq 1">
+                            自定义
+                            <elseif condition="$question['msg_type'] eq 2"/>
+                            售前服务
+                            <elseif condition="$question['msg_type'] eq 3"/>
+                            售中服务
+                            <elseif condition="$question['msg_type'] eq 4"/>
+                            售后服务
+                            </if>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>处理状态:</td>
+                        <td>
+                            <input type="radio" name="msg_status" value="1" <if condition="$question['msg_status'] eq 1">checked</if> />已处理 &nbsp;&nbsp;&nbsp;<input type="radio" name="msg_status" value="0" <if condition="$question['msg_status'] eq 0">checked</if>/>未处理
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>问题反馈内容:</td>
+                        <td>
+                            <textarea name="msg_content" value="" style="width: 80%;height:200px">{$question.msg_content}</textarea>
+                        </td>
+                        <td></td>
+                    </tr>             
+                   
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit" class="btn btn-info">
+                                <i class="ace-icon fa fa-check bigger-110"></i> 保存
+                            </button>
+                            <a href="javascript:history.go(-1)" data-toggle="tooltip" title="" class="btn btn-default pull-right" data-original-title="返回"><i class="fa fa-reply"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </form>
+
+            </div>
+        </div>
+      </div> 
+    </div>    <!-- /.content -->
+   </section>
+</div>
+<script>
+    function ValidateNumber(e, pnumber){
+        if (!/^\d+$/.test(pnumber)){
+            $(e).val(/^\d+/.exec($(e).val()));
+        }
+        return false;
+    }
+    function checkUserUpdate(){
+        var email = $('input[name="email"]').val();
+        var mobile = $('input[name="mobile"]').val();
+        var password = $('input[name="password"]').val();
+        var password2 = $('input[name="password2"]').val();
+        var level = $('input[name="level"]').val();
+
+        var error ='';
+//        if(password != password2){
+//            error += "两次密码不一样\n";
+//        }
+//
+//        if(!checkEmail(email)){
+//            error += "邮箱地址有误\n";
+//        }
+//        if(!checkMobile(mobile)){
+//            error += "手机号码填写有误\n";
+//        }
+        if(error){
+            layer.alert(error, {icon: 2});  //alert(error);
+            return false;
+        }
+        return true;
+
+    }
+</script>
+
+</body>
+</html>

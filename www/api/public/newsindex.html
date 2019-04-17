@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang=zh-CN><head><meta charset=utf-8><meta name=format-detection content="telephone=no"><meta http-equiv=x-dns-prefetch-control content=on><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>天宝微拍</title><link rel=dns-prefetch href=//w.tianbaoweipai.com><link rel=dns-prefetch href=//api.w.api.datacdn.cn><link rel=dns-prefetch href=//img.tianbaoweipai.com><link rel=dns-prefetch href=//tianbaoweipaibyliqipeng.oss-cn-shanghai.aliyuncs.com><link rel=dns-prefetch href=//cdn.w.tianbaoweipai.com><link rel=stylesheet href=/static/css/index.css><link rel=stylesheet href=/static/css/weui.min.css><script src=//cdn.bootcss.com/vue/2.1.10/vue.min.js></script><script type=text/javascript src=/static/js/vuex.min.js></script><script type=text/javascript src=/static/js/plugin/zepto.min.js></script><script type=text/javascript src=/static/js/swipeSlide.min.js></script><script type=text/javascript src=http://res.wx.qq.com/open/js/jweixin-1.2.0.js></script><script src=/static/js/store.min.js></script><script type=text/javascript src=/static/js/axios.min.js></script><!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--><script>var default_domain_api = 'http://api.w.datacdn.cn';
+        var default_domain_web = 'http://w.tianbaoweipai.com';
+        var urldomain = window.location.protocol + '//' + window.location.host;
+        !(function init() {
+            if (!store.enabled) {
+                alert('Local storage is not supported by your browser. Please disable "Private Mode", or upgrade to a modern browser.')
+                return
+            }
+        })();
+        axios.defaults.baseURL = default_domain_api;
+        //  axios.defaults.headers.common['Authorization'] = 'Bearer'+storeWithExpiration.get('token');
+        axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+        var WEIPAT = WEIPAT || {};
+        WEIPAT.version = Math.random();
+        WEIPAT.userinfo = {
+            uri: '',
+            nickname: ' ',
+            headimgurl: '/static/img/nohead.png',
+            telephone: '',
+            isSubscribe: '',
+            sellLevel: 1,
+            buyerLevel: 1,
+            isLogin: 0,
+            token: '',
+        };
+        function setCookie(c_name,value,expiredays)
+        {
+            var exdate=new Date()
+            exdate.setDate(exdate.getTime()+(expiredays))
+            document.cookie=c_name+ "=" +escape(value)+
+                ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+        }
+
+        function getCookie(c_name)
+        {
+            if (document.cookie.length>0)
+            {
+                c_start=document.cookie.indexOf(c_name + "=")
+                if (c_start!=-1)
+                {
+                    c_start=c_start + c_name.length+1
+                    c_end=document.cookie.indexOf(";",c_start)
+                    if (c_end==-1) c_end=document.cookie.length
+                    return unescape(document.cookie.substring(c_start,c_end))
+                }
+            }
+            return ""
+        }
+
+//        window.storeWithExpiration = {
+//            set: function (key, val, exp) {
+//                //exp天数
+//                exp =exp||0;
+//                setCookie(key,val,exp)
+//            },
+//            get: function (key) {
+//                var info = getCookie(key)
+//                if (!info) {
+//                    return null
+//                }
+//                return  info;
+//            }
+//        }
+
+
+        window.storeWithExpiration = {
+            set: function (key, val, exp) {
+                store.set(key, {val: val, exp: exp, time: new Date().getTime()})
+            },
+            get: function (key) {
+                var info = store.get(key)
+                if (!info) {
+                    return null
+                }
+                if (new Date().getTime() - info.time > info.exp) {
+                    // Remove 'username'
+                    store.remove(key)
+                    return null
+                }
+                return info.val
+            }
+        }
+
+        //  window.storeWithExpiration.set('token','');
+        function weixinlogin() {
+            if (is_weixn() == true) {
+                //先检查是存否在token
+                var flagislogin =   window.storeWithExpiration.get('token');
+                if(!flagislogin && typeof flagislogin != "undefined" && flagislogin != 0 || flagislogin ==null || ''== flagislogin || flagislogin.replace(/(^s*)|(s*$)/g, "").length ==0) {
+
+                    var appid = "wxdabbc66245346dda";
+                    var redirect_uri = encodeURIComponent(urldomain);
+                    var scope = "snsapi_base";//snsapi_userinfo
+                    var url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + appid + "&redirect_uri=" + redirect_uri + "&response_type=code&scope=" + scope + "&state=123&connect_redirect=1#wechat_redirect";
+                    var code = '';
+                    code = is_code_state();
+
+                    if (code.replace(/(^s*)|(s*$)/g, "").length >0){
+                        //api到后端取数据
+                        //  var code_flag = store.get('code')
+                        var userinfo = getLogin(code)
+                        return;
+                        //   return userinfo;
+                    }
+                    location.href = url;
+                }
+
+                //解析json
+
+
+                //  WEIPAT.userinfo.nickname =json.userong.nickname,
+                WEIPAT.userinfo.isSubscribe =1,
+                    WEIPAT.userinfo.isLogin =1,
+
+                    WEIPAT.userinfo.token =flagislogin;
+
+                return false;
+            }
+        }
+        // check js
+        function is_weixn() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        // check js
+        function is_code_state() {
+            var code = GetQueryString('code');
+            if (code) {
+                var code_flag = store.set('code', code)
+                return code;
+            } else {
+                return '';
+            }
+        }
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return (r[2]);
+            return null;
+        }
+        //   weixinlogin();
+
+
+
+        //兼容js
+        if (typeof Object.assign != 'function') {
+            Object.assign = function (target, varArgs) { // .length of function is 2
+                'use strict';
+                if (target == null) { // TypeError if undefined or null
+                    throw new TypeError('Cannot convert undefined or null to object');
+                }
+
+                var to = Object(target);
+
+                for (var index = 1; index < arguments.length; index++) {
+                    var nextSource = arguments[index];
+
+                    if (nextSource != null) { // Skip over if undefined or null
+                        for (var nextKey in nextSource) {
+                            // Avoid bugs when hasOwnProperty is shadowed
+                            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                                to[nextKey] = nextSource[nextKey];
+                            }
+                        }
+                    }
+                }
+                return to;
+            };
+        }
+        if (!window.URLSearchParams) {
+            window.URLSearchParams = function URLSearchParams() {
+                this.params = {};
+            };
+            window.URLSearchParams.prototype = {
+                set: function (key, value) {
+                    this.params[key] = value;
+                },
+                get: function (key) {
+                    return this.params[key];
+                },
+                has: function (key) {
+                    return this.params.hasOwnProperty(key);
+                },
+                delete: function (key) {
+                    delete this.params[key];
+                },
+                toString: function () {
+                    return Object.keys(this.params).map(function (param) {
+                        return param + '=' + encodeURIComponent(this.params[param]);
+                    }, this).join('&');
+                },
+            };
+        }
+
+        if (!Element.prototype.addEventListener) {
+            var oListeners = {};
+
+            function runListeners(oEvent) {
+                if (!oEvent) {
+                    oEvent = window.event;
+                }
+                for (var iLstId = 0, iElId = 0, oEvtListeners = oListeners[oEvent.type]; iElId < oEvtListeners.aEls.length; iElId++) {
+                    if (oEvtListeners.aEls[iElId] === this) {
+                        for (iLstId; iLstId < oEvtListeners.aEvts[iElId].length; iLstId++) {
+                            oEvtListeners.aEvts[iElId][iLstId].call(this, oEvent);
+                        }
+                        break;
+                    }
+                }
+            }
+
+            Element.prototype.addEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
+                if (oListeners.hasOwnProperty(sEventType)) {
+                    var oEvtListeners = oListeners[sEventType];
+                    for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+                        if (oEvtListeners.aEls[iElId] === this) {
+                            nElIdx = iElId;
+                            break;
+                        }
+                    }
+                    if (nElIdx === -1) {
+                        oEvtListeners.aEls.push(this);
+                        oEvtListeners.aEvts.push([fListener]);
+                        this["on" + sEventType] = runListeners;
+                    } else {
+                        var aElListeners = oEvtListeners.aEvts[nElIdx];
+                        if (this["on" + sEventType] !== runListeners) {
+                            aElListeners.splice(0);
+                            this["on" + sEventType] = runListeners;
+                        }
+                        for (var iLstId = 0; iLstId < aElListeners.length; iLstId++) {
+                            if (aElListeners[iLstId] === fListener) {
+                                return;
+                            }
+                        }
+                        aElListeners.push(fListener);
+                    }
+                } else {
+                    oListeners[sEventType] = {aEls: [this], aEvts: [[fListener]]};
+                    this["on" + sEventType] = runListeners;
+                }
+            };
+            Element.prototype.removeEventListener = function (sEventType, fListener /*, useCapture (will be ignored!) */) {
+                if (!oListeners.hasOwnProperty(sEventType)) {
+                    return;
+                }
+                var oEvtListeners = oListeners[sEventType];
+                for (var nElIdx = -1, iElId = 0; iElId < oEvtListeners.aEls.length; iElId++) {
+                    if (oEvtListeners.aEls[iElId] === this) {
+                        nElIdx = iElId;
+                        break;
+                    }
+                }
+                if (nElIdx === -1) {
+                    return;
+                }
+                for (var iLstId = 0, aElListeners = oEvtListeners.aEvts[nElIdx]; iLstId < aElListeners.length; iLstId++) {
+                    if (aElListeners[iLstId] === fListener) {
+                        aElListeners.splice(iLstId, 1);
+                    }
+                }
+            };
+        }
+
+        //到后端获取用户信息
+        function getLogin(code) {
+            //  var params = new URLSearchParams();
+            // params.append('code', code);
+
+            axios.get('/user/getAccess_token?code='+code)
+                .then(function (json) {
+                    return json.data;
+                }).then(function(json){
+                if(json.statue_code=='2000'){
+                    if(json.user){
+                        WEIPAT.userinfo.nickname =json.userong.nickname,
+                            WEIPAT.userinfo.isSubscribe =json.userong.subscribe,
+                            WEIPAT.userinfo.isLogin =1,
+                            WEIPAT.userinfo.headimgurl =json.userong.head_pic;
+                        WEIPAT.userinfo.token =json.token;
+                        window.storeWithExpiration.set('token', json.token, 86400000);
+                    }
+                }
+
+
+            }) .catch(function (error) {
+                alert(error)
+            });
+            return ;
+
+        }
+
+        !function () {
+            function a() {
+                var clientWidth = document.documentElement.clientWidth > 640 ? 640 : document.documentElement.clientWidth;
+                document.documentElement.style.fontSize = clientWidth / 7.5 + "px";
+                //适应字体调整
+                var div = document.createElement("div");
+                div.style.width = "7.5rem";
+                document.documentElement.appendChild(div);
+                document.documentElement.style.fontSize = document.documentElement.style.fontSize.replace("px", "") * clientWidth / div.clientWidth + "px";
+                document.documentElement.removeChild(div);
+            }
+            var b = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(b), b = setTimeout(a, 300)
+            }, !1), a()
+        }(window);</script></head><body><script src=//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js></script><div id=app></div><script>if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
+    //   storeWithExpiration.set('foo', 'bar', 1000)
+    //    $(function () {
+    //        FastClick.attach(document.body);// init fastclick
+    //       // fixSupport();
+    //        $(document).off("wptSupport_view:fix").on("wptSupport_view:fix", function () {
+    //           // fixSupport();
+    //        });
+    //    });
+    function fixSupport() {
+        if ($.os.android) {
+            var bodyWidth = document.body.clientWidth;
+            var bodyHeight = document.documentElement.clientHeight;
+        } else {
+            bodyWidth = $(window).width();
+            bodyHeight = $(window).height();
+        }
+        var dHeight = document.documentElement.offsetHeight;
+        if (dHeight <= bodyHeight) {
+            //  $('#contentbox').css('minHeight', bodyHeight - 60 - 0);
+        }
+        //  $(".supportBanner").css("visibility", "visible");
+    }
+
+    function checkWebp() {
+        try {
+            return (document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0);
+        } catch (err) {
+            return false;
+        }
+    }
+
+    function  isEmptyObject( obj ) {
+        var name;
+        for ( name in obj ) {
+            return false;
+        }
+        return true;
+    }
+
+        var _that=this;
+        var domain = location.href.split('#')[0];
+        axios.get('/makesign?url=' + encodeURIComponent(domain)).then(function (response) {
+            if (response.status == '200') {
+                return response;
+            }
+        }).then(function (response) {
+            if (!isEmptyObject(response)) {
+                wx.config({
+                    debug: false,
+                    appId: "wxdabbc66245346dda",
+                    timestamp: String(response.data.timestamp),
+                    nonceStr: response.data.noncestr,
+                    signature: response.data.signature,
+                    jsApiList: [
+                        "previewImage",
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage',
+                        'onMenuShareQQ',
+                        'onMenuShareWeibo',
+                        'onMenuShareQZone',
+                        "showOptionMenu",
+                        "closeWindow",
+                        "getNetworkType"
+                    ]
+                });
+                wx.ready(function () {
+                    wx.checkJsApi({
+                        jsApiList: [
+                            'getNetworkType',
+                            'previewImage'
+                        ],
+                        success: function (res) {
+                            //{"errMsg":"checkJsApi:ok","checkResult":{"uploadImage":true,"imagePreview":true}}
+                            console.log(res)
+                        }
+                    });
+                    wx.error(function (res) {
+                        console.log(res)
+                    })
+                });
+            } else {
+
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });</script><script src=/static/js/iscroll.js defer=defer async></script><script type=text/javascript src=/static/js/plugin/newsindex.23f7a43f283a48000ad7.js></script></body></html>

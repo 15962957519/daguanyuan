@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="http://cdn.weipaitang.com/">
+    <title>作品发布</title>
+    {load href="/static/js/plugin/zepto.min.js" /}
+    {load href="/static/js/vue.min.js" /}
+
+    <script src="/static/js/plugin/fabu.js"></script>
+
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+    <script type="text/javascript">
+        !function () {
+            function a() {
+                var clientWidth = document.documentElement.clientWidth > 640 ? 640 : document.documentElement.clientWidth;
+                document.documentElement.style.fontSize = clientWidth / 7.5 + "px";
+
+                //适应字体调整
+                var div = document.createElement("div");
+                div.style.width = "7.5rem";
+                document.documentElement.appendChild(div);
+                document.documentElement.style.fontSize = document.documentElement.style.fontSize.replace("px", "") * clientWidth / div.clientWidth + "px";
+                document.documentElement.removeChild(div);
+            }
+            var b = null;
+            window.addEventListener("resize", function () {
+                clearTimeout(b), b = setTimeout(a, 300)
+            }, !1), a()
+        }(window);
+    </script>
+</head>
+<body>
+<div id="contentbox">
+    <div class="topBanner fixtop">
+        <div class="draft btn">退出发布</div>
+        <div class="next btn">立即发布</div>
+    </div>
+    <div class="editMain">
+        <form action="/index.php/auction/saving.html" method="post" id="publishForm">
+            <input type="hidden" name="imgList" value="" /><input type="hidden" name="oldimgList" value="" /> <input type="hidden" name="imgCert" id="imgCert" value="" /><input type="hidden" name="id" value="" />
+            <div class="desc">
+                <div class="goodsImgList">
+                    <div class="addImg"></div>
+                </div>
+            </div>
+
+            <div class="saleItem">
+                <div class="lihead">联系手机：</div>
+                <input style="border:none;padding:4px 8px;font-size:16px;" type="tel" name="phone" placeholder="必须填写" />
+            </div>
+            <div class="saleItem">
+                <div class="lihead">联系微信：</div>
+                <input style="border:none;padding:4px 8px;font-size:16px;" name="wx" placeholder="非必须填写" />
+            </div>
+
+
+            <div class="desc">
+                <input placeholder="商品区名称:必填,最多不超过16字" type="text" name="title" value="" />
+            </div>
+            <div class="desc">
+                <textarea placeholder="商品区描述:必填,最多不超过256字" name="content"></textarea>
+            </div>
+
+            <div class="setBox">
+                <div class="saleItem endTime">
+                    <div class="lihead">截止时间</div>
+                    <div class="endTimeInput">
+                        <span>请选择时间</span>
+                        <input type="hidden" name="endTime" value="" />
+                    </div>
+                </div>
+                <div class="saleItem category">
+                    <div class="lihead">分类</div>
+                    <div class="categoryInput">
+                        <span>请选择商品区分类</span>
+                    </div>
+                    <input type="hidden" id="category" name="category" value="" />
+                </div>
+                <div class="saleItem">
+                    <div class="lihead" desc="起拍价(元)">起拍价</div>
+                    <div class="numInput" id="bidMoney">
+                        <span>0</span>
+                    </div>
+                    <input type="hidden" name="bidMoney" value="0" />
+                </div>
+                <div class="saleItem">
+                    <div class="lihead" desc="加价幅度(元)">加价幅度</div>
+                    <div class="numInput" id="increase">
+                        <span>100</span>
+                    </div>
+                    <input type="hidden" name="increase" value="100" />
+                </div>
+            </div>
+            <div class="optionalTitle">可选设置</div>
+            <div class="saleItem">
+                <div class="lihead">7天包退</div>
+                <div class="switchBtn enableReturn on"></div>
+                <input type="hidden" id="enableReturn" name="enableReturn" value="1" />
+            </div>
+            <div class="saleItem">
+                <div class="lihead">包邮</div>
+                <div class="switchBtn expressFee on"></div>
+                <input type="hidden" id="expressFee" name="expressFee" value="1" />
+            </div>
+
+            <div class="saleItem">
+                <div class="lihead" desc="保留价(元)">保留价</div>
+                <div class="numInput" id="reserveprice">
+                    <span>0</span>
+                </div>
+                <input type="hidden" name="reserveprice" value="0" />
+            </div>
+            <div class="tip">
+                保留价可不设定，如设定则最高竞拍价格大于保留价则竞拍成功，否则流拍。
+            </div>
+
+            <!--
+            <div class="saleItem bzj disable">
+                <div class="lihead" desc="">保留价</div>
+                <div class="bidBzjInput" id="bidBzj">
+                    <span>0</span>
+                    <div class="bidBzjList">
+                        <div class="bzjItem">0</div>
+                        <div class="bzjItem">2</div>
+                        <div class="bzjItem">10</div>
+                        <div class="bzjItem">30</div>
+                        <div class="bzjItem">50</div>
+                        <div class="bzjItem">100</div>
+                        <div class="bzjItem">200</div>
+                        <div class="bzjItem">500</div>
+                        <div class="bzjItem">1000</div>
+                    </div>
+                </div>
+
+            </div>
+            -->
+            <input type="hidden" name="bidBzj" value="0" />
+        </form>
+    </div>
+</div>
+<div class="wptCategory">
+    <div class="wptMask"></div>
+    <div class="categoryBox">
+        <div class="categoryTitle">
+            <span class="title">分类 <label>请谨慎选择，切勿跨品类</label></span>
+            <div class="finish">完成</div>
+        </div>
+        <div class="categoryList">
+            <div class="categoryItem" data-id="1" data-title="玉翠珠宝 ">
+                <div class="category1">
+                    玉翠珠宝 <span>和田翡翠，琥珀蜜蜡，玛瑙水晶等</span>
+                </div>
+                <div></div>
+            </div><div class="categoryItem" data-id="2" data-title="书画篆刻 ">
+            <div class="category2">
+                书画篆刻 <span>国画，书法，印章，印石等</span>
+            </div>
+            <div></div>
+        </div><div class="categoryItem" data-id="3" data-title="茶酒滋补 ">
+            <div class="category3">
+                茶酒滋补 <span>茶，酒等</span>
+            </div>
+            <div></div>
+        </div><div class="categoryItem" data-id="4" data-title="紫砂陶瓷 ">
+            <div class="category4">
+                紫砂陶瓷 <span>瓷器，陶器，紫砂等</span>
+            </div>
+            <div></div>
+        </div><div class="categoryItem" data-id="5" data-title="工艺作品 ">
+            <div class="category5">
+                工艺作品 <span>珠串，木雕，石雕，核雕等</span>
+            </div>
+            <div></div>
+        </div><div class="categoryItem" data-id="6" data-title="文玩杂项 ">
+            <div class="category6">
+                文玩杂项 <span>不限于以上品类的其他文玩珍品</span>
+            </div>
+            <div></div>
+        </div>			</div>
+    </div>
+</div>
+
+<div class="wptEndtime">
+    <div class="wptMask"></div>
+    <div class="categoryBox">
+        <div class="categoryTitle">
+            <span class="title">截止时间 <label>请选择拍卖截止时间</label></span>
+        </div>
+        <div class="endTimeList">
+            <dl>
+                <dt>
+                    12月30日(<em>今天</em>)
+                </dt>
+                <dd value="1483088400" tips="12月30日(今天) 17:00">17:00</dd><dd value="1483099200" tips="12月30日(今天) 20:00">20:00</dd><dd value="1483102800" tips="12月30日(今天) 21:00">21:00</dd><dd value="1483106400" tips="12月30日(今天) 22:00">22:00</dd><dd value="1483110000" tips="12月30日(今天) 23:00">23:00</dd>					<div style="clear:both;padding:0;"></div>
+            </dl>
+            <dl>
+                <dt>
+                    12月31日(<em>明天</em>)
+                </dt>
+                <dd value="1483156800" tips="12月31日(明天) 12:00">12:00</dd><dd value="1483174800" tips="12月31日(明天) 17:00">17:00</dd><dd value="1483185600" tips="12月31日(明天) 20:00">20:00</dd><dd value="1483189200" tips="12月31日(明天) 21:00">21:00</dd><dd value="1483192800" tips="12月31日(明天) 22:00">22:00</dd><dd value="1483196400" tips="12月31日(明天) 23:00">23:00</dd>					<div style="clear:both;padding:0;"></div>
+            </dl>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    a{
+        text-decoration: none;
+    }
+
+    .supportBanner {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        line-height: 20px;
+        font-size: 12px;
+        border-top: 1px solid #f4f4f4;
+        background-color: #FFF;
+        margin-top: 10px;
+        color: #d7d7d7;
+        visibility: hidden;
+    }
+</style>
+<a target="top" href="http://www.oneweipai.com/main">
+    <div class="supportBanner" style="visibility: visible;margin-bottom:40px;">
+        <img alt="" src="/Public/img/support.jpg" height="40px;" alt="微拍" style="display: block; margin: 0 auto;"> 由微拍免费技术支持
+    </div>
+</a>
+<div class="fixednumMain">
+    <div class="tipBanner">
+        <span class="title"></span>
+        <div class="finish">完成</div>
+    </div>
+    <div class="numkey">
+        <ul>
+            <li class="num"><div>1</div> <span></span></li>
+            <li class="num"><div>2</div> <span>ABC</span></li>
+            <li class="num"><div>3</div> <span>DEF</span></li>
+            <li class="num"><div>4</div> <span>GHI</span></li>
+            <li class="num"><div>5</div> <span>JKL</span></li>
+            <li class="num"><div>6</div> <span>MNO</span></li>
+            <li class="num"><div>7</div> <span>PQRS</span></li>
+            <li class="num"><div>8</div> <span>TUV</span></li>
+            <li class="num"><div>9</div> <span>WXYZ</span></li>
+            <li class="num othernum">00</li>
+            <li class="num" style="line-height: 50px;">0</li>
+            <li class="delete"></li>
+        </ul>
+    </div>
+</div>
+<div class="wptShare">
+    <div class="wptMask"></div>
+    <div class="shareTip"></div>
+</div>
+<div class="wptAlert">
+    <div class="wptMask"></div>
+    <div class="dialog">
+        <div class="tip">
+            <div class="msg"></div>
+        </div>
+        <div class="btns">
+            <div class="btn-confirm">知道了</div>
+        </div>
+    </div>
+</div>
+<div class="wptConfirm">
+    <div class="wptMask"></div>
+    <div class="dialog">
+        <div class="tip">
+            <div class="msg"></div>
+        </div>
+        <div class="btns">
+            <div class="btn-confirm sure"></div>
+            <div class="btn-cancel">取消</div>
+        </div>
+    </div>
+</div>
+<div class="wptMultiConfirm">
+    <div class="wptMask"></div>
+    <div class="dialog">
+        <div class="tip">
+            <div class="msg"></div>
+        </div>
+        <div class="btns">
+            <div class="btn-cancel">取消</div>
+        </div>
+    </div>
+</div>
+<div class="wptPassword">
+    <div class="dialog">
+        <div class="tip"></div>
+        <div class="password">
+            <div class="passwordKey" num=""></div>
+            <div class="passwordKey" num=""></div>
+            <div class="passwordKey" num=""></div>
+            <div class="passwordKey" num=""></div>
+            <div class="passwordKey" num=""></div>
+            <div class="passwordKey" num=""></div>
+        </div>
+    </div>
+    <div class="keyboard">
+        <ul>
+            <li class="num">1</li>
+            <li class="num">2</li>
+            <li class="num">3</li>
+            <li class="num">4</li>
+            <li class="num">5</li>
+            <li class="num">6</li>
+            <li class="num">7</li>
+            <li class="num">8</li>
+            <li class="num">9</li>
+            <li class="blank"></li>
+            <li class="num">0</li>
+            <li class="delete"></li>
+        </ul>
+    </div>
+</div>
+<div class="wptNotice">
+    <div class="msg">
+        <img src="/Public/img/logo256.jpg"><span></span>
+    </div>
+    <div class="btn"></div>
+</div>
+<div class="wptLoading">
+    <div class="wptMask"></div>
+    <div class="loading"></div>
+</div>
+
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js?v=0.7.4.0"></script>
+<script type="text/javascript">
+    if (window.top  != window.self && window.top.wx) {
+        wx = window.top.wx;
+    } else {
+        window.wx
+        && wx.config({
+            debug :false,
+            appId : "wxf730cbeb3610e837",
+            timestamp : "1483073979",
+            nonceStr : "9b59OmMfNqxe1Bbo",
+            signature : "8bf99564b0a9e5b9fecdf7fd31e2562766e190bf",
+            jsApiList : [ "onMenuShareTimeline",
+                "onMenuShareAppMessage", "onMenuShareQQ",
+                "hideOptionMenu", "showOptionMenu", "closeWindow",
+                "chooseImage", "uploadImage", "previewImage","startRecord","stopRecord","playVoice","uploadVoice","onVoicePlayEnd","showMenuItems"]
+        });
+
+    }
+
+    wx.ready(function() {
+        // wx.hideOptionMenu();
+    });
+</script>
+<script type="text/javascript" src="/Public/js/zepto.js?v=0.7.6.1"></script>
+<script type="text/javascript">
+    var certflag = 0;
+    var oldIds = null;	var previewImageUrl = 'http://file.api.weixin.qq.com/cgi-bin/media/get?access_token=aU8GcoUXwEaETdGh_KwpIzsqY2ekGyaE4vrtUD_TQY4eCyxVJhZ_TY1xgjQOLxIiOA_wUem9jO85ddrYQ0MYdxKaMQWTuDPGDeVxNZAMHSOFbx8-ORNITml-i_zUtaMLHZOdAAAZRG&media_id=';
+</script>
+<script type="text/javascript" src="/Public/js/auction/index.js?v=21061224"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+    "name": "weixinpayment",
+    "description": "Secure dadad Encryption Library",
+    "license": "MIT",
+    "version": "2.0.3",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "dd Hornby",
+            "email": "taylor@dd.ca",
+            "homepage": "https://dd.ca/"
+        },
+        {
+            "name": "Scott Arciszewski",
+            "email": "info@paragonie.com",
+            "homepage": "https://paragonie.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"weixinpayment\\": "src"}
+    }
+}
