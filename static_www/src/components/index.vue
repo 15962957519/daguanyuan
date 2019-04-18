@@ -15,8 +15,6 @@
       <loopbanners :top_banners="top_banners"></loopbanners>
       <!--新闻列表-->
       <newlifts :two_articles="two_articles"></newlifts>
-      <!--新闻列表-->
-      <shchs :two_articles="two_articles"></shchs>
       <!--活动分类-->
       <Activitylists></Activitylists>
       <!--开拍专场-->
@@ -47,7 +45,6 @@
     import Header from '@/components/public/Header';
     import loopbanner from '@/components/index/loopbanner';
     import newlift from '@/components/index/newlift';
-    import shch from '@/components/index/shch';
     import Activitylist from '@/components/index/Activitylist';
     import Shooting from '@/components/index/Shooting';
     import scroll  from '@/components/slot/scroll';

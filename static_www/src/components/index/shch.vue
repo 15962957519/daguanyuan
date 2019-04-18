@@ -1,106 +1,125 @@
 <template>
-    <div class="new_list">
-        <ul>
-            <li class="new_list_one" @click="todo_new">
-                <img src="@/assets/images/zixun.png">
-                <!--<span style="color:#b58352;padding: .15rem .1rem; height: .4rem; line-height: .1rem; border-left:1px solid #eee; "> NEW </span>-->
-            </li>
-            <li class="new_list_two">
-                <yd-rollnotice autoplay="2000" align="left" >
-                    <template v-for="(item,key) in articles">
-                        <yd-rollnotice-item @click.native="new_result(item.article_id)"><span style="color:#b58352;padding: .15rem .1rem; height: .4rem; line-height: .1rem; border-left:1px solid #eee; "> NEW </span>{{item.title}}</yd-rollnotice-item>
-                    </template>
-                </yd-rollnotice>
-                <yd-rollnotice direction="down" style="margin-top: -.15rem;" autoplay="2000" align="left" >
-                    <template v-for="(item1,key) in articles1">
-                        <yd-rollnotice-item @click.native="new_result(item1.article_id)"><span style="color:#b58352;padding: .15rem .1rem; height: .4rem; line-height: .1rem; border-left:1px solid #eee; "> HOT </span>{{item1.title}}</yd-rollnotice-item>
-                    </template>
-                </yd-rollnotice>
-            </li>
-        </ul>
+    <div  id="index"  class="index">
 
+        <!--头部的导航-->
+        <app-header></app-header>
+        <!--<loopimage></loopimage>-->
+        <scroll class="wrapper"
+                :data="data"
+                :listenScroll="true"
+                :pulldown="true"
+                @pulldown="pulldownrefsh"
+                @uppush="productlist"
+                @refreshpage="refreshpage">
+            <!--图片轮播-->
+            <loopbanners :top_banners="top_banners"></loopbanners>
+            <!--新闻列表-->
+            <newlifts :two_articles="two_articles"></newlifts>
+            <!--活动分类-->
+            <Activitylists></Activitylists>
+            <!--开拍专场-->
+            <shootings :center_banners="center_banners"></shootings>
+            <!--详情介绍-->
+            <productlists  @refresh="srcollrefsh"  ref="productlists" ></productlists>
+        </scroll>
+        <!--底部菜单-->
+        <menus></menus>
+        <div id="childcontentdetail" :class="[isIos ? 'xn-ios':'']">
+            <transition :name="transitionName">
+                <router-view></router-view>
+            </transition>
+        </div>
 
     </div>
-
 </template>
-<script>
+<style>
+    body{ background: #eee;}
+    #index{
+        height:100%;
+    }
+</style>
+<script type="text/babel">
+    import menu from '@/components/menu';
+    import productlists from '@/components/productlists';
+    import loopimage from '@/components/loopimage';
+    import Header from '@/components/public/Header';
+    import loopbanner from '@/components/index/loopbanner';
+    import newlift from '@/components/index/newlift';
+    import Activitylist from '@/components/index/Activitylist';
+    import Shooting from '@/components/index/Shooting';
+    import scroll  from '@/components/slot/scroll';
 
-    import Vue from 'vue';
-    import {RollNotice, RollNoticeItem} from 'vue-ydui/dist/lib.rem/rollnotice';
-    /* 使用pximport {RollNotice, RollNoticeItem} from 'vue-ydui/dist/lib.px/rollnotice'; */
-
-    Vue.component(RollNotice.name, RollNotice);
-    Vue.component(RollNoticeItem.name, RollNoticeItem);
     export default {
-        data(){
+        data: function () {
             return {
-                isShow:false,
-                articles: [],
-                articles1:[]
+                top_banners: [],
+                center_banners:[],
+                two_articles: [],
+                page: 1,
+                pulldown: false,
+                data: [],
+                tuijian_goods:[],
+                isIos:false,
+                transitionName:''
             }
         },
-        components:{
-
+        components: {
+            "app-header":Header,
+            'menus': menu,
+            'productlists': productlists,
+            'loopimage': loopimage,
+            'loopbanners': loopbanner,
+            'newlifts': newlift,
+            'Activitylists': Activitylist,
+            'Shootings': Shooting,
+            'scroll':scroll
         },
-        watch: {
-            two_articles(newValue, oldValue) {
-                //   console.log(oldValue)
-                //  return;
-                this.articles = []
-                this.articles1 = []
-                var lengh=newValue.length/2
-                for(var i=0;i<lengh;i++){
-                    this.articles[i]=newValue[i*2];
-                    this.articles1[i]=newValue[i*2+1];
+        methods: {
+            getDevice(){
+                if (navigator.userAgent.match(/(iPhone|iPod|iPad);?/i)) {
+                    this.isIos = true;
                 }
-                if(newValue.length % 2 != 0 ){
-                    this.articles1.pop()
-                }
-                // console.log(this.articles1)
-                // let a = 0
-                // for (let i = 0; i < newValue.length; i++) {
-                //     if (i % 2 != 1 && i != 0) {
-                //         a++
-                //     }
-                //     this.articles[a] = this.articles[a] instanceof Array ? this.articles[a] : []
-                //     this.articles[a].push(newValue[i])
-                // }
-            }
-        },
-        props:{
-            two_articles:{
-                type:Array,
-                default:[]
-            }
-
-        },
-
-        methods:{
-            todo_new(){
-                this.$router.push({name: 'new_index_link'})
             },
-            new_result(e){
-                var article_id =e
-                this.$router.push({
-                    name: 'new_result_link',
-                    query: {
-                        article_id: article_id
+            srcollrefsh(){
+                this.data.push(1);
+            },
+            pulldownrefsh(){
+                this.$refs.productlists.clearproductlist()
+            },
+            productlist(){
+                this.$refs.productlists.getproductlist()
+            },
+            refreshpage(){
+                this.page =1;
+                this.data=[];
+            },
+            firstlist:function(){
+                var that = this;
+                that.$axios.get('/api', {
+                    params: {
+                        token: storeWithExpiration.get('token'),
                     }
-                })
-            }
+                }) .then(function (response) {
+                    if (response.status == '200') {
+                        return response.data;
+                    }
+                }).then(function (json) {
+                    that.top_banners = json.data.top_banners;
+                    that.center_banners = json.data.center_banners;
+                    that.two_articles = json.data.two_articles;
+                    console.log(22,that.top_banners);
 
+                }).catch(function (ex) {
+                    console.log(ex);
+                });
+            }
+        },
+        created:function(){
+
+        },
+        mounted: function () {
+            this.getDevice();
+            this.firstlist();
         }
     }
-
 </script>
-<style>
-    .new_list_one{ width: 17%;}
-    .new_list_one img{  padding: .15rem 0 .12rem 0; height: 1.2rem}
-    .new_list_two{ width: 80%;}
-    .new_list{ height: 1.3rem; width: 100%; background: #fff; margin: .1rem 0;}
-    .new_list ul li{ float: left;}
-    .yd-rollnotice-item{ background: #fff; }
-    .yd-rollnotice{   margin-bottom: .1rem;line-height: 30px; overflow: hidden }
-    .yd-rollnotice-item img{ width: 1rem; margin-left: .1rem; margin-right: .1rem;}
-
-</style>
